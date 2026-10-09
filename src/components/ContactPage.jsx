@@ -87,7 +87,7 @@ function ContactPage() {
         <div className="contact-map-section">
           <div className="contact-map-heading"><div><span>COME FIND US</span><h2>Our Ahmedabad Office</h2></div><a href={mapsUrl} target="_blank" rel="noreferrer"><Navigation size={16} /> Open in Maps</a></div>
           <div className="contact-map-wrap">
-          <iframe title="Sunray Systems Ahmedabad office map" src="https://www.google.com/maps?q=Sepal+Olivia+Bopal+Cross+Road+S.P.+Ring+Road+Ahmedabad+380058&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+            <iframe title="Sunray Systems Ahmedabad office map" src="https://www.google.com/maps?q=Sepal+Olivia+Bopal+Cross+Road+S.P.+Ring+Road+Ahmedabad+380058&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
           </div>
         </div>
       </section>
