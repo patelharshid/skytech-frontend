@@ -6,6 +6,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
+  const isContactPage = window.location.pathname.replace(/\/$/, '') === '/contact-us';
 
   // Handle sticky navbar on scroll (Desktop only)
   useEffect(() => {
@@ -99,7 +100,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse d-lg-none mt-3 border-top pt-3`} id="mobileSkyTechNav">
             <ul className="navbar-nav flex-column gap-2 font-semibold mb-3">
               <li className="nav-item">
-                <a className="nav-link active" href="#hero" onClick={() => setIsNavCollapsed(true)}>Home</a>
+                <a className={`nav-link ${isContactPage ? '' : 'active'}`} href="/#hero" aria-current={isContactPage ? undefined : 'page'} onClick={() => setIsNavCollapsed(true)}>Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Laptops</a>
@@ -130,12 +131,14 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
               </li>
             </ul>
 
-            <button
-              className="btn btn-skytech-gold w-100 py-2.5 fs-7 fw-bold"
-              onClick={() => { setIsNavCollapsed(true); onOpenQuoteModal(); }}
+            <a
+              className={`btn btn-skytech-gold w-100 py-2.5 fs-7 fw-bold ${isContactPage ? 'contact-nav-active' : ''}`}
+              href="/contact-us"
+              aria-current={isContactPage ? 'page' : undefined}
+              onClick={() => setIsNavCollapsed(true)}
             >
               Contact Us
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -158,7 +161,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
               <div className="navbar-collapse justify-content-between align-items-center w-100">
                 <ul className="navbar-nav w-100 justify-content-between align-items-center font-semibold py-1">
                   <li className="nav-item">
-                    <a className="nav-link active" href="#hero">Home</a>
+                    <a className={`nav-link ${isContactPage ? '' : 'active'}`} href="/#hero" aria-current={isContactPage ? undefined : 'page'}>Home</a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#catalog">Laptops</a>
@@ -190,12 +193,13 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
                 </ul>
 
                 {/* Right Action Button: Contact Us Golden Pill Button */}
-                <button
-                  className="btn btn-skytech-gold px-3.5 py-2 fs-7 fw-bold text-nowrap flex-shrink-0 ms-lg-3"
-                  onClick={onOpenQuoteModal}
+                <a
+                  className={`btn btn-skytech-gold px-3.5 py-2 fs-7 fw-bold text-nowrap flex-shrink-0 ms-lg-3 ${isContactPage ? 'contact-nav-active' : ''}`}
+                  href="/contact-us"
+                  aria-current={isContactPage ? 'page' : undefined}
                 >
                   Contact Us
-                </button>
+                </a>
               </div>
             </div>
           </nav>

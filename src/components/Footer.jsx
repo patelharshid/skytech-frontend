@@ -129,7 +129,7 @@ const Footer = () => {
                   <li><a href="#hero" className="skytech-footer-link-item"><YellowDotIcon />About us</a></li>
                   <li><a href="#catalog" className="skytech-footer-link-item"><YellowDotIcon />Refurbished Systems</a></li>
                   <li><a href="#shop" className="skytech-footer-link-item"><YellowDotIcon />Shop</a></li>
-                  <li><a href="#services" className="skytech-footer-link-item"><YellowDotIcon />Contact Us</a></li>
+                  <li><a href="/contact-us" className="skytech-footer-link-item"><YellowDotIcon />Contact Us</a></li>
                 </ul>
               </div>
 

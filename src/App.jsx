@@ -13,6 +13,7 @@ import CheckoutModal from './components/CheckoutModal';
 import RentalEstimatorModal from './components/RentalEstimatorModal';
 import BulkInquiryModal from './components/BulkInquiryModal';
 import Footer from './components/Footer';
+import ContactPage from './components/ContactPage';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -30,6 +31,7 @@ function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isRentModalOpen, setIsRentModalOpen] = useState(false);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const isContactPage = window.location.pathname.replace(/\/$/, '') === '/contact-us';
 
   const toggleTheme = () => {
     const nextTheme = theme === 'light' ? 'dark' : 'light';
@@ -78,7 +80,7 @@ function App() {
         onOpenRentModal={() => setIsRentModalOpen(true)}
       />
 
-      <main>
+      {isContactPage ? <ContactPage /> : <main>
         <HeroBanner
           onOpenRentModal={() => setIsRentModalOpen(true)}
           onOpenQuoteModal={() => setIsQuoteModalOpen(true)}
@@ -99,7 +101,7 @@ function App() {
         <FAQSection />
 
         <GetInTouchSection />
-      </main>
+      </main>}
 
       <Footer
         onOpenRentModal={() => setIsRentModalOpen(true)}
