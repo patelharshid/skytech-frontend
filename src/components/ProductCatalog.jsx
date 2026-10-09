@@ -95,12 +95,6 @@ const ProductCatalog = ({ onAddToCart }) => {
             {filteredProducts.map(product => (
               <div key={product.id} className="col-6 col-md-4 col-lg-3">
                 <div className="product-card sky-card h-100 p-3 d-flex flex-column justify-content-between position-relative">
-                  {product.popular && (
-                    <span className="position-absolute top-0 end-0 m-3 badge bg-danger z-1">
-                      Hot Seller
-                    </span>
-                  )}
-
                   <div>
                     {/* Product Image */}
                     <div className="product-image position-relative overflow-hidden rounded-3 mb-3 bg-surface" style={{ height: '180px' }}>
@@ -109,9 +103,6 @@ const ProductCatalog = ({ onAddToCart }) => {
                         alt={product.name}
                         className="w-100 h-100 object-fit-cover transition-all hover-scale"
                       />
-                      <span className="position-absolute bottom-0 start-0 m-2 badge badge-emerald font-mono fs-8">
-                        {product.condition}
-                      </span>
                     </div>
 
                     {/* Brand & Title */}
