@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   ArrowLeft,
   Box,
@@ -33,6 +33,7 @@ function ProductDetailPage({ productId, onAddToCart }) {
   const product = products?.find((item) => String(item.id) === String(productId));
   const galleryImages = product?.images?.length ? product.images : product?.image ? [product.image] : [];
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const relatedProductsRef = useRef(null);
   const detailFields = [
     ['Brand', product?.brand],
     ['Series', product?.series],
@@ -46,6 +47,13 @@ function ProductDetailPage({ productId, onAddToCart }) {
   ].filter(([, value]) => value);
   const listedDetailValues = detailFields.map(([, value]) => value);
   const additionalSpecs = (product?.specs || []).filter((spec) => !listedDetailValues.includes(spec));
+  const sameCategoryProducts = (products || []).filter((item) => (
+    String(item.id) !== String(productId) && item.category === product?.category
+  ));
+  const otherCategoryProducts = (products || []).filter((item) => (
+    String(item.id) !== String(productId) && item.category !== product?.category
+  ));
+  const relatedProducts = [...sameCategoryProducts, ...otherCategoryProducts].slice(0, 4);
 
   useEffect(() => {
     setActiveImageIndex(0);
@@ -139,7 +147,7 @@ function ProductDetailPage({ productId, onAddToCart }) {
                 <div className="text-uppercase fw-bold product-detail-brand">{product.brand}</div>
                 <h1 className="product-detail-title">{product.name}</h1>
                 {product.price != null && (
-                  <div className="product-detail-price mb-4">${Number(product.price).toLocaleString()}</div>
+                  <div className="product-detail-price mb-4">₹{Number(product.price).toLocaleString('en-IN')}</div>
                 )}
                 {product.condition && <div className="mb-4"><span className="badge rounded-pill product-condition-badge">{product.condition}</span></div>}
                 {product.description && <p className="text-secondary mb-4">{product.description}</p>}
@@ -186,6 +194,55 @@ function ProductDetailPage({ productId, onAddToCart }) {
             </div>
           </div>
         </section>
+
+        {relatedProducts.length > 0 && (
+          <section className="product-related-section mt-5" aria-labelledby="related-products-title">
+            <div className="d-flex align-items-center justify-content-between gap-3 mb-4">
+              <h2 id="related-products-title" className="h3 fw-bold mb-0 product-related-title">Related Products</h2>
+              <div className="d-flex gap-2">
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary rounded-circle product-related-arrow"
+                  aria-label="Scroll related products left"
+                  onClick={() => relatedProductsRef.current?.scrollBy({ left: -320, behavior: 'smooth' })}
+                >
+                  <ChevronLeft size={22} />
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary rounded-circle product-related-arrow"
+                  aria-label="Scroll related products right"
+                  onClick={() => relatedProductsRef.current?.scrollBy({ left: 320, behavior: 'smooth' })}
+                >
+                  <ChevronRight size={22} />
+                </button>
+              </div>
+            </div>
+
+            <div className="product-related-track" ref={relatedProductsRef}>
+              {relatedProducts.map((relatedProduct) => (
+                <article className="product-related-card" key={relatedProduct.id}>
+                  <div className="product-related-image-wrap">
+                    <img src={relatedProduct.image} alt={relatedProduct.name} className="product-related-image" />
+                  </div>
+                  <h3 className="product-related-name">{relatedProduct.name}</h3>
+                  <div className="d-flex align-items-center justify-content-between gap-2 product-related-card-footer">
+                    <div>
+                      <span className="d-block fw-semibold text-secondary small">Price</span>
+                      <span className="fw-bold product-related-price">₹{Number(relatedProduct.price).toLocaleString('en-IN')}</span>
+                    </div>
+                    <a
+                      href={`/product/${encodeURIComponent(relatedProduct.id)}`}
+                      className="btn btn-sm rounded-pill product-related-link"
+                    >
+                      View More
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );
