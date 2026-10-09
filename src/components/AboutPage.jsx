@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/about-page.css';
 import { FileText, MonitorCog, ShoppingBag, Target, Wrench } from 'lucide-react';
 import aboutStoryImage from '../assets/about-story.png';
 import aboutMissionImage from '../assets/about-mission.png';
