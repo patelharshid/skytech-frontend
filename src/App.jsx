@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroBanner from './components/HeroBanner';
-import AboutSection from './components/AboutSection';
 import ProductCatalog from './components/ProductCatalog';
 import SnapshotOfExcellence from './components/SnapshotOfExcellence';
 import IndustriesWeServe from './components/IndustriesWeServe';
@@ -84,10 +83,6 @@ function App() {
           onOpenRentModal={() => setIsRentModalOpen(true)}
           onOpenQuoteModal={() => setIsQuoteModalOpen(true)}
           onExploreCatalog={() => handleScrollToSection('shop')}
-        />
-        <AboutSection
-          onExploreCatalog={() => handleScrollToSection('shop')}
-          onContact={() => setIsQuoteModalOpen(true)}
         />
         <ProductCatalog
           onAddToCart={handleAddToCart}
