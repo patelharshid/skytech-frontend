@@ -147,7 +147,7 @@ const GetInTouchSection = () => {
                     <div className="mt-2">
                       <button
                         type="submit"
-                        className="btn border-0 rounded-pill px-5 py-2.5 fw-bold text-white shadow-sm"
+                        className="btn border-0 rounded-pill px-5 py-2 fw-bold text-white shadow-sm"
                         style={{
                           background: 'linear-gradient(90deg, #FFB800 0%, #FFA500 100%)',
                           fontSize: '14px',

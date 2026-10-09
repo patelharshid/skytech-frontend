@@ -36,7 +36,7 @@ const HeroBanner = ({ onOpenRentModal, onOpenQuoteModal, onExploreCatalog }) => 
         <div className="row align-items-center gy-4">
           {/* Left Text Column */}
           <div className="col-lg-7">
-            <div className="d-inline-flex align-items-center gap-2 badge-gold mb-3 px-3 py-1.5 text-dark fw-bold">
+            <div className="d-inline-flex align-items-center gap-2 badge-gold mb-3 px-3 py-2 text-dark fw-bold">
               <span>{slide.tag}</span>
             </div>
 
@@ -48,7 +48,7 @@ const HeroBanner = ({ onOpenRentModal, onOpenQuoteModal, onExploreCatalog }) => 
               {slide.subtitle}
             </p>
 
-            <div className="row g-2 mb-4 text-light fs-7">
+            <div className="row g-2 mb-4 text-light small">
               {slide.bullets.map((bullet, idx) => (
                 <div key={idx} className="col-sm-6 d-flex align-items-center gap-2">
                   <CheckCircle2 size={16} className="text-warning flex-shrink-0" />
@@ -81,7 +81,7 @@ const HeroBanner = ({ onOpenRentModal, onOpenQuoteModal, onExploreCatalog }) => 
           {/* Right Image Visual Banner */}
           <div className="col-lg-5">
             <div className="sky-card p-3 bg-slate border-secondary shadow-lg position-relative overflow-hidden">
-              <span className="position-absolute top-0 end-0 m-3 badge bg-warning text-dark fs-7 fw-bold z-1 shadow">
+              <span className="position-absolute top-0 end-0 m-3 badge bg-warning text-dark small fw-bold z-1 shadow">
                 {slide.bgBadge}
               </span>
               <img 

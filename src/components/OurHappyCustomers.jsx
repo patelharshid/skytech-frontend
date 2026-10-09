@@ -189,7 +189,7 @@ const OurHappyCustomers = () => {
                       </div>
 
                       {/* Review Text */}
-                      <p className="fs-7 text-start mb-0" style={{ color: 'var(--customers-text-color)', lineHeight: '1.55' }}>
+                      <p className="small text-start mb-0" style={{ color: 'var(--customers-text-color)', lineHeight: '1.55' }}>
                         {rev.comment}
                       </p>
                     </div>

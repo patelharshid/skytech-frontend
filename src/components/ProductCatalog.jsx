@@ -56,13 +56,13 @@ const ProductCatalog = ({ onAddToCart }) => {
               <div className="product-search-controls d-flex gap-2">
                 <input
                   type="text"
-                  className="form-control sky-form-control fs-7"
+                  className="form-control sky-form-control small"
                   placeholder="Search laptops, GPUs, specs..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <select
-                  className="form-select sky-form-control fs-7"
+                  className="form-select sky-form-control small"
                   style={{ width: '160px' }}
                   value={selectedBrand}
                   onChange={(e) => setSelectedBrand(e.target.value)}
@@ -84,7 +84,7 @@ const ProductCatalog = ({ onAddToCart }) => {
         {loading ? (
           <div className="text-center py-5">
             <Loader2 className="animate-spin text-primary mx-auto mb-3" size={32} />
-            <p className="text-muted fs-7">Loading catalog data from service...</p>
+            <p className="text-muted small">Loading catalog data from service...</p>
           </div>
         ) : !filteredProducts || filteredProducts.length === 0 ? (
           <div className="text-center py-5 sky-card">
@@ -156,7 +156,7 @@ const ProductCatalog = ({ onAddToCart }) => {
                       </button>
 
                       <button
-                        className="btn btn-sm btn-sky-primary d-flex align-items-center gap-1 px-2.5 py-1.5"
+                        className="btn btn-sm btn-sky-primary d-flex align-items-center gap-1 px-2 py-2"
                         onClick={() => onAddToCart(product)}
                       >
                         <ShoppingBag size={14} />
@@ -206,8 +206,8 @@ const ProductCatalog = ({ onAddToCart }) => {
                       )}
                     </div>
 
-                    <h6 className="fw-bold fs-7 mb-2">Technical Specifications:</h6>
-                    <ul className="list-unstyled text-muted fs-7 mb-4">
+                    <h6 className="fw-bold small mb-2">Technical Specifications:</h6>
+                    <ul className="list-unstyled text-muted small mb-4">
                       {quickViewProduct.specs.map((s, idx) => (
                         <li key={idx} className="d-flex align-items-center gap-2 mb-1">
                           <Check size={14} className="text-success" />
@@ -218,7 +218,7 @@ const ProductCatalog = ({ onAddToCart }) => {
 
                     <div className="d-flex gap-2">
                       <button
-                        className="btn btn-sky-primary w-100 d-flex align-items-center justify-content-center gap-2 py-2.5"
+                        className="btn btn-sky-primary w-100 d-flex align-items-center justify-content-center gap-2 py-2"
                         onClick={() => {
                           onAddToCart(quickViewProduct);
                           setQuickViewProduct(null);

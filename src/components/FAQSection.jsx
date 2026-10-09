@@ -58,7 +58,7 @@ const FAQSection = () => {
 
                       <div className={`faq-accordion-body-wrapper ${isOpen ? 'is-open' : ''}`}>
                         <div className="faq-accordion-body-inner">
-                          <div className="pt-3 mt-3 border-top faq-answer-text fs-7" style={{ lineHeight: '1.65' }}>
+                          <div className="pt-3 mt-3 border-top faq-answer-text small" style={{ lineHeight: '1.65' }}>
                             {faq.answer}
                           </div>
                         </div>

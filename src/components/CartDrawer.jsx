@@ -44,9 +44,9 @@ const CartDrawer = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem
                           style={{ width: '64px', height: '64px' }}
                         />
                         <div className="flex-grow-1 min-w-0">
-                          <h6 className="fw-bold fs-7 mb-1 text-truncate">{item.name}</h6>
+                          <h6 className="fw-bold small mb-1 text-truncate">{item.name}</h6>
                           <div className="fs-8 text-muted font-mono">{item.condition}</div>
-                          <div className="fw-bold text-primary fs-7 mt-1 font-mono">${item.price}</div>
+                          <div className="fw-bold text-primary small mt-1 font-mono">${item.price}</div>
                         </div>
 
                         {/* Quantity Controls */}
@@ -86,12 +86,12 @@ const CartDrawer = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem
                   <div className="sky-card p-4 bg-surface">
                     <h6 className="fw-bold mb-3">Order Summary</h6>
                     
-                    <div className="d-flex justify-content-between mb-2 fs-7 text-muted">
+                    <div className="d-flex justify-content-between mb-2 small text-muted">
                       <span>Subtotal:</span>
                       <span className="fw-bold text-main font-mono">${subtotal.toLocaleString()}</span>
                     </div>
 
-                    <div className="d-flex justify-content-between mb-3 fs-7 text-muted">
+                    <div className="d-flex justify-content-between mb-3 small text-muted">
                       <span>Insured Express Shipping:</span>
                       <span className="fw-bold text-main font-mono">{shipping === 0 ? 'FREE' : `$${shipping}`}</span>
                     </div>

@@ -69,7 +69,7 @@ const BulkInquiryModal = ({ isOpen, onClose }) => {
               <form onSubmit={handleSubmitInquiry}>
                 {/* Type Selection */}
                 <div className="mb-4">
-                  <label className="fw-semibold text-main fs-7 mb-2 d-block">Inquiry Purpose</label>
+                  <label className="fw-semibold text-main small mb-2 d-block">Inquiry Purpose</label>
                   <div className="btn-group w-100">
                     <button
                       type="button"
@@ -97,7 +97,7 @@ const BulkInquiryModal = ({ isOpen, onClose }) => {
 
                 <div className="row g-3 mb-3">
                   <div className="col-md-6">
-                    <label className="form-label fs-7 fw-semibold">Your Full Name *</label>
+                    <label className="form-label small fw-semibold">Your Full Name *</label>
                     <input
                       type="text"
                       className="form-control sky-form-control"
@@ -108,7 +108,7 @@ const BulkInquiryModal = ({ isOpen, onClose }) => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label className="form-label fs-7 fw-semibold">Corporate Email *</label>
+                    <label className="form-label small fw-semibold">Corporate Email *</label>
                     <input
                       type="email"
                       className="form-control sky-form-control"
@@ -119,7 +119,7 @@ const BulkInquiryModal = ({ isOpen, onClose }) => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label className="form-label fs-7 fw-semibold">Phone / WhatsApp Number *</label>
+                    <label className="form-label small fw-semibold">Phone / WhatsApp Number *</label>
                     <input
                       type="tel"
                       className="form-control sky-form-control"
@@ -130,7 +130,7 @@ const BulkInquiryModal = ({ isOpen, onClose }) => {
                     />
                   </div>
                   <div className="col-md-6">
-                    <label className="form-label fs-7 fw-semibold">Company Name</label>
+                    <label className="form-label small fw-semibold">Company Name</label>
                     <input
                       type="text"
                       className="form-control sky-form-control"
@@ -142,7 +142,7 @@ const BulkInquiryModal = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label fs-7 fw-semibold">Requirement Details / System Specifications</label>
+                  <label className="form-label small fw-semibold">Requirement Details / System Specifications</label>
                   <textarea
                     className="form-control sky-form-control"
                     rows="3"

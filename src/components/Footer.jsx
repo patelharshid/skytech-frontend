@@ -87,7 +87,7 @@ const Footer = () => {
               </div>
 
               {/* Description */}
-              <p className="fs-7 text-muted mb-4 px-2" style={{ lineHeight: '1.65', color: '#52453c' }}>
+              <p className="small text-muted mb-4 px-2" style={{ lineHeight: '1.65', color: '#52453c' }}>
                 SkyTech Systems, is based out of Ahmedabad and having customer base across India, we are serving more than 1200+ Corporate and SME customers in Gujarat.
               </p>
 

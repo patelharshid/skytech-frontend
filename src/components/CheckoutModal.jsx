@@ -87,7 +87,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, onOrderComplete }) => {
                     <h6 className="fw-bold mb-3">1. Shipping Information</h6>
 
                     <div className="mb-3">
-                      <label className="form-label fs-7 fw-semibold">Full Name *</label>
+                      <label className="form-label small fw-semibold">Full Name *</label>
                       <input
                         type="text"
                         className="form-control sky-form-control"
@@ -99,7 +99,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, onOrderComplete }) => {
                     </div>
 
                     <div className="mb-3">
-                      <label className="form-label fs-7 fw-semibold">Email Address *</label>
+                      <label className="form-label small fw-semibold">Email Address *</label>
                       <input
                         type="email"
                         className="form-control sky-form-control"
@@ -111,7 +111,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, onOrderComplete }) => {
                     </div>
 
                     <div className="mb-3">
-                      <label className="form-label fs-7 fw-semibold">Shipping Address *</label>
+                      <label className="form-label small fw-semibold">Shipping Address *</label>
                       <input
                         type="text"
                         className="form-control sky-form-control"
@@ -124,7 +124,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, onOrderComplete }) => {
 
                     <div className="row g-2 mb-4">
                       <div className="col-6">
-                        <label className="form-label fs-7 fw-semibold">City *</label>
+                        <label className="form-label small fw-semibold">City *</label>
                         <input
                           type="text"
                           className="form-control sky-form-control"
@@ -135,7 +135,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, onOrderComplete }) => {
                         />
                       </div>
                       <div className="col-6">
-                        <label className="form-label fs-7 fw-semibold">ZIP Code *</label>
+                        <label className="form-label small fw-semibold">ZIP Code *</label>
                         <input
                           type="text"
                           className="form-control sky-form-control"
@@ -182,7 +182,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, onOrderComplete }) => {
                           ))}
                         </div>
 
-                        <div className="pt-3 border-top fs-7">
+                        <div className="pt-3 border-top small">
                           <div className="d-flex justify-content-between mb-1 text-muted">
                             <span>Subtotal:</span>
                             <span className="font-mono">${subtotal.toLocaleString()}</span>

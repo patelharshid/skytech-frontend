@@ -94,13 +94,13 @@ const RentalEstimatorModal = ({ isOpen, onClose }) => {
                 {/* Left Controls */}
                 <div className="col-lg-7">
                   <div className="mb-4">
-                    <label className="fw-semibold text-main fs-7 mb-2 d-block">1. Select Rental System</label>
+                    <label className="fw-semibold text-main small mb-2 d-block">1. Select Rental System</label>
                     <div className="d-flex flex-column gap-2">
                       {rentalOptions.map(opt => (
                         <button
                           key={opt.id}
                           type="button"
-                          className={`btn text-start p-2.5 rounded-3 border d-flex justify-content-between align-items-center fs-7 ${selectedSystemId === opt.id ? 'btn-skytech-gold text-dark' : 'btn-sky-outline'
+                          className={`btn text-start p-2 rounded-3 border d-flex justify-content-between align-items-center small ${selectedSystemId === opt.id ? 'btn-skytech-gold text-dark' : 'btn-sky-outline'
                             }`}
                           onClick={() => setSelectedSystemId(opt.id)}
                         >
@@ -114,7 +114,7 @@ const RentalEstimatorModal = ({ isOpen, onClose }) => {
                   {/* Quantity & Duration Sliders */}
                   <div className="mb-4">
                     <div className="d-flex justify-content-between mb-1">
-                      <label className="fw-semibold text-main fs-7">2. Quantity (Units)</label>
+                      <label className="fw-semibold text-main small">2. Quantity (Units)</label>
                       <span className="fw-bold font-mono text-warning fs-6">{quantity} Units</span>
                     </div>
                     <input
@@ -129,7 +129,7 @@ const RentalEstimatorModal = ({ isOpen, onClose }) => {
 
                   <div className="mb-3">
                     <div className="d-flex justify-content-between mb-1">
-                      <label className="fw-semibold text-main fs-7">3. Rental Duration (Months)</label>
+                      <label className="fw-semibold text-main small">3. Rental Duration (Months)</label>
                       <span className="fw-bold font-mono text-warning fs-6">{durationMonths} Months</span>
                     </div>
                     <div className="btn-group w-100">
@@ -206,7 +206,7 @@ const RentalEstimatorModal = ({ isOpen, onClose }) => {
 
                       <button
                         type="submit"
-                        className="btn btn-skytech-gold w-100 py-2.5 fw-bold d-flex align-items-center justify-content-center gap-2"
+                        className="btn btn-skytech-gold w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2"
                       >
                         <span>Request System Rental</span>
                         <Send size={16} />

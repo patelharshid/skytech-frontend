@@ -30,7 +30,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
       <TopMarqueeBar />
 
       {/* Main Header Bar (Visible at top) */}
-      <div className="sky-header py-2.5 py-md-3 mb-md-4">
+      <div className="sky-header py-2 py-md-3 mb-md-4">
         <div className="container">
           <div className="row align-items-center gy-2 gy-md-3">
             {/* Brand Logo */}
@@ -52,12 +52,12 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
               <div className="input-group">
                 <input
                   type="text"
-                  className="form-control sky-form-control py-2 fs-7"
+                  className="form-control sky-form-control py-2 small"
                   placeholder="Search Products..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <button className="btn btn-skytech-gold px-3.5 d-flex align-items-center justify-content-center">
+                <button className="btn btn-skytech-gold px-3 d-flex align-items-center justify-content-center">
                   <Search size={18} />
                 </button>
               </div>
@@ -71,7 +71,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
                   <PhoneCall size={17} />
                 </div>
                 <div className="text-nowrap">
-                  <span className="fw-bold fs-7 text-main font-mono text-nowrap">+91 97264 50900</span>
+                  <span className="fw-bold small text-main font-mono text-nowrap">+91 97264 50900</span>
                 </div>
               </div>
 
@@ -81,13 +81,13 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
                   <Mail size={17} />
                 </div>
                 <div className="text-nowrap">
-                  <span className="fw-bold fs-7 text-main font-mono text-nowrap">info@sunraysystems.in</span>
+                  <span className="fw-bold small text-main font-mono text-nowrap">info@sunraysystems.in</span>
                 </div>
               </div>
 
               {/* Mobile Navbar Menu Toggler */}
               <button
-                className="navbar-toggler border-0 p-1.5 d-lg-none flex-shrink-0 text-main"
+                className="navbar-toggler border-0 p-2 d-lg-none flex-shrink-0 text-main"
                 type="button"
                 onClick={handleNavCollapse}
                 aria-label="Toggle navigation"
@@ -133,7 +133,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
             </ul>
 
             <a
-              className={`btn btn-skytech-gold w-100 py-2.5 fs-7 fw-bold ${isContactPage ? 'contact-nav-active' : ''}`}
+              className={`btn btn-skytech-gold w-100 py-2 small fw-bold ${isContactPage ? 'contact-nav-active' : ''}`}
               href="/contact-us"
               aria-current={isContactPage ? 'page' : undefined}
               onClick={() => setIsNavCollapsed(true)}
@@ -151,7 +151,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
             <div className="container-fluid p-0">
               {/* Logo inside floating navbar (visible ONLY when sticky on Desktop) */}
               <a className={`navbar-brand align-items-center gap-2 text-decoration-none me-3 ${isScrolled ? 'd-inline-flex' : 'd-none'}`} href="#">
-                <div className="bg-skytech-gold p-1.5 rounded-3 text-dark d-flex align-items-center justify-content-center" style={{ width: '32px', height: '32px' }}>
+                <div className="bg-skytech-gold p-2 rounded-3 text-dark d-flex align-items-center justify-content-center" style={{ width: '32px', height: '32px' }}>
                   <Laptop size={18} />
                 </div>
                 <span className="fs-5 text-main font-bold tracking-tight">
@@ -195,7 +195,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
 
                 {/* Right Action Button: Contact Us Golden Pill Button */}
                 <a
-                  className={`btn btn-skytech-gold px-3.5 py-2 fs-7 fw-bold text-nowrap flex-shrink-0 ms-lg-3 ${isContactPage ? 'contact-nav-active' : ''}`}
+                  className={`btn btn-skytech-gold px-3 py-2 small fw-bold text-nowrap flex-shrink-0 ms-lg-3 ${isContactPage ? 'contact-nav-active' : ''}`}
                   href="/contact-us"
                   aria-current={isContactPage ? 'page' : undefined}
                 >

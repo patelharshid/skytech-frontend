@@ -1,0 +1,95 @@
+.page-title-banner {
+  min-height: 11.5rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-page-banner {
+  background-color: #475569;
+}
+
+.contact-banner-image {
+  object-position: 84% center;
+}
+
+.about-page-banner {
+  background-image: url('../assets/about-banner.png');
+}
+
+.page-title-shade {
+  background: linear-gradient(90deg, rgba(15, 23, 42, .68), rgba(15, 23, 42, .32));
+}
+
+.contact-location-card {
+  background: linear-gradient(145deg, #f4f9fd, #fff 72%);
+  border-top: 4px solid var(--skytech-orange) !important;
+}
+
+.contact-method-icon {
+  background: #fff0e8;
+}
+
+.contact-form-panel {
+  background: #faf7ef;
+}
+
+.contact-form-panel .form-control {
+  border-color: #d5d7da;
+  border-radius: .5rem;
+}
+
+.contact-form-panel .form-control:focus {
+  border-color: var(--skytech-orange);
+  box-shadow: 0 0 0 .2rem rgba(var(--skytech-orange-rgb), .18);
+}
+
+.contact-form-panel textarea {
+  min-height: 8rem;
+}
+
+.contact-nav-active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(233, 87, 39, .8);
+}
+
+.about-nav-active,
+.skytech-floating-nav .nav-link.about-nav-active {
+  color: #dc4f20 !important;
+  background: #fff !important;
+  border-radius: .35rem;
+}
+
+.navbar-nav .nav-link.active.about-nav-active {
+  color: #dc4f20 !important;
+  background: #fff3ee;
+  border-radius: .55rem;
+}
+
+.about-mission-image {
+  min-height: 12rem;
+}
+
+.about-commitments-heading {
+  max-width: 44rem;
+}
+
+.about-commitment-card {
+  min-height: 18rem;
+}
+
+@media (max-width: 767.98px) {
+  .page-title-banner {
+    min-height: 10rem;
+  }
+
+  .contact-page-banner {
+    background-position: center;
+  }
+
+  .contact-banner-image {
+    object-position: 84% center;
+  }
+
+  .about-page-banner {
+    background-position: center;
+  }
+}
