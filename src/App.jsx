@@ -15,6 +15,7 @@ import BulkInquiryModal from './components/BulkInquiryModal';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
+import ProductDetailPage from './components/ProductDetailPage';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -24,7 +25,7 @@ function App() {
       name: 'Apple MacBook Pro 16" (M3 Max, 36GB RAM, 1TB SSD)',
       price: 3299,
       quantity: 1,
-      condition: 'Certified New',
+
       image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80'
     }
   ]);
@@ -32,8 +33,11 @@ function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isRentModalOpen, setIsRentModalOpen] = useState(false);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-  const isContactPage = window.location.pathname.replace(/\/$/, '') === '/contact-us';
-  const isAboutPage = window.location.pathname.replace(/\/$/, '') === '/about-us';
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+  const isContactPage = currentPath === '/contact-us';
+  const isAboutPage = currentPath === '/about-us';
+  const productRoute = currentPath.match(/^\/product\/([^/]+)$/);
+  const productId = productRoute ? decodeURIComponent(productRoute[1]) : null;
 
   const toggleTheme = () => {
     const nextTheme = theme === 'light' ? 'dark' : 'light';
@@ -82,15 +86,15 @@ function App() {
         onOpenRentModal={() => setIsRentModalOpen(true)}
       />
 
-      {isContactPage ? <ContactPage /> : isAboutPage ? <AboutPage /> : <main>
+      {isContactPage ? <ContactPage /> : isAboutPage ? <AboutPage /> : productId ? (
+        <ProductDetailPage productId={productId} onAddToCart={handleAddToCart} />
+      ) : <main>
         <HeroBanner
           onOpenRentModal={() => setIsRentModalOpen(true)}
           onOpenQuoteModal={() => setIsQuoteModalOpen(true)}
           onExploreCatalog={() => handleScrollToSection('shop')}
         />
-        <ProductCatalog
-          onAddToCart={handleAddToCart}
-        />
+        <ProductCatalog />
 
         <SnapshotOfExcellence />
 

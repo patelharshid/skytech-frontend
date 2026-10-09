@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { Eye, Check, Loader2, ShoppingBag } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { useProducts } from '../hooks/useData';
 
-const ProductCatalog = ({ onAddToCart }) => {
+const ProductCatalog = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedBrand, setSelectedBrand] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [quickViewProduct, setQuickViewProduct] = useState(null);
-
   const { data: filteredProducts, loading } = useProducts({
     category: activeCategory,
     brand: selectedBrand,
@@ -106,13 +104,12 @@ const ProductCatalog = ({ onAddToCart }) => {
                     <span className="fs-6 fw-bold text-primary font-mono text-nowrap">
                       ${product.originalPrice ?? product.price}
                     </span>
-                    <button
-                      type="button"
+                    <a
+                      href={`/product/${encodeURIComponent(product.id)}`}
                       className="btn btn-warning rounded-pill fw-bold text-dark text-nowrap px-3 py-2"
-                      onClick={() => setQuickViewProduct(product)}
                     >
                       View More
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -121,67 +118,6 @@ const ProductCatalog = ({ onAddToCart }) => {
         )}
       </div>
 
-      {/* Quick View Modal */}
-      {quickViewProduct && (
-        <div className="modal fade show d-block" tabIndex="-1" style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
-          <div className="modal-dialog modal-dialog-centered modal-lg">
-            <div className="modal-content shadow-lg p-3">
-              <div className="modal-header border-0 pb-0">
-                <span className="badge badge-sky">{quickViewProduct.brand}</span>
-                <button type="button" className="btn-close" onClick={() => setQuickViewProduct(null)}></button>
-              </div>
-
-              <div className="modal-body">
-                <div className="row g-4 align-items-center">
-                  <div className="col-md-6">
-                    <img
-                      src={quickViewProduct.image}
-                      alt={quickViewProduct.name}
-                      className="w-100 rounded-3 object-fit-cover border"
-                      style={{ maxHeight: '280px' }}
-                    />
-                  </div>
-
-                  <div className="col-md-6">
-                    <h4 className="fw-bold mb-2">{quickViewProduct.name}</h4>
-                    <div className="d-flex align-items-center gap-2 mb-3">
-                      <span className="badge badge-emerald">{quickViewProduct.condition}</span>
-                      <span className="text-muted fs-8 font-mono">SKU: ST-89104</span>
-                    </div>
-
-                    <div className="fs-3 fw-bold text-primary font-mono mb-3">
-                      ${quickViewProduct.originalPrice ?? quickViewProduct.price}
-                    </div>
-
-                    <h6 className="fw-bold small mb-2">Technical Specifications:</h6>
-                    <ul className="list-unstyled text-muted small mb-4">
-                      {quickViewProduct.specs.map((s, idx) => (
-                        <li key={idx} className="d-flex align-items-center gap-2 mb-1">
-                          <Check size={14} className="text-success" />
-                          <span>{s}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="d-flex gap-2">
-                      <button
-                        className="btn btn-sky-primary w-100 d-flex align-items-center justify-content-center gap-2 py-2"
-                        onClick={() => {
-                          onAddToCart(quickViewProduct);
-                          setQuickViewProduct(null);
-                        }}
-                      >
-                        <ShoppingBag size={18} />
-                        <span>Add to Cart</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
