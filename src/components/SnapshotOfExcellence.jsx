@@ -69,7 +69,7 @@ const SnapshotOfExcellence = () => {
         <div className="row gy-5 align-items-center">
           {/* Left Text Column */}
           <div className="col-lg-5">
-            <h2 className="display-5 fw-extrabold text-main mb-2 tracking-tight">
+            <h2 className="fs-2 fw-bold text-main mb-2 tracking-tight">
               {snapshotData?.title}
             </h2>
             <div className="fs-5 fw-bold text-muted mb-3 d-flex align-items-center gap-2">

@@ -167,7 +167,7 @@ const GetInTouchSection = () => {
             {/* Find Us Here: Google Map */}
             <div className="p-4 rounded-4" style={{ backgroundColor: '#FAF7F2', border: '1px solid #F3ECE1' }}>
               <div className="d-flex align-items-center justify-content-between mb-3">
-                <h3 className="fs-4 fw-bold text-dark mb-0">Find Us Here</h3>
+                <h3 className="fs-2 fw-bold text-dark mb-0">Find Us Here</h3>
               </div>
               <div className="rounded-4 overflow-hidden border bg-white shadow-sm" style={{ borderColor: '#E5E7EB' }}>
                 <iframe
@@ -185,7 +185,7 @@ const GetInTouchSection = () => {
 
             {/* Company Information */}
             <div className="p-4 rounded-4" style={{ backgroundColor: '#FAF7F2', border: '1px solid #F3ECE1' }}>
-              <h3 className="fs-4 fw-bold text-dark mb-4">Company Information</h3>
+              <h3 className="fs-2 fw-bold text-dark mb-4">Company Information</h3>
               <div className="d-flex flex-column gap-3">
                 {/* Location Card */}
                 <div className="d-flex align-items-start gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: '#E5E7EB' }}>

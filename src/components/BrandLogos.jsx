@@ -6,7 +6,7 @@ const BrandLogos = () => {
     <section className="py-5 bg-white border-top border-bottom">
       <div className="container">
         {/* Title */}
-        <h3 className="text-center fw-bold fs-4 mb-4 text-main">
+        <h3 className="text-center fw-bold fs-2 mb-4 text-main">
           Working Alongside Global Brands
         </h3>
 

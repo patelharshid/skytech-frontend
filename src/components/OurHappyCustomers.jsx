@@ -117,7 +117,7 @@ const OurHappyCustomers = () => {
       <div className="container py-3 py-md-4">
         {/* Main Section Header */}
         <div className="text-center mb-4 mb-md-5">
-          <h2 className="display-6 fw-extrabold mb-3 tracking-tight" style={{ color: 'var(--customers-title-color)', fontWeight: 800 }}>
+          <h2 className="fs-2 fw-bold mb-3 tracking-tight" style={{ color: 'var(--customers-title-color)' }}>
             What Our Customers Say
           </h2>
         </div>

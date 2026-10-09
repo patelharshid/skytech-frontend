@@ -36,7 +36,7 @@ const IndustriesWeServe = () => {
 
       <div className="container position-relative z-1 py-4 py-md-5">
         {/* Title */}
-        <h2 className="display-5 fw-extrabold text-white text-center mb-4 mb-md-5 tracking-tight">
+        <h2 className="fs-2 fw-bold text-white text-center mb-4 mb-md-5 tracking-tight">
           Industry We Serve
         </h2>
 

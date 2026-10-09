@@ -18,7 +18,7 @@ const FAQSection = () => {
           {/* Left Column: FAQ Accordion */}
           <div className="col-lg-6">
             <div className="mb-4">
-              <h2 className="fw-bold text-dark" style={{ color: '#111827' }}>
+              <h2 className="fs-2 fw-bold text-dark" style={{ color: '#111827' }}>
                 Frequently Asked Questions
               </h2>
             </div>
