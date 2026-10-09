@@ -407,6 +407,8 @@ h6 {
 .text-truncate-2 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -459,6 +461,119 @@ h6 {
 
   .display-4 {
     font-size: 1.75rem !important;
+  }
+
+  .product-search-controls {
+    align-items: stretch;
+  }
+
+  .product-search-controls .form-select {
+    flex: 0 0 125px;
+    width: 125px !important;
+  }
+
+  .product-card {
+    padding: .65rem !important;
+    border-radius: 12px;
+  }
+
+  .product-image {
+    height: 130px !important;
+  }
+
+  .product-card .badge.position-absolute {
+    margin: .35rem !important;
+    font-size: .62rem;
+  }
+
+  .product-card-actions {
+    align-items: flex-start !important;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .product-card-actions > div:first-child {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    column-gap: .3rem;
+  }
+
+  .product-card-actions .fs-5 {
+    font-size: 1rem !important;
+  }
+
+  .product-card-actions > div:last-child {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .modal.fade.show.d-block {
+    padding: .5rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal.fade.show.d-block .modal-dialog {
+    margin: 0 auto;
+    min-height: calc(100% - 1rem);
+  }
+
+  .modal.fade.show.d-block .modal-content {
+    max-height: calc(100vh - 1rem);
+    max-height: calc(100dvh - 1rem);
+    padding: .75rem !important;
+  }
+
+  .modal.fade.show.d-block .modal-body {
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .modal.fade.show.d-block .modal-header {
+    gap: .5rem;
+    align-items: flex-start;
+  }
+
+  .modal.fade.show.d-block .modal-header > div {
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+
+  .modal.fade.show.d-block .modal-title {
+    font-size: 1rem;
+  }
+
+  .modal .btn-group > .btn {
+    white-space: normal;
+  }
+
+  .cart-item-row {
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+    gap: .65rem !important;
+  }
+
+  .cart-item-row > img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .cart-item-row > div:last-child {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .product-card-actions {
+    align-items: flex-start !important;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .product-card-actions > div:last-child {
+    width: 100%;
+    justify-content: flex-end;
   }
 }
 
@@ -765,18 +880,3 @@ h6 {
   color: #ea580c !important;
 }
 
-.about-section {
-  background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
-}
-.about-eyebrow { color: var(--skytech-amber-dark); font-size: .76rem; font-weight: 800; letter-spacing: .14em; }
-.about-visual { min-height: 430px; display: flex; align-items: center; background: linear-gradient(140deg, #0f172a 4%, #1e293b 62%, #34445d 100%); box-shadow: 0 24px 60px rgba(15, 23, 42, .18); }
-.about-visual-glow { position: absolute; width: 300px; height: 300px; right: -90px; top: -100px; border-radius: 50%; background: rgba(254, 207, 7, .15); filter: blur(4px); }
-.about-kicker { display: inline-flex; align-items: center; gap: .45rem; color: var(--skytech-gold); font-size: .82rem; font-weight: 700; }
-.about-highlight { width: fit-content; padding: .85rem 1rem; border: 1px solid rgba(255,255,255,.15); border-radius: 1rem; background: rgba(255,255,255,.07); backdrop-filter: blur(8px); }
-.about-highlight-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: .8rem; color: var(--skytech-dark); background: var(--skytech-gold); }
-.about-visual-mark { position: absolute; right: 1.5rem; bottom: -2rem; color: rgba(255,255,255,.07); }
-.about-commitment { display: flex; gap: .75rem; padding: .9rem; border: 1px solid var(--border-color); border-radius: .9rem; background: rgba(255,255,255,.78); }
-.about-commitment-icon { flex: 0 0 36px; display: grid; place-items: center; width: 36px; height: 36px; color: var(--skytech-amber-dark); background: #fff6d6; border-radius: .65rem; }
-.about-commitment h3 { margin: .1rem 0 .25rem; color: var(--text-main); font-size: .88rem; font-weight: 750; }
-.about-commitment p { margin: 0; color: var(--text-muted); font-size: .78rem; line-height: 1.5; }
-@media (max-width: 575.98px) { .about-visual { min-height: 350px; } }

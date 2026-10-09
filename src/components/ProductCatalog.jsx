@@ -53,7 +53,7 @@ const ProductCatalog = ({ onAddToCart }) => {
 
             {/* Search Input & Brand Filter */}
             <div className="col-lg-6">
-              <div className="d-flex gap-2">
+              <div className="product-search-controls d-flex gap-2">
                 <input
                   type="text"
                   className="form-control sky-form-control fs-7"
@@ -94,7 +94,7 @@ const ProductCatalog = ({ onAddToCart }) => {
           <div className="row g-2 g-sm-3 g-md-4">
             {filteredProducts.map(product => (
               <div key={product.id} className="col-6 col-md-4 col-lg-3">
-                <div className="sky-card h-100 p-3 d-flex flex-column justify-content-between position-relative">
+                <div className="product-card sky-card h-100 p-3 d-flex flex-column justify-content-between position-relative">
                   {product.popular && (
                     <span className="position-absolute top-0 end-0 m-3 badge bg-danger z-1">
                       Hot Seller
@@ -103,7 +103,7 @@ const ProductCatalog = ({ onAddToCart }) => {
 
                   <div>
                     {/* Product Image */}
-                    <div className="position-relative overflow-hidden rounded-3 mb-3 bg-surface" style={{ height: '180px' }}>
+                    <div className="product-image position-relative overflow-hidden rounded-3 mb-3 bg-surface" style={{ height: '180px' }}>
                       <img
                         src={product.image}
                         alt={product.name}
@@ -138,7 +138,7 @@ const ProductCatalog = ({ onAddToCart }) => {
                   </div>
 
                   {/* Price & Action */}
-                  <div className="pt-3 border-top d-flex align-items-center justify-content-between">
+                  <div className="product-card-actions pt-3 border-top d-flex align-items-center justify-content-between">
                     <div>
                       <span className="fs-5 fw-bold text-primary font-mono">${product.price}</span>
                       {product.originalPrice > product.price && (

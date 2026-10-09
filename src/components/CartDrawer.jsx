@@ -36,7 +36,7 @@ const CartDrawer = ({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem
                 <div className="col-lg-7">
                   <div className="d-flex flex-column gap-3" style={{ maxHeight: '340px', overflowY: 'auto' }}>
                     {cartItems.map(item => (
-                      <div key={item.id} className="p-3 rounded-3 border bg-surface d-flex align-items-center justify-content-between gap-3">
+                      <div key={item.id} className="cart-item-row p-3 rounded-3 border bg-surface d-flex align-items-center justify-content-between gap-3">
                         <img 
                           src={item.image} 
                           alt={item.name} 
