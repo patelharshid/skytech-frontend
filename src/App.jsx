@@ -11,7 +11,6 @@ import GetInTouchSection from './components/GetInTouchSection';
 import CartDrawer from './components/CartDrawer';
 import CheckoutModal from './components/CheckoutModal';
 import RentalEstimatorModal from './components/RentalEstimatorModal';
-import BulkInquiryModal from './components/BulkInquiryModal';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
@@ -117,11 +116,6 @@ function App() {
       <RentalEstimatorModal
         isOpen={isRentModalOpen}
         onClose={() => setIsRentModalOpen(false)}
-      />
-
-      <BulkInquiryModal
-        isOpen={isQuoteModalOpen}
-        onClose={() => setIsQuoteModalOpen(false)}
       />
 
       <CartDrawer
