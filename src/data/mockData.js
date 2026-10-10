@@ -1,9 +1,11 @@
+import { primaryNumber, primaryEmail } from '../constants/constants';
+
 export const siteConfigData = {
   storeName: "SkyTech",
   tagline: "Systems & Rentals",
-  phone: "+91 97264 50900",
-  email: "info@sunraysystems.in",
-  whatsappPhone: "919726450900",
+  phone: `+91 ${primaryNumber}`,
+  email: primaryEmail,
+  whatsappPhone: `91${primaryNumber}`,
   address: "SkyTech Plaza, IT Tech Park, Gate 4",
   workingHours: "Mon - Sat: 9:30 AM - 8:00 PM"
 };
@@ -13,7 +15,7 @@ export const marqueeAnnouncementsData = [
   "💻 Systems on Rent: High-Speed Laptops & Desktops for Corporates & Students starting @ $19/mo",
   "🚚 Free Express Doorstep Shipping & Insured Pickup Across Nation",
   "🛡️ 100% Tested Quality: 50-Point Hardware Inspection + 1-Year Warranty",
-  "📞 Hotline Support: +91 97264 50900 | Bulk Inquiries Welcome"
+  `📞 Hotline Support: +91 ${primaryNumber} | Bulk Inquiries Welcome`
 ];
 
 export const slidesData = [
@@ -213,7 +215,7 @@ export const faqData = [
   {
     id: 2,
     question: "How Can I Contact Customer Support?",
-    answer: "You can reach our dedicated support team via call or WhatsApp at +91 97264 50900, email us at info@sunraysystems.in, or visit our store at Sepal Olivia 101, Bopal Cross Road, Ahmedabad, Gujarat (Mon-Sat 11:00 AM – 7:00 PM)."
+    answer: `You can reach our dedicated support team via call or WhatsApp at +91 ${primaryNumber}, email us at ${primaryEmail}, or visit our store at Sepal Olivia 101, Bopal Cross Road, Ahmedabad, Gujarat (Mon-Sat 11:00 AM – 7:00 PM).`
   },
   {
     id: 3,

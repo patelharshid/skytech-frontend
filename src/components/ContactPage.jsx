@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../css/contact-page.css';
 import { AtSign, BriefcaseBusiness, Clock3, MapPin, Navigation, PhoneCall } from 'lucide-react';
 import contactBanner from '../assets/contact-banner.png';
-import { primaryNumber } from '../constants/constants';
+import { primaryNumber, primaryEmail } from '../constants/constants';
 
 const officeAddress = 'Sepal Olivia 101, 1st Floor, Beside Iscon Platinum, S.P. Ring Road, Bopal Cross Road, Ahmedabad, Gujarat 380058';
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
@@ -40,9 +40,9 @@ function ContactPage() {
                   <span className="contact-method-icon rounded-circle p-2 text-orange"><PhoneCall size={18} /></span>
                   <span className="d-flex flex-column"><small className="text-secondary">Call our team</small><strong className="text-dark">+91 {primaryNumber}</strong></span>
                 </a>
-                <a className="contact-method d-flex align-items-center gap-3 border-top py-2 text-decoration-none" href="mailto:info@sunraysystems.in">
+                <a className="contact-method d-flex align-items-center gap-3 border-top py-2 text-decoration-none" href={`mailto:${primaryEmail}`}>
                   <span className="contact-method-icon rounded-circle p-2 text-orange"><AtSign size={18} /></span>
-                  <span className="d-flex flex-column"><small className="text-secondary">Email us</small><strong className="text-dark">info@sunraysystems.in</strong></span>
+                  <span className="d-flex flex-column"><small className="text-secondary">Email us</small><strong className="text-dark">{primaryEmail}</strong></span>
                 </a>
               </div>
 
@@ -56,7 +56,7 @@ function ContactPage() {
                 <div className="col-12 col-sm-6">
                   <section className="card h-100 border-0 rounded-4 p-3 bg-body-tertiary">
                     <h3 className="h6 fw-bold d-flex align-items-center gap-2"><BriefcaseBusiness size={18} className="text-orange" />Careers</h3>
-                    <p className="small text-secondary mb-0">Interested in joining our team? <a className="text-orange text-decoration-none" href="mailto:info@sunraysystems.in">Email us</a></p>
+                    <p className="small text-secondary mb-0">Interested in joining our team? <a className="text-orange text-decoration-none" href={`mailto:${primaryEmail}`}>Email us</a></p>
                   </section>
                 </div>
               </div>
