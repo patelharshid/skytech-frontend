@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { useProducts } from '../hooks/useData';
 
+const categoryLabels = {
+  laptops: 'Laptops',
+  desktops: 'Desktops & PCs',
+  accessories: 'Accessories & Parts'
+};
+
 const ProductCatalog = ({ activeCategory, setActiveCategory }) => {
   const [selectedBrand, setSelectedBrand] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,59 +30,6 @@ const ProductCatalog = ({ activeCategory, setActiveCategory }) => {
           </p>
         </div>
 
-        {/* Filter Controls Bar */}
-        <div className="sky-card p-3 mb-5">
-          <div className="row g-3 align-items-center">
-            {/* Category Nav Tabs */}
-            <div className="col-lg-6">
-              <div className="d-flex flex-wrap gap-2">
-                {[
-                  { id: 'all', label: 'All Products' },
-                  { id: 'laptops', label: 'Laptops' },
-                  { id: 'desktops', label: 'Desktops & PCs' },
-                  { id: 'accessories', label: 'Accessories & Parts' }
-                ].map(cat => (
-                  <button
-                    key={cat.id}
-                    className={`btn btn-sm rounded-pill px-3 py-2 fw-semibold ${activeCategory === cat.id ? 'btn-sky-primary' : 'btn-sky-outline'
-                      }`}
-                    onClick={() => setActiveCategory(cat.id)}
-                  >
-                    {cat.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Search Input & Brand Filter */}
-            <div className="col-lg-6">
-              <div className="product-search-controls d-flex gap-2">
-                <input
-                  type="text"
-                  className="form-control sky-form-control small"
-                  placeholder="Search laptops, GPUs, specs..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                <select
-                  className="form-select sky-form-control small"
-                  style={{ width: '160px' }}
-                  value={selectedBrand}
-                  onChange={(e) => setSelectedBrand(e.target.value)}
-                >
-                  <option value="all">All Brands</option>
-                  <option value="Apple">Apple</option>
-                  <option value="Dell">Dell</option>
-                  <option value="ASUS">ASUS</option>
-                  <option value="Lenovo">Lenovo</option>
-                  <option value="Custom PC">Custom PC</option>
-                  <option value="Samsung">Samsung</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Products Grid */}
         {loading ? (
           <div className="text-center py-5">
@@ -95,9 +48,17 @@ const ProductCatalog = ({ activeCategory, setActiveCategory }) => {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-100 rounded-3 object-fit-cover mb-3"
+                    className="w-100 rounded-3 object-fit-cover mb-2"
                     style={{ height: '180px' }}
                   />
+                  {product.category && (
+                    <span
+                      className="badge badge-gold text-uppercase mb-2"
+                      style={{ fontSize: '0.72rem', letterSpacing: '0.04em' }}
+                    >
+                      {categoryLabels[product.category] || product.category}
+                    </span>
+                  )}
                   <h3 className="h6 fw-bold mb-3 text-main">{product.name}</h3>
                   <div className="d-flex align-items-center justify-content-between gap-2 border-top pt-3 mt-auto w-100">
                     <span className="fs-6 fw-bold text-primary font-mono text-nowrap">

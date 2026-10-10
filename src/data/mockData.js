@@ -21,34 +21,22 @@ export const marqueeAnnouncementsData = [
 export const slidesData = [
   {
     id: 1,
-    tag: "🏷️ 100% Certified Quality",
     title: "Budget-Friendly Refurbished Laptops & MacBooks",
     subtitle: "Save up to 50% on top brands like Apple MacBook, Dell XPS, HP EliteBook, and Lenovo ThinkPad with 1-Year Sky Tech Warranty.",
-    primaryAction: "Explore Refurbished Laptops",
-    secondaryAction: "Get Quote",
-    bgBadge: "Up to 50% OFF",
     image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80",
     bullets: ["50-Point Hardware Inspection", "Free Antivirus & Bag Included", "30-Day Money Back Guarantee"]
   },
   {
     id: 2,
-    tag: "💻 Flexible Rental Plans",
     title: "High-Performance Systems on Rent",
     subtitle: "Rent laptops, gaming desktops, and servers for your company, events, or education starting at just $19 / month with free maintenance.",
-    primaryAction: "Calculate Rental Rate",
-    secondaryAction: "Rent Now",
-    bgBadge: "From $19/mo",
     image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80",
     bullets: ["Short-Term & Long-Term Rentals", "Zero Maintenance Liabilities", "Instant Replacement Guarantee"]
   },
   {
     id: 3,
-    tag: "🛠️ Expert Tech Services",
     title: "Computer Repair & Annual Maintenance (AMC)",
     subtitle: "On-site laptop repair, motherboard chip-level repair, SSD/RAM hardware upgrades, virus cleaning, and corporate AMC contracts.",
-    primaryAction: "Book Repair Service",
-    secondaryAction: "Call Engineer",
-    bgBadge: "On-Site Service",
     image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80",
     bullets: ["Certified Hardware Engineers", "Same-Day Doorstep Service", "Original Spare Parts Warranty"]
   }

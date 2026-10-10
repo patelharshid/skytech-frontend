@@ -36,10 +36,6 @@ const HeroBanner = ({ onOpenRentModal, onOpenQuoteModal, onExploreCatalog }) => 
         <div className="row align-items-center gy-4">
           {/* Left Text Column */}
           <div className="col-lg-7">
-            <div className="d-inline-flex align-items-center gap-2 badge-gold mb-3 px-3 py-2 text-dark fw-bold">
-              <span>{slide.tag}</span>
-            </div>
-
             <h1 className="display-4 fw-extrabold mb-3 text-white tracking-tight">
               {slide.title}
             </h1>
@@ -56,37 +52,14 @@ const HeroBanner = ({ onOpenRentModal, onOpenQuoteModal, onExploreCatalog }) => 
                 </div>
               ))}
             </div>
-
-            <div className="d-flex flex-wrap align-items-center gap-3">
-              <button 
-                className="btn btn-skytech-gold btn-lg d-flex align-items-center gap-2 px-4 py-3"
-                onClick={() => {
-                  if (slide.id === 2) onOpenRentModal();
-                  else onExploreCatalog();
-                }}
-              >
-                <span>{slide.primaryAction}</span>
-                <ArrowRight size={18} />
-              </button>
-
-              <button 
-                className="btn btn-outline-light btn-lg d-flex align-items-center gap-2 px-4 py-3 fw-semibold"
-                onClick={onOpenQuoteModal}
-              >
-                <span>{slide.secondaryAction}</span>
-              </button>
-            </div>
           </div>
 
           {/* Right Image Visual Banner */}
           <div className="col-lg-5">
             <div className="sky-card p-3 bg-slate border-secondary shadow-lg position-relative overflow-hidden">
-              <span className="position-absolute top-0 end-0 m-3 badge bg-warning text-dark small fw-bold z-1 shadow">
-                {slide.bgBadge}
-              </span>
-              <img 
-                src={slide.image} 
-                alt={slide.title} 
+              <img
+                src={slide.image}
+                alt={slide.title}
                 className="w-100 rounded-3 object-fit-cover shadow-sm"
                 style={{ height: '310px' }}
               />
@@ -108,13 +81,13 @@ const HeroBanner = ({ onOpenRentModal, onOpenQuoteModal, onExploreCatalog }) => 
           </div>
 
           <div className="d-flex gap-2">
-            <button 
+            <button
               className="btn btn-sm btn-outline-light p-2 rounded-circle"
               onClick={() => setCurrentSlide(prev => (prev - 1 + slidesData.length) % slidesData.length)}
             >
               <ChevronLeft size={16} />
             </button>
-            <button 
+            <button
               className="btn btn-sm btn-outline-light p-2 rounded-circle"
               onClick={() => setCurrentSlide(prev => (prev + 1) % slidesData.length)}
             >
