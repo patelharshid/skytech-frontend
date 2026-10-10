@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
-import { primaryNumber } from '../constants/constants';
+import { primaryNumber, primaryEmail } from '../constants/constants';
 
 
 const GetInTouchSection = () => {
@@ -225,8 +225,8 @@ const GetInTouchSection = () => {
                   </div>
                   <div>
                     <h6 className="fw-bold mb-1 text-dark" style={{ fontSize: '15px' }}>Email Us</h6>
-                    <a href="mailto:info@skytech.in" className="text-decoration-none text-secondary fw-medium" style={{ fontSize: '14px' }}>
-                      info@skytech.in
+                    <a href={`mailto:${primaryEmail}`} className="text-decoration-none text-secondary fw-medium" style={{ fontSize: '14px' }}>
+                      {primaryEmail}
                     </a>
                   </div>
                 </div>
