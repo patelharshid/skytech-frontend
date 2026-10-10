@@ -44,7 +44,7 @@
 }
 
 .contact-nav-active {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(233, 87, 39, .8);
+  box-shadow: none !important;
 }
 
 @media (max-width: 767.98px) {

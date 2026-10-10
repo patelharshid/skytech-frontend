@@ -110,6 +110,7 @@
 
 .skytech-footer-link-item:hover {
   color: var(--footer-link-hover);
+  font-weight: 700;
 }
 
 .skytech-copyright-pill {

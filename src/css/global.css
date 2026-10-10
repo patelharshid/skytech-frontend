@@ -240,10 +240,35 @@ h6 {
   white-space: nowrap;
 }
 
-.skytech-floating-nav .nav-link:hover,
-.skytech-floating-nav .nav-link.active {
-  color: var(--nav-link-active-color) !important;
-  background-color: var(--skytech-gold);
+.skytech-floating-nav .nav-link:hover {
+  color: #dc4f20 !important;
+  font-weight: 700 !important;
+  background-color: transparent !important;
+}
+
+.skytech-floating-nav .nav-link.active:hover,
+.skytech-floating-nav .nav-link.about-nav-active:hover {
+  background: #fff !important;
+  color: #dc4f20 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #dc4f20 !important;
+  font-weight: 700 !important;
+}
+
+.skytech-floating-nav .nav-link.active,
+.skytech-floating-nav .nav-link.about-nav-active {
+  color: #dc4f20 !important;
+  background: #fff !important;
+  border-radius: .35rem;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.active.about-nav-active {
+  color: #dc4f20 !important;
+  background: #fff3ee;
+  border-radius: .55rem;
 }
 
 /* Custom Buttons */
