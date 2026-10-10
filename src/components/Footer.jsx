@@ -193,7 +193,7 @@ const Footer = () => {
 
       {/* Floating WhatsApp Action Button */}
       <a
-        href="https://wa.me/919726450900?text=Hello%20SkyTech%20Systems%2C%20I%20want%20to%20inquire%20about%20products"
+        href="https://wa.me/919879911503?text=Hello%20SkyTech%20Systems%2C%20I%20want%20to%20inquire%20about%20products"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float shadow-lg"
