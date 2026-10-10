@@ -49,7 +49,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
             </div>
 
             {/* Central Search Bar */}
-            <div className="col-12 col-sm col-lg-4 order-3 order-sm-2">
+            <div className="col-12 col-sm col-lg-4 order-3 order-sm-2 d-none d-sm-block">
               <div className="input-group">
                 <input
                   type="text"
