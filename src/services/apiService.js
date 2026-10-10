@@ -47,7 +47,7 @@ export const apiService = {
   getMarqueeAnnouncements: async () => {
     try {
       const apiUrl = import.meta.env.VITE_API_URL;
-      const response = await fetch(`${apiUrl}/api/topmarquee`);
+      const response = await fetch(`${apiUrl}/api/topmarquee/getTopMarquee`);
       if (response.ok) {
         const result = await response.json();
         if (result && Array.isArray(result.data)) {
