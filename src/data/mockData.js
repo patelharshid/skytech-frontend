@@ -1,4 +1,4 @@
-import { primaryNumber, primaryEmail } from '../constants/constants';
+import { primaryNumber, primaryEmail, officeAddress } from '../constants/constants';
 
 export const siteConfigData = {
   storeName: "SkyTech",
@@ -6,7 +6,7 @@ export const siteConfigData = {
   phone: `+91 ${primaryNumber}`,
   email: primaryEmail,
   whatsappPhone: `91${primaryNumber}`,
-  address: "SkyTech Plaza, IT Tech Park, Gate 4",
+  address: officeAddress,
   workingHours: "Mon - Sat: 9:30 AM - 8:00 PM"
 };
 

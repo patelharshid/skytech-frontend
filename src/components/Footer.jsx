@@ -6,7 +6,7 @@ import {
   Clock,
   MessageSquare
 } from 'lucide-react';
-import { primaryNumber, secondaryNumber, primaryEmail } from '../constants/constants';
+import { primaryNumber, secondaryNumber, primaryEmail, officeAddress } from '../constants/constants';
 
 
 const YellowDotIcon = () => (
@@ -165,8 +165,7 @@ const Footer = () => {
                   <li className="d-flex align-items-start gap-3 fs-6 text-muted">
                     <MapPin size={22} className="text-warning flex-shrink-0 mt-1" aria-hidden="true" />
                     <span className="fw-semibold text-main fs-6">
-                      Sepal Olivia 101, 1st Floor, Beside Iscon Platinum, S.P. Ring Road,
-                      Bopal Cross Road, Ahmedabad, Gujarat – 380058
+                      {officeAddress}
                     </span>
                   </li>
 

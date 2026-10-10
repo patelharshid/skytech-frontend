@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
-import { primaryNumber, primaryEmail } from '../constants/constants';
+import { primaryNumber, primaryEmail, officeAddress } from '../constants/constants';
 
 
 const GetInTouchSection = () => {
@@ -197,8 +197,7 @@ const GetInTouchSection = () => {
                   <div>
                     <h6 className="fw-bold mb-1 text-dark" style={{ fontSize: '15px' }}>Our Location</h6>
                     <address className="mb-0 text-secondary" style={{ lineHeight: '1.5', fontSize: '14px', fontStyle: 'normal' }}>
-                      Sepal Olivia 101, 1st Floor, Beside Iscon Platinum, S.P. Ring Road,<br />
-                      Bopal Cross Road, Ahmedabad, Gujarat – 380058, India.
+                      {officeAddress}
                     </address>
                   </div>
                 </div>

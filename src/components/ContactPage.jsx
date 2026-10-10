@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import '../css/contact-page.css';
 import { AtSign, BriefcaseBusiness, Clock3, MapPin, Navigation, PhoneCall } from 'lucide-react';
 import contactBanner from '../assets/contact-banner.png';
-import { primaryNumber, primaryEmail } from '../constants/constants';
+import { primaryNumber, primaryEmail, officeAddress } from '../constants/constants';
 
-const officeAddress = 'Sepal Olivia 101, 1st Floor, Beside Iscon Platinum, S.P. Ring Road, Bopal Cross Road, Ahmedabad, Gujarat 380058';
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
 
 function ContactPage() {
