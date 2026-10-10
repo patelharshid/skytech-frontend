@@ -53,10 +53,10 @@ const ShopByCategory = ({ onSelectCategory }) => {
   };
 
   return (
-    <section className="shop-by-category bg-light py-5" aria-labelledby="shop-by-category-title">
+    <section className="shop-by-category py-5" aria-labelledby="shop-by-category-title">
       <div className="container">
         <div className="text-center mb-4 mb-lg-5">
-          <h2 id="shop-by-category-title" className="display-6 fw-bold mb-0">Shop by Category</h2>
+          <h2 id="shop-by-category-title" className="display-6 fw-bold mb-0">Shop By Category</h2>
           <span className="category-heading-rule" aria-hidden="true" />
         </div>
 
@@ -72,7 +72,7 @@ const ShopByCategory = ({ onSelectCategory }) => {
             if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
           }}
         >
-          <button type="button" className="btn btn-outline-warning category-carousel-arrow category-carousel-previous" onClick={() => moveSlide(-1)} aria-label="Previous categories">
+          <button type="button" className="btn btn-light category-carousel-arrow category-carousel-previous" onClick={() => moveSlide(-1)} aria-label="Previous categories">
             <ArrowLeft size={20} aria-hidden="true" />
           </button>
 
@@ -93,10 +93,10 @@ const ShopByCategory = ({ onSelectCategory }) => {
                       onClick={() => selectCategory(category.id)}
                       aria-label={`Browse ${category.title}`}
                     >
-                      <span className="category-card-image-wrap ratio ratio-16x9 bg-body-secondary">
+                      <span className="category-card-image-wrap ratio">
                         <img src={image} alt="" className="category-card-image img-fluid object-fit-contain" loading="lazy" />
                       </span>
-                      <span className="category-card-copy bg-white text-center d-flex align-items-center justify-content-center py-3 px-2">
+                      <span className="category-card-copy text-center d-flex align-items-center justify-content-center py-3 px-2">
                         <span className="category-card-title fw-bold fs-5">{category.title}</span>
                       </span>
                     </button>
@@ -106,7 +106,7 @@ const ShopByCategory = ({ onSelectCategory }) => {
             </div>
           </div>
 
-          <button type="button" className="btn btn-outline-warning category-carousel-arrow category-carousel-next" onClick={() => moveSlide(1)} aria-label="Next categories">
+          <button type="button" className="btn btn-light category-carousel-arrow category-carousel-next" onClick={() => moveSlide(1)} aria-label="Next categories">
             <ArrowRight size={20} aria-hidden="true" />
           </button>
 
