@@ -45,7 +45,19 @@ export const apiService = {
   },
 
   getMarqueeAnnouncements: async () => {
-    return fetchOrMock('/announcements', marqueeAnnouncementsData);
+    try {
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${apiUrl}/api/topmarquee`);
+      if (response.ok) {
+        const result = await response.json();
+        if (result && Array.isArray(result.data)) {
+          return result.data;
+        }
+      }
+    } catch (error) {
+      console.warn('[apiService] Live fetch from /api/topmarquee failed:', error);
+    }
+    return [];
   },
 
   getHeroSlides: async () => {

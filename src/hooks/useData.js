@@ -43,10 +43,6 @@ export function useRentalOptions() {
   return useAsyncData(() => apiService.getRentalOptions());
 }
 
-export function useMarqueeAnnouncements() {
-  return useAsyncData(() => apiService.getMarqueeAnnouncements());
-}
-
 export function useSiteConfig() {
   return useAsyncData(() => apiService.getSiteConfig());
 }
