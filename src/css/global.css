@@ -21,16 +21,6 @@
   --whatsapp: #25d366;
   --whatsapp-rgb: 37, 211, 102;
 
-  /* Aliases for compatibility */
-  --sunray-gold: var(--skytech-gold);
-  --sunray-gold-hover: var(--skytech-gold-hover);
-  --sunray-dark: var(--skytech-dark);
-  --sunray-slate: var(--skytech-slate);
-  --sunray-amber: var(--skytech-amber);
-  --sunray-emerald: var(--skytech-emerald);
-  --sunray-blue: var(--skytech-blue);
-  --sunray-red: var(--skytech-red);
-
   /* ---------- Gradients ---------- */
   --grad-gold: linear-gradient(135deg, var(--skytech-gold) 0%, var(--skytech-orange) 100%);
   --grad-dark: linear-gradient(135deg, var(--skytech-dark) 0%, var(--skytech-slate) 100%);

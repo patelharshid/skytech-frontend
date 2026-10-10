@@ -103,7 +103,7 @@ function ContactPage() {
             <a className="btn btn-outline-warning rounded-pill d-inline-flex align-items-center gap-2 align-self-start align-self-sm-auto" href={mapUrl} target="_blank" rel="noreferrer"><Navigation size={16} />Open in Maps</a>
           </div>
           <div className="ratio ratio-21x9 rounded-4 overflow-hidden border shadow-sm">
-            <iframe title="Sunray Systems Ahmedabad office map" src={mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+            <iframe title="SkyTech Systems Ahmedabad office map" src={mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
           </div>
         </section>
       </section>

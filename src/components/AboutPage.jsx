@@ -29,7 +29,7 @@ function AboutPage() {
           <div className="col-12 col-lg-6">
             <span className="small fw-bold text-uppercase text-orange">Who we are</span>
             <h2 className="display-6 fw-bold mt-2 mb-3">Technology that works for your business.</h2>
-            <p className="text-secondary lh-lg">Founded in 2013, Sunray Systems helps businesses find dependable technology at a fair price. We offer desktops, laptops, workstations, servers and accessories selected to meet different needs and budgets.</p>
+            <p className="text-secondary lh-lg">Founded in 2013, SkyTech Systems helps businesses find dependable technology at a fair price. We offer desktops, laptops, workstations, servers and accessories selected to meet different needs and budgets.</p>
             <p className="text-secondary lh-lg">Based in Ahmedabad and serving customers across India, we focus on quality-tested products, helpful advice and reliable after-sales support. Whether you are upgrading one device or planning an entire workspace, our team is here to help you choose with confidence.</p>
             <div className="d-flex align-items-center gap-2 rounded-3 p-3 bg-warning-subtle text-dark"><MonitorCog size={20} className="text-orange flex-shrink-0" /><span className="small fw-semibold">Quality checked technology, backed by people who care.</span></div>
           </div>

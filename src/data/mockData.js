@@ -201,8 +201,7 @@ export const brandLogosData = [
   },
   {
     name: 'Lenovo',
-    logo: 'https://www.sunraysystems.in/wp-content/uploads/2025/04/lenovo-icon.jpg.webp',
-    style: { maxHeight: '60px', maxWidth: '90%', transform: 'scale(1.3)' }
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg'
   }
 ];
 
