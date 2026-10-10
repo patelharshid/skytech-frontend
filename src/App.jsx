@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroBanner from './components/HeroBanner';
 import ProductCatalog from './components/ProductCatalog';
+import ShopByCategory from './components/ShopByCategory';
 import SnapshotOfExcellence from './components/SnapshotOfExcellence';
 import IndustriesWeServe from './components/IndustriesWeServe';
 import OurHappyCustomers from './components/OurHappyCustomers';
@@ -18,6 +19,7 @@ import ProductDetailPage from './components/ProductDetailPage';
 
 function App() {
   const [theme, setTheme] = useState('light');
+  const [activeCategory, setActiveCategory] = useState('all');
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
@@ -93,7 +95,8 @@ function App() {
           onOpenQuoteModal={() => setIsQuoteModalOpen(true)}
           onExploreCatalog={() => handleScrollToSection('shop')}
         />
-        <ProductCatalog />
+        <ProductCatalog activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+        <ShopByCategory onSelectCategory={setActiveCategory} />
 
         <SnapshotOfExcellence />
 

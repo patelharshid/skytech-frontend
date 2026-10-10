@@ -176,3 +176,166 @@
 .text-orange {
   color: #ea580c !important;
 }
+
+/* Category carousel mechanics; card and layout styling use Bootstrap utilities. */
+.category-heading-rule {
+  display: block;
+  width: 10rem;
+  height: 2px;
+  margin: 0.85rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--skytech-orange), transparent);
+}
+
+.category-carousel {
+  position: relative;
+}
+
+.category-carousel-stage {
+  margin-inline: 3rem;
+  overflow: hidden;
+}
+
+.category-carousel-track {
+  display: flex;
+  width: 400%;
+  transform: translateX(calc(var(--category-slide) * -8.333333%));
+  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category-carousel-track.no-transition {
+  transition: none;
+}
+
+.category-carousel-slide {
+  flex: 0 0 11.111111%;
+  min-width: 0;
+  padding-inline: 0.65rem;
+}
+
+.category-carousel-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 43%;
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-color: var(--skytech-orange);
+  color: var(--skytech-orange);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.category-carousel-arrow:hover {
+  transform: scale(1.06);
+  border-color: var(--skytech-orange);
+  background: var(--skytech-orange);
+  color: #fff;
+}
+
+.category-carousel-arrow:focus-visible,
+.category-carousel-dot:focus-visible {
+  outline: 3px solid rgba(var(--skytech-orange-rgb), 0.3);
+  outline-offset: 3px;
+}
+
+.category-carousel-previous {
+  left: 0;
+}
+
+.category-carousel-next {
+  right: 0;
+}
+
+.category-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 1rem;
+}
+
+.category-carousel-dot {
+  width: 10px;
+  height: 10px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.category-carousel-dot-active {
+  transform: scale(1.12);
+  border-color: var(--skytech-orange) !important;
+  background-color: var(--skytech-orange) !important;
+}
+
+.category-card {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(53, 53, 53, 0.14) !important;
+}
+
+.category-card:focus-visible {
+  outline: 3px solid rgba(var(--skytech-orange-rgb), 0.25);
+  outline-offset: 3px;
+}
+
+.category-card-image-wrap {
+  overflow: hidden;
+}
+
+.category-card-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 320ms ease;
+}
+
+.category-card:hover .category-card-image {
+  transform: scale(1.045);
+}
+
+.category-card-title {
+  color: var(--skytech-orange);
+}
+
+@media (max-width: 575.98px) {
+  .category-carousel-stage {
+    margin-inline: 2.7rem;
+  }
+
+  .category-carousel-track {
+    width: 1200%;
+  }
+
+  .category-carousel-slide {
+    padding-inline: 0.45rem;
+  }
+
+  .category-carousel-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .category-carousel-track {
+    width: 600%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-carousel-track,
+  .category-card,
+  .category-card-image,
+  .category-carousel-arrow,
+  .category-carousel-dot {
+    transition-duration: 0.01ms;
+  }
+}
