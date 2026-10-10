@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
-import { primaryNumber, primaryEmail, officeAddress } from '../constants/constants';
+import { primaryNumber, primaryEmail, officeAddress, mapEmbedUrl } from '../constants/constants';
 
 
 const GetInTouchSection = () => {
@@ -174,7 +174,7 @@ const GetInTouchSection = () => {
               <div className="rounded-4 overflow-hidden border bg-white shadow-sm" style={{ borderColor: '#E5E7EB' }}>
                 <iframe
                   title="Sky Tech Location"
-                  src="https://www.google.com/maps?q=Sepal+Olivia+Bopal+Cross+Road+S.P.+Ring+Road+Ahmedabad+380058&output=embed"
+                  src={mapEmbedUrl}
                   width="100%"
                   height="260"
                   style={{ border: 0, display: 'block' }}

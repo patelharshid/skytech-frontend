@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../css/contact-page.css';
 import { AtSign, BriefcaseBusiness, Clock3, MapPin, Navigation, PhoneCall } from 'lucide-react';
 import contactBanner from '../assets/contact-banner.png';
-import { primaryNumber, primaryEmail, officeAddress, mapUrl } from '../constants/constants';
+import { primaryNumber, primaryEmail, officeAddress, mapUrl, mapEmbedUrl } from '../constants/constants';
 
 
 function ContactPage() {
@@ -103,7 +103,7 @@ function ContactPage() {
             <a className="btn btn-outline-warning rounded-pill d-inline-flex align-items-center gap-2 align-self-start align-self-sm-auto" href={mapUrl} target="_blank" rel="noreferrer"><Navigation size={16} />Open in Maps</a>
           </div>
           <div className="ratio ratio-21x9 rounded-4 overflow-hidden border shadow-sm">
-            <iframe title="Sunray Systems Ahmedabad office map" src="https://www.google.com/maps?q=Sepal+Olivia+Bopal+Cross+Road+S.P.+Ring+Road+Ahmedabad+380058&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+            <iframe title="Sunray Systems Ahmedabad office map" src={mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
           </div>
         </section>
       </section>
