@@ -6,7 +6,7 @@ import {
   Clock,
   MessageSquare
 } from 'lucide-react';
-import { primaryNumber, secondaryNumber } from '../constants/constants';
+import { primaryNumber, secondaryNumber, primaryEmail } from '../constants/constants';
 
 
 const YellowDotIcon = () => (
@@ -155,10 +155,10 @@ const Footer = () => {
                   <li className="d-flex align-items-start gap-3 fs-6 text-muted">
                     <Mail size={22} className="text-warning flex-shrink-0 mt-1" aria-hidden="true" />
                     <a
-                      href="mailto:info@sunraysystems.in"
+                      href={`mailto:${primaryEmail}`}
                       className="text-decoration-none fw-bold text-main fs-6"
                     >
-                      info@sunraysystems.in
+                      {primaryEmail}
                     </a>
                   </li>
 
