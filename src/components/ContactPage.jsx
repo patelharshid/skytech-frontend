@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import '../css/contact-page.css';
 import { AtSign, BriefcaseBusiness, Clock3, MapPin, Navigation, PhoneCall } from 'lucide-react';
 import contactBanner from '../assets/contact-banner.png';
-import { primaryNumber, primaryEmail, officeAddress } from '../constants/constants';
+import { primaryNumber, primaryEmail, officeAddress, mapUrl } from '../constants/constants';
 
-const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
 
 function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -31,8 +30,8 @@ function ContactPage() {
             <div className="card h-100 border rounded-4 shadow-sm p-4 p-xl-5 contact-location-card">
               <div className="small fw-bold text-uppercase text-orange d-flex align-items-center gap-2"><MapPin size={16} /> Our office</div>
               <h2 className="h3 fw-bold mt-3 mb-3">Visit us in Ahmedabad</h2>
-              <a className="text-secondary text-decoration-none lh-lg" href={mapsUrl} target="_blank" rel="noreferrer">{officeAddress}</a>
-              <a className="btn btn-warning rounded-pill d-inline-flex align-items-center gap-2 align-self-start fw-semibold mt-3 px-3" href={mapsUrl} target="_blank" rel="noreferrer"><Navigation size={16} />Get directions</a>
+              <a className="text-secondary text-decoration-none lh-lg" href={mapUrl} target="_blank" rel="noreferrer">{officeAddress}</a>
+              <a className="btn btn-warning rounded-pill d-inline-flex align-items-center gap-2 align-self-start fw-semibold mt-3 px-3" href={mapUrl} target="_blank" rel="noreferrer"><Navigation size={16} />Get directions</a>
 
               <div className="border-top mt-4 pt-3">
                 <a className="contact-method d-flex align-items-center gap-3 py-2 text-decoration-none" href={`tel:${primaryNumber}`}>
@@ -101,7 +100,7 @@ function ContactPage() {
         <section className="mt-5 pt-2">
           <div className="d-flex flex-column flex-sm-row align-items-sm-end justify-content-between gap-3 mb-3">
             <div><span className="small fw-bold text-uppercase text-orange">Come find us</span><h2 className="h3 fw-bold mb-0 mt-1">Our Ahmedabad Office</h2></div>
-            <a className="btn btn-outline-warning rounded-pill d-inline-flex align-items-center gap-2 align-self-start align-self-sm-auto" href={mapsUrl} target="_blank" rel="noreferrer"><Navigation size={16} />Open in Maps</a>
+            <a className="btn btn-outline-warning rounded-pill d-inline-flex align-items-center gap-2 align-self-start align-self-sm-auto" href={mapUrl} target="_blank" rel="noreferrer"><Navigation size={16} />Open in Maps</a>
           </div>
           <div className="ratio ratio-21x9 rounded-4 overflow-hidden border shadow-sm">
             <iframe title="Sunray Systems Ahmedabad office map" src="https://www.google.com/maps?q=Sepal+Olivia+Bopal+Cross+Road+S.P.+Ring+Road+Ahmedabad+380058&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
