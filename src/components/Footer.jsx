@@ -96,7 +96,7 @@ const Footer = () => {
               {/* Social Icons Row */}
               <div className="pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-center gap-2">
                 <a href="#" className="skytech-social-btn" title="Facebook"><FacebookIcon /></a>
-                <a href="https://wa.me/919726450900" target="_blank" rel="noreferrer" className="skytech-social-btn" title="WhatsApp"><WhatsappIcon /></a>
+                <a href={`https://wa.me/91${primaryNumber}`} target="_blank" rel="noreferrer" className="skytech-social-btn" title="WhatsApp"><WhatsappIcon /></a>
                 <a href="#" className="skytech-social-btn" title="LinkedIn"><LinkedinIcon /></a>
                 <a href="#" className="skytech-social-btn" title="Instagram"><InstagramIcon /></a>
                 <a href="#" className="skytech-social-btn" title="YouTube"><YoutubeIcon /></a>
@@ -117,7 +117,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <a href="#shop" className="btn-skytech-all-products">
+              <a href="/#shop" className="btn-skytech-all-products">
                 ALL PRODUCTS
               </a>
             </div>
@@ -128,9 +128,9 @@ const Footer = () => {
               <div className="col-6 col-md-3">
                 <h6 className="skytech-footer-title">Quick Links</h6>
                 <ul className="skytech-footer-links">
-                  <li><a href="#hero" className="skytech-footer-link-item"><YellowDotIcon />About us</a></li>
-                  <li><a href="#catalog" className="skytech-footer-link-item"><YellowDotIcon />Refurbished Systems</a></li>
-                  <li><a href="#shop" className="skytech-footer-link-item"><YellowDotIcon />Shop</a></li>
+                  <li><a href="/about-us" className="skytech-footer-link-item"><YellowDotIcon />About us</a></li>
+                  <li><a href="/#catalog" className="skytech-footer-link-item"><YellowDotIcon />Refurbished Systems</a></li>
+                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Shop</a></li>
                   <li><a href="/contact-us" className="skytech-footer-link-item"><YellowDotIcon />Contact Us</a></li>
                 </ul>
               </div>
@@ -139,12 +139,12 @@ const Footer = () => {
               <div className="col-6 col-md-3">
                 <h6 className="skytech-footer-title">Find It Fast</h6>
                 <ul className="skytech-footer-links">
-                  <li><a href="#shop" className="skytech-footer-link-item"><YellowDotIcon />Laptops</a></li>
-                  <li><a href="#shop" className="skytech-footer-link-item"><YellowDotIcon />Server</a></li>
-                  <li><a href="#shop" className="skytech-footer-link-item"><YellowDotIcon />Desktop System</a></li>
-                  <li><a href="#shop" className="skytech-footer-link-item"><YellowDotIcon />All In One</a></li>
-                  <li><a href="#shop" className="skytech-footer-link-item"><YellowDotIcon />Apple MacBook</a></li>
-                  <li><a href="#shop" className="skytech-footer-link-item"><YellowDotIcon />Accessories</a></li>
+                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Laptops</a></li>
+                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Server</a></li>
+                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Desktop System</a></li>
+                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />All In One</a></li>
+                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Apple MacBook</a></li>
+                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Accessories</a></li>
                 </ul>
               </div>
 
