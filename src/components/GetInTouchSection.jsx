@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
+import { primaryNumber } from '../constants/constants';
+
 
 const GetInTouchSection = () => {
   const [formData, setFormData] = useState({
@@ -209,8 +211,8 @@ const GetInTouchSection = () => {
                   <div>
                     <h6 className="fw-bold mb-1 text-dark" style={{ fontSize: '15px' }}>Call Us</h6>
                     <div className="d-flex flex-wrap align-items-center gap-2 text-secondary" style={{ fontSize: '14px' }}>
-                      <a href="tel:+919726450900" className="text-decoration-none text-secondary fw-medium">
-                        +91 97264 50900
+                      <a href={`tel:${primaryNumber}`} className="text-decoration-none text-secondary fw-medium">
+                        +91 {primaryNumber}
                       </a>
                     </div>
                   </div>

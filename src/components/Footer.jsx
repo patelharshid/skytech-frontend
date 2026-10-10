@@ -6,6 +6,8 @@ import {
   Clock,
   MessageSquare
 } from 'lucide-react';
+import { primaryNumber, secondaryNumber } from '../constants/constants';
+
 
 const YellowDotIcon = () => (
   <svg width="14" height="14" viewBox="0 0 16 16" className="flex-shrink-0 me-2" style={{ verticalAlign: 'middle' }}>
@@ -111,7 +113,7 @@ const Footer = () => {
                   <PhoneCall size={20} />
                 </div>
                 <div className="fw-bold fs-5 text-main font-mono">
-                  +91- 97264 50900 | +91-99255 27533
+                  +91-{primaryNumber} | +91-{secondaryNumber}
                 </div>
               </div>
 

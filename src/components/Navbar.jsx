@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Laptop, ShoppingBag, Search, Sun, Moon, PhoneCall, Mail, Menu, X } from 'lucide-react';
 import TopMarqueeBar from './TopMarqueeBar';
+import { primaryNumber } from '../constants/constants';
 
 const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -71,7 +72,7 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
                   <PhoneCall size={17} />
                 </div>
                 <div className="text-nowrap">
-                  <span className="fw-bold small text-main font-mono text-nowrap">+91 97264 50900</span>
+                  <span className="fw-bold small text-main font-mono text-nowrap">+91 {primaryNumber}</span>
                 </div>
               </div>
 

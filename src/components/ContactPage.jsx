@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../css/contact-page.css';
 import { AtSign, BriefcaseBusiness, Clock3, MapPin, Navigation, PhoneCall } from 'lucide-react';
 import contactBanner from '../assets/contact-banner.png';
+import { primaryNumber } from '../constants/constants';
 
 const officeAddress = 'Sepal Olivia 101, 1st Floor, Beside Iscon Platinum, S.P. Ring Road, Bopal Cross Road, Ahmedabad, Gujarat 380058';
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
@@ -35,9 +36,9 @@ function ContactPage() {
               <a className="btn btn-warning rounded-pill d-inline-flex align-items-center gap-2 align-self-start fw-semibold mt-3 px-3" href={mapsUrl} target="_blank" rel="noreferrer"><Navigation size={16} />Get directions</a>
 
               <div className="border-top mt-4 pt-3">
-                <a className="contact-method d-flex align-items-center gap-3 py-2 text-decoration-none" href="tel:+919726450900">
+                <a className="contact-method d-flex align-items-center gap-3 py-2 text-decoration-none" href={`tel:${primaryNumber}`}>
                   <span className="contact-method-icon rounded-circle p-2 text-orange"><PhoneCall size={18} /></span>
-                  <span className="d-flex flex-column"><small className="text-secondary">Call our team</small><strong className="text-dark">+91 97264 50900</strong></span>
+                  <span className="d-flex flex-column"><small className="text-secondary">Call our team</small><strong className="text-dark">+91 {primaryNumber}</strong></span>
                 </a>
                 <a className="contact-method d-flex align-items-center gap-3 border-top py-2 text-decoration-none" href="mailto:info@sunraysystems.in">
                   <span className="contact-method-icon rounded-circle p-2 text-orange"><AtSign size={18} /></span>

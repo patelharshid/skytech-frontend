@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMarqueeAnnouncements } from '../hooks/useData';
+import { primaryNumber } from '../constants/constants';
 
 const TopMarqueeBar = () => {
   const { data: announcements } = useMarqueeAnnouncements();
@@ -9,7 +10,7 @@ const TopMarqueeBar = () => {
     "💻 Systems on Rent: High-Speed Laptops & Desktops for Corporates & Students starting @ $19/mo",
     "🚚 Free Express Doorstep Shipping & Insured Pickup Across Nation",
     "🛡️ 100% Tested Quality: 50-Point Hardware Inspection + 1-Year Warranty",
-    "📞 Hotline Support: +91 97264 50900 | Bulk Inquiries Welcome"
+    `📞 Hotline Support: +91 ${primaryNumber} | Bulk Inquiries Welcome`
   ];
 
   return (
