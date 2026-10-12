@@ -57,14 +57,14 @@ function AboutPage() {
       </section>
 
       <section className="container-xxl py-5">
-        <div className="text-center mx-auto mb-4 about-commitments-heading">
+        <div className="text-center mx-auto mb-4" style={{ maxWidth: '44rem' }}>
           <span className="small fw-bold text-uppercase text-orange">How we help</span>
           <h2 className="h2 fw-bold mt-2">Support for every stage of your technology journey</h2>
         </div>
         <div className="row g-4">
           {commitments.map(({ icon: Icon, title, text }) => (
             <div className="col-12 col-md-4" key={title}>
-              <article className="card h-100 border-0 rounded-4 shadow-sm p-4 about-commitment-card">
+              <article className="card h-100 border-0 rounded-4 shadow-sm p-4">
                 <span className="rounded-circle p-3 bg-danger-subtle text-orange align-self-start mb-3"><Icon size={27} strokeWidth={1.7} /></span>
                 <h3 className="h5 fw-bold">{title}</h3>
                 <p className="text-secondary lh-lg mb-0">{text}</p>

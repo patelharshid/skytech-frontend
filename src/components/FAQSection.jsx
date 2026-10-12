@@ -44,7 +44,7 @@ const FAQSection = () => {
                         aria-expanded={isOpen}
                         type="button"
                       >
-                        <span className="fw-bold faq-question-text fs-6 pe-2">
+                        <span className="fw-bold fs-6 pe-2 text-dark">
                           {faq.question}
                         </span>
                         <div className="faq-toggle-icon">
@@ -58,7 +58,7 @@ const FAQSection = () => {
 
                       <div className={`faq-accordion-body-wrapper ${isOpen ? 'is-open' : ''}`}>
                         <div className="faq-accordion-body-inner">
-                          <div className="pt-3 mt-3 border-top faq-answer-text small" style={{ lineHeight: '1.65' }}>
+                          <div className="pt-3 mt-3 border-top text-secondary small lh-base">
                             {faq.answer}
                           </div>
                         </div>

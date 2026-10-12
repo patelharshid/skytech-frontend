@@ -53,8 +53,8 @@ const IndustriesWeServe = () => {
               return (
                 <div key={item.id} className="col">
                   <div className="industry-card h-100 d-flex align-items-center gap-3 p-3 px-3 px-md-4 rounded-4 bg-white shadow-sm transition-all">
-                    <div className="industry-icon-box flex-shrink-0 text-orange">
-                      <IconComponent size={26} strokeWidth={1.8} className="industry-icon" />
+                    <div className="d-inline-flex align-items-center justify-content-center flex-shrink-0 text-warning">
+                      <IconComponent size={26} strokeWidth={1.8} />
                     </div>
                     <span className="fw-bold text-dark fs-6 mb-0 text-nowrap">
                       {item.name}

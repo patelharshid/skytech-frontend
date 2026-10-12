@@ -22,14 +22,6 @@
   box-shadow: var(--faq-card-shadow-active);
 }
 
-.faq-question-text {
-  color: var(--text-main);
-}
-
-.faq-answer-text {
-  color: var(--text-muted);
-}
-
 .faq-toggle-icon {
   width: 38px;
   height: 38px;
@@ -109,17 +101,6 @@
   box-shadow: var(--shadow-md);
 }
 
-.industry-icon-box {
-  color: var(--secondary) !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.industry-icon {
-  stroke: var(--secondary);
-}
-
 .snapshot-section {
   background-color: var(--bg-body);
   background-image: radial-gradient(circle at 10% 20%, rgba(var(--primary-rgb), 0.05) 0%, transparent 50%);
@@ -162,10 +143,6 @@
 .snapshot-counter-card:hover .snapshot-icon-badge {
   transform: translateX(-50%) scale(1.08);
   border-color: var(--accent);
-}
-
-.text-orange {
-  color: var(--secondary) !important;
 }
 
 .category-heading-rule {
@@ -305,10 +282,6 @@
   transform: scale(1.045);
 }
 
-.category-card-title {
-  color: var(--secondary);
-}
-
 .category-card-copy {
   min-height: 3.4rem;
   border-radius: 0 0 1.5rem 1.5rem;
@@ -349,7 +322,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .category-carousel-track,
   .category-card,
   .category-card-image,

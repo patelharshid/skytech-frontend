@@ -1,19 +1,9 @@
-.page-title-banner {
-  min-height: 11.5rem;
-  background-position: center;
-  background-size: cover;
-}
-
 .contact-page-banner {
   background-color: var(--page-title-banner-bg);
 }
 
 .contact-banner-image {
   object-position: 84% center;
-}
-
-.page-title-shade {
-  background: var(--page-title-shade);
 }
 
 .contact-location-card {
@@ -30,30 +20,6 @@
   background: var(--bg-subtle);
 }
 
-.contact-form-panel .form-control {
-  border-color: var(--border-subtle);
-  border-radius: .5rem;
-}
-
-.contact-form-panel .form-control:focus {
-  border-color: var(--secondary);
-  box-shadow: 0 0 0 .2rem rgba(var(--secondary-rgb), .18);
-}
-
-.contact-form-panel textarea {
-  min-height: 8rem;
-}
-
 .contact-nav-active {
   box-shadow: none !important;
-}
-
-@media (max-width: 767.98px) {
-  .page-title-banner {
-    min-height: 10rem;
-  }
-
-  .contact-banner-image {
-    object-position: 84% center;
-  }
 }

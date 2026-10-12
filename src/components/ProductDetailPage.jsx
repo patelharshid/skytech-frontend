@@ -144,19 +144,19 @@ function ProductDetailPage({ productId, onAddToCart }) {
           <div className="col-12 col-lg-6">
             {(detailFields.length > 0 || additionalSpecs.length > 0) && (
               <section className="product-detail-summary">
-                <div className="text-uppercase fw-bold product-detail-brand">{product.brand}</div>
-                <h1 className="product-detail-title">{product.name}</h1>
+                <div className="text-uppercase fw-bold text-warning small mb-2">{product.brand}</div>
+                <h1 className="h2 fw-bold text-dark mb-3">{product.name}</h1>
                 {product.price != null && (
-                  <div className="product-detail-price mb-4">₹{Number(product.price).toLocaleString('en-IN')}</div>
+                  <div className="h3 fw-bold text-dark mb-4">₹{Number(product.price).toLocaleString('en-IN')}</div>
                 )}
                 {product.condition && <div className="mb-4"><span className="badge rounded-pill product-condition-badge">{product.condition}</span></div>}
                 {product.description && <p className="text-secondary mb-4">{product.description}</p>}
                 <h2 className="h5 fw-bold mb-3">Product details</h2>
-                <ul className="list-unstyled d-flex flex-column gap-3 mb-0 product-detail-list">
+                <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
                   {detailFields.map(([label, value]) => (
                     <li key={`${product.id}-${label}`} className="d-flex align-items-center gap-3">
-                      {React.createElement(detailIcons[label] || Tag, { size: 19, className: 'flex-shrink-0 product-detail-icon' })}
-                      <span><strong>{label}:</strong> <span className="product-detail-value">{value}</span></span>
+                      {React.createElement(detailIcons[label] || Tag, { size: 19, className: 'flex-shrink-0 text-warning' })}
+                      <span><strong>{label}:</strong> <span className="text-secondary">{value}</span></span>
                     </li>
                   ))}
                   {additionalSpecs.map((spec, index) => {
@@ -165,9 +165,9 @@ function ProductDetailPage({ productId, onAddToCart }) {
 
                     return (
                       <li key={`${product.id}-spec-${index}`} className="d-flex align-items-center gap-3">
-                        <CircuitBoard size={19} className="flex-shrink-0 product-detail-icon" />
+                        <CircuitBoard size={19} className="flex-shrink-0 text-warning" />
                         <span><strong>{hasLabel ? `${label.trim()}:` : 'Specification:'}</strong>{' '}
-                          <span className="product-detail-value">{hasLabel ? valueParts.join(':').trim() : spec}</span></span>
+                          <span className="text-secondary">{hasLabel ? valueParts.join(':').trim() : spec}</span></span>
                       </li>
                     );
                   })}
@@ -179,26 +179,26 @@ function ProductDetailPage({ productId, onAddToCart }) {
 
         <section className="row align-items-center g-4 g-lg-5 product-detail-about mt-5">
           <div className="col-12 col-lg-8">
-            <h2 className="h4 fw-bold product-detail-about-title">
+            <h2 className="h4 fw-bold text-dark mb-3">
               High-Quality Refurbished Laptops, Desktops &amp; Servers
             </h2>
-            <p className="mb-0 product-detail-about-copy">
+            <p className="mb-0 text-secondary lh-lg">
               At Sky Tech, we offer high-quality refurbished laptops, desktops, workstations, and servers at affordable prices. Each system is thoroughly tested, cleaned, and restored to ensure excellent performance and reliability. Refurbished devices are a smart choice for businesses, students, and professionals who want top-brand systems without the high cost of new equipment. Our refurbished products come with warranty options and technical support, giving you peace of mind. Whether for office use, bulk requirements, or personal computing, our refurbished systems deliver great value and performance. Choose Sky Tech for cost-effective, eco-friendly, and dependable refurbished IT solutions.
             </p>
           </div>
           <div className="col-12 col-lg-4">
-            <div className="product-detail-about-image-wrap">
+            <div className="d-flex align-items-center justify-content-center p-3 rounded-3 bg-light" style={{ minHeight: '230px' }}>
               {galleryImages[activeImageIndex] && (
-                <img src={galleryImages[activeImageIndex]} alt={product.name} className="product-detail-about-image" />
+                <img src={galleryImages[activeImageIndex]} alt={product.name} className="d-block w-100 object-fit-contain" style={{ height: '205px' }} />
               )}
             </div>
           </div>
         </section>
 
         {relatedProducts.length > 0 && (
-          <section className="product-related-section mt-5" aria-labelledby="related-products-title">
+          <section className="mt-5 p-3 p-md-4" aria-labelledby="related-products-title">
             <div className="d-flex align-items-center justify-content-between gap-3 mb-4">
-              <h2 id="related-products-title" className="h3 fw-bold mb-0 product-related-title">Related Products</h2>
+              <h2 id="related-products-title" className="h3 fw-bold text-dark mb-0">Related Products</h2>
               <div className="d-flex gap-2">
                 <button
                   type="button"
@@ -222,18 +222,18 @@ function ProductDetailPage({ productId, onAddToCart }) {
             <div className="product-related-track" ref={relatedProductsRef}>
               {relatedProducts.map((relatedProduct) => (
                 <article className="product-related-card" key={relatedProduct.id}>
-                  <div className="product-related-image-wrap">
-                    <img src={relatedProduct.image} alt={relatedProduct.name} className="product-related-image" />
+                  <div className="d-flex align-items-center justify-content-center p-3 pb-2" style={{ height: '205px' }}>
+                    <img src={relatedProduct.image} alt={relatedProduct.name} className="d-block w-100 h-100 rounded-2 object-fit-cover" />
                   </div>
                   <h3 className="product-related-name">{relatedProduct.name}</h3>
-                  <div className="d-flex align-items-center justify-content-between gap-2 product-related-card-footer">
+                  <div className="d-flex align-items-center justify-content-between gap-2 mt-auto p-3 border-top" style={{ minHeight: '72px' }}>
                     <div>
                       <span className="d-block fw-semibold text-secondary small">Price</span>
-                      <span className="fw-bold product-related-price">₹{Number(relatedProduct.price).toLocaleString('en-IN')}</span>
+                      <span className="fw-bold text-primary">₹{Number(relatedProduct.price).toLocaleString('en-IN')}</span>
                     </div>
                     <a
                       href={`/product/${encodeURIComponent(relatedProduct.id)}`}
-                      className="btn btn-sm rounded-pill product-related-link"
+                      className="btn btn-sm btn-warning rounded-pill fw-bold text-nowrap px-3 py-1"
                     >
                       View More
                     </a>

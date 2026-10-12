@@ -97,7 +97,7 @@ const ShopByCategory = ({ onSelectCategory }) => {
                         <img src={image} alt="" className="category-card-image img-fluid object-fit-contain" loading="lazy" />
                       </span>
                       <span className="category-card-copy text-center d-flex align-items-center justify-content-center py-3 px-2">
-                        <span className="category-card-title fw-bold fs-5">{category.title}</span>
+                        <span className="text-warning fw-bold fs-5">{category.title}</span>
                       </span>
                     </button>
                   </div>

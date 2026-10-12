@@ -97,7 +97,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <a href="/#shop" className="btn-skytech-all-products">
+              <a href="/#shop" className="btn btn-warning rounded-pill fw-bold text-uppercase px-4 py-2">
                 ALL PRODUCTS
               </a>
             </div>
@@ -106,8 +106,8 @@ const Footer = () => {
             <div className="row g-3 g-md-4">
               {/* Column 1: Quick Links */}
               <div className="col-6 col-md-3">
-                <h6 className="skytech-footer-title">Quick Links</h6>
-                <ul className="skytech-footer-links">
+                <h6 className="fw-bold text-main mb-3">Quick Links</h6>
+                <ul className="list-unstyled d-flex flex-column gap-2 mb-0">
                   <li><a href="/about-us" className="skytech-footer-link-item"><YellowDotIcon />About us</a></li>
                   <li><a href="/#catalog" className="skytech-footer-link-item"><YellowDotIcon />Refurbished Systems</a></li>
                   <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Shop</a></li>
@@ -117,8 +117,8 @@ const Footer = () => {
 
               {/* Column 2: Find It Fast */}
               <div className="col-6 col-md-3">
-                <h6 className="skytech-footer-title">Find It Fast</h6>
-                <ul className="skytech-footer-links">
+                <h6 className="fw-bold text-main mb-3">Find It Fast</h6>
+                <ul className="list-unstyled d-flex flex-column gap-2 mb-0">
                   <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Laptops</a></li>
                   <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Server</a></li>
                   <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Desktop System</a></li>
@@ -130,8 +130,8 @@ const Footer = () => {
 
               {/* Column 3: Contact Info */}
               <div className="col-12 col-md-6">
-                <h6 className="skytech-footer-title fs-5 mb-3">Contact Info</h6>
-                <ul className="skytech-footer-links d-flex flex-column gap-3">
+                <h6 className="fw-bold text-main fs-5 mb-3">Contact Info</h6>
+                <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
                   <li className="d-flex align-items-start gap-3 fs-6 text-muted">
                     <Mail size={22} className="text-warning flex-shrink-0 mt-1" aria-hidden="true" />
                     <a
@@ -165,7 +165,7 @@ const Footer = () => {
 
         {/* Bottom Copyright Strip */}
         <div className="mt-4 pt-2">
-          <div className="skytech-copyright-pill">
+          <div className="rounded-pill text-center fw-semibold small py-3 px-4 bg-surface text-main">
             Copyright © 2026 SkyTech. All rights reserved.
           </div>
         </div>
