@@ -211,8 +211,8 @@ export const faqData = [
   },
   {
     id: 4,
-    question: "Where Does SkyTech Systems Operate And Who Are Its Customers?",
-    answer: "SkyTech Systems is based in Ahmedabad, Gujarat and serves over 1,200+ Corporate, SME, and retail customers across Gujarat and all over India with express doorstep delivery and insured pickup."
+    question: "Where Does SkyTech Operate And Who Are Its Customers?",
+    answer: "SkyTech is based in Ahmedabad, Gujarat and serves over 1,200+ Corporate, SME, and retail customers across Gujarat and all over India with express doorstep delivery and insured pickup."
   }
 ];
 
@@ -230,9 +230,9 @@ export const industriesWeServeData = [
 ];
 
 export const snapshotExcellenceData = {
-  title: "SkyTech Systems",
+  title: "SKYTECH",
   subtitle: "A Snapshot of Excellence.",
-  description: "SkyTech Systems, is based out of Ahmedabad and having customer base across India, We are serving more than 1200+ Corporate and SME customers in Gujarat.",
+  description: "SkyTech, is based out of Ahmedabad and having customer base across India, We are serving more than 1200+ Corporate and SME customers in Gujarat.",
   counters: [
     { id: 1, target: 13, suffix: "+", label: "Years Experience", iconKey: "Award" },
     { id: 2, target: 1000, suffix: "+", label: "Dealers", iconKey: "Users" },

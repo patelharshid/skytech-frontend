@@ -7,6 +7,7 @@ import {
   MessageSquare
 } from 'lucide-react';
 import { primaryNumber, secondaryNumber, primaryEmail, officeAddress } from '../constants/constants';
+import logo from '../assets/logo.png';
 
 
 const YellowDotIcon = () => (
@@ -55,42 +56,21 @@ const Footer = () => {
     <footer className="skytech-footer-section py-5 position-relative">
       <div className="container">
         <div className="row gy-4 align-items-start">
-          {/* Left Column - SkyTech Systems Card */}
+          {/* Left Column - SkyTech Card */}
           <div className="col-lg-4">
             <div className="skytech-footer-card text-center">
               {/* White SkyTech Logo Badge */}
               <div className="skytech-logo-badge mb-3">
-                <div className="d-flex align-items-center gap-2">
-                  <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
-                    <circle cx="20" cy="20" r="10" stroke="#d94e16" strokeWidth="2.5" fill="none" />
-                    <circle cx="20" cy="20" r="5" fill="#fecf07" />
-                    {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-                      <line
-                        key={i}
-                        x1={20 + 12 * Math.cos((angle * Math.PI) / 180)}
-                        y1={20 + 12 * Math.sin((angle * Math.PI) / 180)}
-                        x2={20 + 16 * Math.cos((angle * Math.PI) / 180)}
-                        y2={20 + 16 * Math.sin((angle * Math.PI) / 180)}
-                        stroke="#d94e16"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    ))}
-                  </svg>
-                  <div className="text-start">
-                    <div className="fw-extrabold text-uppercase lh-1" style={{ color: '#d94e16', fontSize: '1.2rem', letterSpacing: '0.04em' }}>
-                      SKYTECH<sup style={{ fontSize: '0.55rem', top: '-0.5em' }}>™</sup>
-                    </div>
-                    <div className="fw-bold text-uppercase tracking-widest lh-1" style={{ color: '#ca8a04', fontSize: '0.62rem', marginTop: '3px', letterSpacing: '0.22em' }}>
-                      SYSTEMS
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src={logo}
+                  alt="SKYTECH"
+                  style={{ width: '180px', height: 'auto', objectFit: 'contain' }}
+                />
               </div>
 
               {/* Description */}
               <p className="small text-muted mb-4 px-2" style={{ lineHeight: '1.65', color: '#52453c' }}>
-                SkyTech Systems, is based out of Ahmedabad and having customer base across India, we are serving more than 1200+ Corporate and SME customers in Gujarat.
+                SkyTech is based out of Ahmedabad and having customer base across India, we are serving more than 1200+ Corporate and SME customers in Gujarat.
               </p>
 
               {/* Social Icons Row */}
@@ -186,7 +166,7 @@ const Footer = () => {
         {/* Bottom Copyright Strip */}
         <div className="mt-4 pt-2">
           <div className="skytech-copyright-pill">
-            Copyright © 2026 SkyTech Systems. All rights reserved.
+            Copyright © 2026 SkyTech. All rights reserved.
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Laptop, ShoppingBag, Search, Sun, Moon, PhoneCall, Mail, Menu, X } from 'lucide-react';
+import { ShoppingBag, Search, Sun, Moon, PhoneCall, Mail, Menu, X } from 'lucide-react';
 import TopMarqueeBar from './TopMarqueeBar';
 import { primaryNumber, primaryEmail } from '../constants/constants';
+import logo from '../assets/logo.png';
 
 const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -36,15 +37,12 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
           <div className="row align-items-center gy-2 gy-md-3">
             {/* Brand Logo */}
             <div className="col-8 col-sm-auto col-lg-3 d-flex align-items-center justify-content-between">
-              <a className="navbar-brand d-inline-flex align-items-center gap-2 fw-bold text-decoration-none" href="#">
-                <div className="bg-skytech-gold p-2 rounded-3 text-dark d-flex align-items-center justify-content-center flex-shrink-0" style={{ width: '40px', height: '40px' }}>
-                  <Laptop size={22} />
-                </div>
-                <div className="text-nowrap">
-                  <span className="fs-3 text-main font-bold tracking-tight d-block lh-1">
-                    Sky<span className="text-warning">Tech</span>
-                  </span>
-                </div>
+              <a className="navbar-brand d-inline-flex align-items-center text-decoration-none" href="/#hero">
+                <img
+                  src={logo}
+                  alt="SKYTECH"
+                  style={{ height: '60px', width: 'auto' }}
+                />
               </a>
             </div>
 
@@ -151,13 +149,21 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
           <nav className="navbar navbar-expand-lg skytech-floating-nav py-1">
             <div className="container-fluid p-0">
               {/* Logo inside floating navbar (visible ONLY when sticky on Desktop) */}
-              <a className={`navbar-brand align-items-center gap-2 text-decoration-none me-3 ${isScrolled ? 'd-inline-flex' : 'd-none'}`} href="#">
-                <div className="bg-skytech-gold p-2 rounded-3 text-dark d-flex align-items-center justify-content-center" style={{ width: '32px', height: '32px' }}>
-                  <Laptop size={18} />
+              <a className={`navbar-brand align-items-center text-decoration-none me-3 ${isScrolled ? 'd-inline-flex' : 'd-none'}`} href="/#hero">
+                <div
+                  className="d-inline-flex align-items-center justify-content-center px-2 py-1 rounded-pill"
+                  style={{
+                    backgroundColor: 'var(--white)',
+                    border: '1px solid var(--nav-pill-border)',
+                    boxShadow: 'var(--shadow-sm)',
+                  }}
+                >
+                  <img
+                    src={logo}
+                    alt="SKYTECH"
+                    style={{ height: '26px', width: 'auto', objectFit: 'contain' }}
+                  />
                 </div>
-                <span className="fs-5 text-main font-bold tracking-tight">
-                  Sky<span className="text-warning">Tech</span>
-                </span>
               </a>
 
               <div className="navbar-collapse justify-content-between align-items-center w-100">
