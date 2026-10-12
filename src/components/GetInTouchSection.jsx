@@ -173,9 +173,10 @@ const GetInTouchSection = () => {
               </div>
               <div className="rounded-4 overflow-hidden border bg-white shadow-sm" style={{ borderColor: '#E5E7EB' }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=SKY%20TECH%20IT%20SOLUTIONS%2C%20Ahmedabad%2C%20Gujarat&output=embed"
+                  title="SKY TECH IT SOLUTIONS"
+                  src={mapEmbedUrl}
                   width="100%"
-                  height="400"
+                  height="260"
                   style={{ border: 0, display: 'block' }}
                   loading="lazy"
                   allowFullScreen
