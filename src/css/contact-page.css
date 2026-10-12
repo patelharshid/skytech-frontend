@@ -5,7 +5,7 @@
 }
 
 .contact-page-banner {
-  background-color: #475569;
+  background-color: var(--page-title-banner-bg);
 }
 
 .contact-banner-image {
@@ -13,30 +13,31 @@
 }
 
 .page-title-shade {
-  background: linear-gradient(90deg, rgba(15, 23, 42, .68), rgba(15, 23, 42, .32));
+  background: var(--page-title-shade);
 }
 
 .contact-location-card {
-  background: linear-gradient(145deg, #f4f9fd, #fff 72%);
-  border-top: 4px solid var(--skytech-orange) !important;
+  background: var(--contact-location-card-bg);
+  border-top: 4px solid var(--secondary) !important;
 }
 
 .contact-method-icon {
-  background: #fff0e8;
+  background: var(--contact-method-icon-bg);
+  color: var(--accent);
 }
 
 .contact-form-panel {
-  background: #faf7ef;
+  background: var(--contact-form-panel-bg);
 }
 
 .contact-form-panel .form-control {
-  border-color: #d5d7da;
+  border-color: var(--contact-form-border);
   border-radius: .5rem;
 }
 
 .contact-form-panel .form-control:focus {
-  border-color: var(--skytech-orange);
-  box-shadow: 0 0 0 .2rem rgba(var(--skytech-orange-rgb), .18);
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 .2rem rgba(var(--secondary-rgb), .18);
 }
 
 .contact-form-panel textarea {

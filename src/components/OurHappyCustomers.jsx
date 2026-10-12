@@ -103,7 +103,7 @@ const OurHappyCustomers = () => {
           width: 46px;
           height: 46px;
           border: 1px solid var(--customers-card-border);
-          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+          box-shadow: var(--customers-card-shadow);
           transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .nav-btn-pro:hover {
@@ -111,7 +111,7 @@ const OurHappyCustomers = () => {
           color: var(--customers-nav-btn-hover-color) !important;
           border-color: var(--customers-nav-btn-hover-bg) !important;
           transform: translateY(-50%) scale(1.1) !important;
-          box-shadow: 0 6px 18px rgba(245, 158, 11, 0.35) !important;
+          box-shadow: var(--customers-card-shadow-active) !important;
         }
       `}</style>
       <div className="container py-3 py-md-4">
@@ -184,7 +184,7 @@ const OurHappyCustomers = () => {
                       {/* 5 Stars */}
                       <div className="d-flex align-items-center gap-1 mb-3 text-start">
                         {[...Array(rev.rating)].map((_, i) => (
-                          <Star key={i} size={17} fill="#f59e0b" color="#f59e0b" />
+                          <Star key={i} size={17} fill="var(--customers-star-color)" color="var(--customers-star-color)" />
                         ))}
                       </div>
 
@@ -222,7 +222,7 @@ const OurHappyCustomers = () => {
                       width: dotIdx === startIndex ? '26px' : '9px',
                       height: '9px',
                       borderRadius: '5px',
-                      backgroundColor: dotIdx === startIndex ? 'var(--skytech-amber)' : 'var(--border-color)',
+                      backgroundColor: dotIdx === startIndex ? 'var(--accent)' : 'var(--border-color)',
                       cursor: 'pointer'
                     }}
                     aria-label={`Go to slide ${dotIdx + 1}`}

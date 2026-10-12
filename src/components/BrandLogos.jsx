@@ -17,7 +17,7 @@ const BrandLogos = () => {
               <div
                 key={idx}
                 className="col-6 col-md-3 p-3.5 d-flex align-items-center justify-content-center border-end border-bottom"
-                style={{ height: '95px', backgroundColor: '#ffffff' }}
+                style={{ height: '95px', backgroundColor: 'var(--bg-card)' }}
               >
                 {brand.isAppleCombo ? (
                   <div className="d-flex align-items-center gap-2">

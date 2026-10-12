@@ -51,7 +51,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, onOrderComplete }) => {
   };
 
   return (
-    <div className="modal fade show d-block" tabIndex="-1" style={{ backgroundColor: 'rgba(15, 23, 42, 0.75)', backdropFilter: 'blur(8px)' }}>
+    <div className="modal fade show d-block" tabIndex="-1" style={{ backgroundColor: 'var(--modal-backdrop-bg)', backdropFilter: 'blur(8px)' }}>
       <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content shadow-lg p-3">
           <div className="modal-header border-0 pb-0">

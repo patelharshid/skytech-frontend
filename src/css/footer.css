@@ -41,7 +41,7 @@
 
 .skytech-social-btn:hover {
   background: var(--footer-accent);
-  color: var(--skytech-dark);
+  color: var(--footer-accent-text);
   transform: translateY(-2px);
 }
 
@@ -54,7 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(var(--skytech-gold-rgb), 0.4);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.4);
 }
 
 .btn-skytech-all-products {
@@ -72,14 +72,14 @@
   align-items: center;
   justify-content: center;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(var(--skytech-gold-rgb), 0.35);
+  box-shadow: 0 4px 14px rgba(var(--secondary-rgb), 0.35);
 }
 
 .btn-skytech-all-products:hover {
   background-color: var(--footer-accent-hover);
   color: var(--footer-accent-text) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(var(--skytech-gold-rgb), 0.5);
+  box-shadow: 0 6px 18px rgba(var(--secondary-rgb), 0.5);
 }
 
 .skytech-footer-title {

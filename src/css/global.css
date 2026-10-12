@@ -2,99 +2,246 @@
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* ---------- Brand palette ---------- */
-  --skytech-gold: #fecf07;
-  --skytech-gold-hover: #e5b905;
-  --skytech-gold-rgb: 254, 207, 7;
-  --skytech-orange: #f59e0b;
-  --skytech-orange-rgb: 245, 158, 11;
-  --skytech-dark: #0f172a;
-  --skytech-dark-rgb: 15, 23, 42;
-  --skytech-slate: #1e293b;
-  --skytech-amber: #d97706;
-  --skytech-amber-dark: #b45309;
-  --skytech-emerald: #10b981;
-  --skytech-emerald-rgb: 16, 185, 129;
-  --skytech-blue: #2563eb;
-  --skytech-red: #ef4444;
+  /* ==========================================================================
+     GLOBAL THEME PALETTE
+     To change the entire application's theme, modify ONLY the variables in
+     this section! All components, pages, buttons, badges, navbars, and cards
+     will automatically adapt to your chosen color scheme.
+     ========================================================================== */
+
+  /* --- Primary Brand Color (Buttons, Highlights, Main Accents) --- */
+  --primary: #fecf07;
+  --primary-hover: #e5b905;
+  --primary-rgb: 254, 207, 7;
+  --primary-contrast: #0f172a;
+  /* Text color on primary background */
+
+  /* --- Secondary Brand Color (Complementary Accents, Badges, Secondary CTAs) --- */
+  --secondary: #f59e0b;
+  --secondary-hover: #d97706;
+  --secondary-rgb: 245, 158, 11;
+  --secondary-contrast: #ffffff;
+
+  /* --- Deep Accent Color (Icons, Active States, Hover Accents) --- */
+  --accent: #d97706;
+  --accent-hover: #b45309;
+  --accent-rgb: 217, 119, 6;
+  --accent-dark: #b45309;
+
+  /* --- Dark & Slate Neutrals --- */
+  --dark: #0f172a;
+  --dark-rgb: 15, 23, 42;
+  --slate: #1e293b;
+  --slate-rgb: 30, 41, 59;
+
+  /* --- Status & Auxiliary Colors --- */
+  --blue: #2563eb;
+  --blue-rgb: 37, 99, 235;
+  --emerald: #10b981;
+  --emerald-rgb: 16, 185, 129;
+  --red: #ef4444;
   --white: #ffffff;
+  --white-rgb: 255, 255, 255;
   --whatsapp: #25d366;
   --whatsapp-rgb: 37, 211, 102;
 
-  /* ---------- Gradients ---------- */
-  --grad-gold: linear-gradient(135deg, var(--skytech-gold) 0%, var(--skytech-orange) 100%);
-  --grad-dark: linear-gradient(135deg, var(--skytech-dark) 0%, var(--skytech-slate) 100%);
-  --grad-surface: linear-gradient(135deg, var(--white) 0%, #f8fafc 100%);
-
-  /* ---------- Neutrals ---------- */
+  /* --- Background & Surface Neutrals --- */
   --bg-body: #f8fafc;
   --bg-card: #ffffff;
   --bg-surface: #f1f5f9;
+  --bg-subtle: #faf7f2;
+  --bg-subtle-border: #f0e6dd;
+
+  /* --- Borders --- */
   --border-color: #e2e8f0;
+  --border-subtle: #e5e7eb;
+
+  /* --- Typography Colors --- */
   --text-main: #0f172a;
   --text-muted: #64748b;
   --text-light: #94a3b8;
-  --shadow-sm: 0 2px 4px rgba(var(--skytech-dark-rgb), 0.05);
-  --shadow-md: 0 6px 18px rgba(var(--skytech-dark-rgb), 0.08);
-  --shadow-lg: 0 16px 36px rgba(var(--skytech-dark-rgb), 0.12);
 
-  /* ---------- Navbar ---------- */
-  --nav-bg: #ffffff;
-  --nav-pill-bg: rgba(254, 249, 231, 0.96);
-  --nav-pill-border: rgba(var(--skytech-orange-rgb), 0.35);
-  --nav-pill-shadow: 0 8px 24px rgba(var(--skytech-dark-rgb), 0.08);
+  /* --- Gradients --- */
+  --grad-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  --grad-gold: var(--grad-primary);
+  --grad-dark: linear-gradient(135deg, var(--dark) 0%, var(--slate) 100%);
+  --grad-surface: linear-gradient(135deg, var(--white) 0%, var(--bg-body) 100%);
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 2px 4px rgba(var(--dark-rgb), 0.05);
+  --shadow-md: 0 6px 18px rgba(var(--dark-rgb), 0.08);
+  --shadow-lg: 0 16px 36px rgba(var(--dark-rgb), 0.12);
+
+  /* ==========================================================================
+     COMPONENT & SECTION TOKENS (Dynamically linked to the theme above)
+     ========================================================================== */
+
+  /* Top Marquee Bar */
+  --marquee-bg: var(--primary);
+  --marquee-color: var(--primary-contrast);
+
+  /* Header & Navigation */
+  --nav-bg: var(--white);
+  --nav-pill-bg: rgba(var(--primary-rgb), 0.12);
+  --nav-pill-border: rgba(var(--secondary-rgb), 0.35);
+  --nav-pill-shadow: 0 8px 24px rgba(var(--dark-rgb), 0.08);
   --nav-link-color: var(--text-main);
-  --nav-link-active-color: var(--skytech-dark);
+  --nav-link-hover: var(--accent);
+  --nav-link-active-color: var(--accent);
+  --nav-link-active-bg: var(--white);
+  --nav-link-active-bg-subtle: rgba(var(--secondary-rgb), 0.12);
 
-  /* ---------- Footer (SkyTech) ---------- */
-  --footer-bg: #faf7f2;
-  --footer-border: #f0e6dd;
-  --footer-text: #1e293b;
-  --footer-title: #1e293b;
-  --footer-card-bg: #f4eae3;
-  --footer-card-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-  --footer-logo-bg: #ffffff;
-  --footer-logo-border: rgba(0, 0, 0, 0.06);
-  --footer-logo-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  --footer-social-bg: #ebdcd3;
-  --footer-social-color: #4a3b32;
-  --footer-link: #334155;
-  --footer-link-hover: var(--skytech-amber);
-  --footer-pill-bg: #f7eee5;
-  --footer-pill-text: #334155;
-  --footer-accent: var(--skytech-gold);
-  --footer-accent-hover: var(--skytech-gold-hover);
-  --footer-accent-text: var(--white);
+  /* Buttons */
+  --btn-primary-bg: var(--grad-primary);
+  --btn-primary-color: var(--primary-contrast);
+  --btn-primary-hover-bg: var(--primary-hover);
+  --btn-primary-shadow: rgba(var(--secondary-rgb), 0.35);
+  --btn-primary-hover-shadow: rgba(var(--secondary-rgb), 0.45);
 
-  /* ---------- FAQ Section ---------- */
+  /* Footer */
+  --footer-bg: var(--bg-subtle);
+  --footer-border: var(--bg-subtle-border);
+  --footer-text: var(--text-main);
+  --footer-title: var(--text-main);
+  --footer-card-bg: rgba(var(--secondary-rgb), 0.08);
+  --footer-card-shadow: 0 4px 14px rgba(var(--dark-rgb), 0.03);
+  --footer-logo-bg: var(--white);
+  --footer-logo-border: rgba(var(--dark-rgb), 0.06);
+  --footer-logo-shadow: 0 4px 14px rgba(var(--dark-rgb), 0.06);
+  --footer-social-bg: rgba(var(--secondary-rgb), 0.15);
+  --footer-social-color: var(--dark);
+  --footer-link: var(--text-muted);
+  --footer-link-hover: var(--accent);
+  --footer-pill-bg: rgba(var(--secondary-rgb), 0.1);
+  --footer-pill-text: var(--text-main);
+  --footer-accent: var(--primary);
+  --footer-accent-hover: var(--primary-hover);
+  --footer-accent-text: var(--primary-contrast);
+
+  /* FAQ */
   --faq-bg: var(--bg-surface);
   --faq-card-bg: var(--bg-card);
   --faq-card-border: var(--border-color);
-  --faq-card-border-hover: rgba(var(--skytech-orange-rgb), 0.4);
-  --faq-card-border-active: var(--skytech-amber);
-  --faq-card-shadow: 0 2px 8px rgba(var(--skytech-dark-rgb), 0.04);
-  --faq-card-shadow-hover: 0 8px 20px rgba(var(--skytech-dark-rgb), 0.07);
-  --faq-card-shadow-active: 0 10px 28px rgba(var(--skytech-orange-rgb), 0.12);
-  --faq-toggle-bg: var(--skytech-amber);
+  --faq-card-border-hover: rgba(var(--secondary-rgb), 0.4);
+  --faq-card-border-active: var(--accent);
+  --faq-card-shadow: 0 2px 8px rgba(var(--dark-rgb), 0.04);
+  --faq-card-shadow-hover: 0 8px 20px rgba(var(--dark-rgb), 0.07);
+  --faq-card-shadow-active: 0 10px 28px rgba(var(--secondary-rgb), 0.12);
+  --faq-toggle-bg: var(--accent);
   --faq-toggle-color: var(--white);
-  --faq-toggle-bg-active: var(--skytech-dark);
-  --faq-toggle-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
-  --faq-toggle-shadow-active: 0 4px 14px rgba(15, 23, 42, 0.3);
+  --faq-toggle-bg-active: var(--dark);
+  --faq-toggle-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.25);
+  --faq-toggle-shadow-active: 0 4px 14px rgba(var(--dark-rgb), 0.3);
   --faq-question-color: var(--text-main);
   --faq-answer-color: var(--text-muted);
 
-  /* ---------- Happy Customers Section ---------- */
+  /* Customer Reviews */
   --customers-bg: var(--bg-body);
   --customers-card-bg: var(--bg-card);
   --customers-card-border: var(--border-color);
-  --customers-card-border-hover: rgba(var(--skytech-orange-rgb), 0.5);
-  --customers-card-shadow-hover: 0 14px 30px -6px rgba(var(--skytech-dark-rgb), 0.12);
+  --customers-card-border-hover: rgba(var(--secondary-rgb), 0.5);
+  --customers-card-shadow: 0 4px 14px rgba(var(--dark-rgb), 0.06);
+  --customers-card-shadow-hover: 0 14px 30px -6px rgba(var(--dark-rgb), 0.12);
+  --customers-card-shadow-active: 0 6px 18px rgba(var(--secondary-rgb), 0.35);
   --customers-title-color: var(--text-main);
   --customers-text-color: var(--text-main);
   --customers-date-color: var(--text-muted);
   --customers-nav-btn-bg: var(--bg-card);
-  --customers-nav-btn-hover-bg: var(--skytech-amber);
+  --customers-nav-btn-hover-bg: var(--accent);
   --customers-nav-btn-hover-color: var(--white);
+  --customers-star-color: var(--secondary);
+
+  /* Category Showcase */
+  --category-bg: #fafafa;
+  --category-card-bg: #e9ded7;
+  --category-card-img-bg: linear-gradient(180deg, #e8d9cf 0%, #f3f0ee 100%);
+  --category-card-copy-bg: linear-gradient(180deg, #e8d9cf 0%, #f1eeec 100%);
+  --category-heading-rule: linear-gradient(90deg, transparent, rgba(var(--dark-rgb), 0.4) 18%, rgba(var(--dark-rgb), 0.4) 82%, transparent);
+  --category-arrow-border: var(--secondary);
+  --category-arrow-color: var(--secondary);
+  --category-arrow-bg: var(--white);
+  --category-arrow-hover-bg: var(--secondary);
+  --category-arrow-hover-color: var(--white);
+
+  /* Industries Section */
+  --industries-bg: radial-gradient(circle at center, #1b263b 0%, #0b0f19 100%);
+  --industries-card-bg: var(--white);
+  --industries-card-border: rgba(var(--white-rgb), 0.2);
+  --industries-icon-color: var(--secondary);
+  --industries-glow-1: rgba(var(--accent-rgb), 0.15);
+  --industries-glow-2: rgba(var(--blue-rgb), 0.15);
+
+  /* Snapshot Section */
+  --snapshot-card-bg: var(--bg-subtle);
+  --snapshot-card-border: var(--bg-subtle-border);
+  --snapshot-card-dark-bg: var(--slate);
+  --snapshot-card-dark-border: #334155;
+
+  /* Contact & About Pages */
+  --page-title-banner-bg: #475569;
+  --page-title-shade: linear-gradient(90deg, rgba(var(--dark-rgb), 0.68), rgba(var(--dark-rgb), 0.32));
+  --contact-location-card-bg: linear-gradient(145deg, var(--bg-surface), var(--white) 72%);
+  --contact-method-icon-bg: rgba(var(--primary-rgb), 0.18);
+  --contact-form-panel-bg: var(--bg-subtle);
+  --contact-form-border: var(--border-subtle);
+
+  /* Product Details */
+  --product-about-bg: var(--bg-surface);
+  --product-card-bg: var(--bg-card);
+  --product-card-border: rgba(var(--secondary-rgb), 0.4);
+  --product-price-color: var(--blue);
+
+  /* Modals & Backdrop */
+  --modal-backdrop-bg: rgba(var(--dark-rgb), 0.75);
+  --modal-bg: var(--bg-card);
+  --modal-border: var(--border-color);
+
+  /* ==========================================================================
+     BACKWARD-COMPATIBILITY ALIASES
+     (Allows existing code referencing legacy variables to continue working flawlessly)
+     ========================================================================== */
+  --skytech-gold: var(--primary);
+  --skytech-gold-hover: var(--primary-hover);
+  --skytech-gold-rgb: var(--primary-rgb);
+  --skytech-orange: var(--secondary);
+  --skytech-orange-rgb: var(--secondary-rgb);
+  --skytech-amber: var(--accent);
+  --skytech-amber-dark: var(--accent-dark);
+  --skytech-amber-rgb: var(--accent-rgb);
+  --skytech-dark: var(--dark);
+  --skytech-dark-rgb: var(--dark-rgb);
+  --skytech-slate: var(--slate);
+  --skytech-emerald: var(--emerald);
+  --skytech-emerald-rgb: var(--emerald-rgb);
+  --skytech-blue: var(--blue);
+  --skytech-red: var(--red);
+}
+
+/* ==========================================================================
+   Dark Theme Variant (Optional - activates when data-theme="dark" is set)
+   ========================================================================== */
+[data-theme="dark"] {
+  --bg-body: #0b1120;
+  --bg-card: #1e293b;
+  --bg-surface: #1e293b;
+  --bg-subtle: #172033;
+  --bg-subtle-border: #334155;
+  --border-color: #334155;
+  --border-subtle: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  --nav-bg: #0f172a;
+  --modal-bg: #1e293b;
+  --contact-form-panel-bg: #172033;
+  --contact-form-border: #334155;
+  --snapshot-card-bg: #1e293b;
+  --snapshot-card-border: #334155;
+  --category-bg: #0f172a;
+  --category-card-bg: #1e293b;
+  --category-card-img-bg: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  --category-card-copy-bg: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  --product-about-bg: #131c2e;
 }
 
 body {
@@ -127,25 +274,65 @@ h6 {
   font-family: var(--font-mono);
 }
 
-.text-gold {
-  color: var(--skytech-amber) !important;
+/* Text Utility Classes */
+.text-gold,
+.text-orange,
+.text-warning,
+.text-primary,
+.text-skytech-gold {
+  color: var(--accent) !important;
 }
 
+.text-dark,
+.text-navy,
+.text-main {
+  color: var(--text-main) !important;
+}
+
+.text-secondary,
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Background Utility Classes */
 .bg-skytech-gold,
-.bg-skytech-gold {
-  background-color: var(--skytech-gold) !important;
-  color: var(--skytech-dark) !important;
+.bg-primary,
+.bg-warning {
+  background-color: var(--primary) !important;
+  color: var(--primary-contrast) !important;
 }
 
-.bg-skytech-dark {
-  background-color: var(--skytech-dark) !important;
+.bg-skytech-dark,
+.bg-navy,
+.bg-dark {
+  background-color: var(--dark) !important;
   color: var(--white) !important;
+}
+
+.bg-surface,
+.bg-light-blue,
+.bg-subtle {
+  background-color: var(--bg-surface) !important;
+}
+
+.bg-card,
+.bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+/* Border Utility Classes */
+.border,
+.border-top,
+.border-bottom,
+.border-start,
+.border-end {
+  border-color: var(--border-color) !important;
 }
 
 /* Top Marquee Bar */
 .skytech-marquee-bar {
-  background-color: var(--skytech-gold);
-  color: var(--skytech-dark);
+  background-color: var(--marquee-bg);
+  color: var(--marquee-color);
   font-weight: 700;
   font-size: 0.82rem;
   padding: 6px 0;
@@ -171,7 +358,7 @@ h6 {
 /* Header Styling */
 .sky-header {
   background-color: var(--nav-bg);
-  border-bottom: 0.1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
@@ -206,8 +393,9 @@ h6 {
 }
 
 .skytech-floating-nav-wrapper.is-sticky .skytech-floating-nav {
-  box-shadow: 0 12px 32px rgba(var(--skytech-dark-rgb), 0.18);
-  border-color: var(--skytech-gold);
+  box-shadow: 0 12px 32px rgba(var(--dark-rgb), 0.18);
+  border-color: var(--primary);
+  background: var(--bg-card);
 }
 
 .skytech-floating-nav .navbar-collapse {
@@ -240,59 +428,71 @@ h6 {
   white-space: nowrap;
 }
 
-.skytech-floating-nav .nav-link:hover {
-  color: #dc4f20 !important;
+.skytech-floating-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+  color: var(--nav-link-hover) !important;
   font-weight: 700 !important;
   background-color: transparent !important;
 }
 
-.skytech-floating-nav .nav-link.active:hover,
-.skytech-floating-nav .nav-link.about-nav-active:hover {
-  background: #fff !important;
-  color: #dc4f20 !important;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #dc4f20 !important;
-  font-weight: 700 !important;
-}
-
 .skytech-floating-nav .nav-link.active,
 .skytech-floating-nav .nav-link.about-nav-active {
-  color: #dc4f20 !important;
-  background: #fff !important;
-  border-radius: .35rem;
+  color: var(--nav-link-active-color) !important;
+  background: var(--nav-link-active-bg) !important;
+  border-radius: 0.35rem;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.active.about-nav-active {
-  color: #dc4f20 !important;
-  background: #fff3ee;
-  border-radius: .55rem;
+  color: var(--nav-link-active-color) !important;
+  background: var(--nav-link-active-bg-subtle) !important;
+  border-radius: 0.55rem;
+}
+
+.skytech-floating-nav .nav-link.active:hover,
+.skytech-floating-nav .nav-link.about-nav-active:hover {
+  background: var(--nav-link-active-bg) !important;
+  color: var(--nav-link-hover) !important;
 }
 
 /* Custom Buttons */
-.btn-skytech-gold {
-  background: var(--grad-gold);
-  color: var(--skytech-dark);
-  border: none;
+.btn-skytech-gold,
+.btn-sky-primary,
+.btn-warning,
+.btn-primary {
+  background: var(--btn-primary-bg) !important;
+  background-color: var(--primary) !important;
+  color: var(--btn-primary-color) !important;
+  border: 1px solid var(--primary) !important;
   font-weight: 700;
   padding: 0.55rem 1.3rem;
   border-radius: 50rem;
-  box-shadow: 0 4px 14px rgba(var(--skytech-orange-rgb), 0.3);
+  box-shadow: 0 4px 14px var(--btn-primary-shadow);
   transition: all 0.25s ease;
 }
 
-.btn-skytech-gold:hover {
+.btn-skytech-gold:hover,
+.btn-skytech-gold:focus,
+.btn-sky-primary:hover,
+.btn-sky-primary:focus,
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: var(--btn-primary-hover-bg) !important;
+  background-color: var(--btn-primary-hover-bg) !important;
+  border-color: var(--btn-primary-hover-bg) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(var(--skytech-orange-rgb), 0.4);
-  color: var(--skytech-dark);
+  box-shadow: 0 6px 18px var(--btn-primary-hover-shadow);
+  color: var(--btn-primary-color) !important;
 }
 
 .btn-skytech-dark {
-  background: var(--skytech-dark);
+  background: var(--dark);
   color: var(--white);
-  border: 1px solid var(--skytech-dark);
+  border: 1px solid var(--dark);
   font-weight: 600;
   padding: 0.55rem 1.2rem;
   border-radius: 50rem;
@@ -300,7 +500,8 @@ h6 {
 }
 
 .btn-skytech-dark:hover {
-  background: var(--skytech-slate);
+  background: var(--slate);
+  border-color: var(--slate);
   color: var(--white);
 }
 
@@ -316,7 +517,7 @@ h6 {
 
 .btn-sky-outline:hover {
   background: var(--bg-surface);
-  border-color: var(--skytech-gold);
+  border-color: var(--primary);
   color: var(--text-main);
 }
 
@@ -332,7 +533,7 @@ h6 {
 .sky-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(var(--skytech-gold-rgb), 0.5);
+  border-color: rgba(var(--primary-rgb), 0.5);
 }
 
 .icon-box {
@@ -343,23 +544,28 @@ h6 {
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  background: rgba(var(--skytech-gold-rgb), 0.2);
-  color: var(--skytech-amber);
+  background: rgba(var(--primary-rgb), 0.18);
+  color: var(--accent);
   margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
 .sky-card:hover .icon-box {
-  background: var(--skytech-gold);
-  color: var(--skytech-dark);
+  background: var(--primary);
+  color: var(--primary-contrast);
+  border-color: var(--primary);
   transform: scale(1.05);
 }
 
 /* Badges */
-.badge-gold {
-  background: rgba(var(--skytech-gold-rgb), 0.25);
-  color: var(--skytech-amber-dark);
-  border: 1px solid rgba(var(--skytech-orange-rgb), 0.3);
+.badge-gold,
+.badge-sky,
+.badge-primary,
+.badge-warning {
+  background: rgba(var(--primary-rgb), 0.18) !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(var(--secondary-rgb), 0.3) !important;
   font-weight: 700;
   font-size: 0.8rem;
   padding: 0.3rem 0.75rem;
@@ -367,9 +573,9 @@ h6 {
 }
 
 .badge-emerald {
-  background: rgba(var(--skytech-emerald-rgb), 0.12);
-  color: var(--skytech-emerald);
-  border: 1px solid rgba(var(--skytech-emerald-rgb), 0.25);
+  background: rgba(var(--emerald-rgb), 0.12) !important;
+  color: var(--emerald) !important;
+  border: 1px solid rgba(var(--emerald-rgb), 0.25) !important;
   font-weight: 700;
   font-size: 0.8rem;
   padding: 0.3rem 0.75rem;
@@ -377,7 +583,9 @@ h6 {
 }
 
 /* Form Controls */
-.sky-form-control {
+.sky-form-control,
+.form-control,
+.form-select {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   color: var(--text-main);
@@ -386,12 +594,23 @@ h6 {
   transition: all 0.2s ease;
 }
 
-.sky-form-control:focus {
+.sky-form-control:focus,
+.form-control:focus,
+.form-select:focus {
   background-color: var(--bg-card);
-  border-color: var(--skytech-gold);
+  border-color: var(--primary);
   color: var(--text-main);
-  box-shadow: 0 0 0 4px rgba(var(--skytech-gold-rgb), 0.25);
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.25);
   outline: none;
+}
+
+/* Range Slider */
+.form-range::-webkit-slider-thumb {
+  background-color: var(--primary);
+}
+
+.form-range::-moz-range-thumb {
+  background-color: var(--primary);
 }
 
 /* Floating WhatsApp Button */
@@ -432,7 +651,6 @@ h6 {
    ========================================================================== */
 
 @media (max-width: 991.98px) {
-
   .skytech-floating-nav-wrapper {
     margin-top: 0;
   }
@@ -458,7 +676,6 @@ h6 {
 }
 
 @media (max-width: 575.98px) {
-
   .skytech-marquee-bar {
     font-size: 0.76rem;
     padding: 4px 0;
@@ -538,6 +755,8 @@ h6 {
     max-height: calc(100vh - 1rem);
     max-height: calc(100dvh - 1rem);
     padding: .75rem !important;
+    background-color: var(--modal-bg);
+    border: 1px solid var(--modal-border);
   }
 
   .modal.fade.show.d-block .modal-body {
@@ -557,6 +776,7 @@ h6 {
 
   .modal.fade.show.d-block .modal-title {
     font-size: 1rem;
+    color: var(--text-main);
   }
 
   .modal .btn-group>.btn {

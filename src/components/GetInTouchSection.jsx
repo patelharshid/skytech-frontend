@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
 import { primaryNumber, primaryEmail, officeAddress, mapEmbedUrl } from '../constants/constants';
 
-
 const GetInTouchSection = () => {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -20,35 +19,39 @@ const GetInTouchSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!formData.fullName || !formData.phone || !formData.email || !formData.city) {
+      alert('Please fill out all mandatory fields.');
+      return;
+    }
+
+    // Prepare WhatsApp Message
+    const textMsg = `*New Contact Request from SkyTech Website*%0A%0A` +
+      `*Name:* ${formData.fullName}%0A` +
+      `*Phone:* ${formData.phone}%0A` +
+      `*Email:* ${formData.email}%0A` +
+      `*City:* ${formData.city}%0A` +
+      `*Message:* ${formData.message || 'No additional message'}`;
+
+    window.open(`https://wa.me/91${primaryNumber}?text=${textMsg}`, '_blank');
     setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        fullName: '',
-        phone: '',
-        email: '',
-        city: '',
-        message: ''
-      });
-    }, 4000);
   };
 
   return (
-    <section className="py-5 bg-white" id="contact">
-      <div className="container">
-        <div className="row g-4 align-items-stretch">
+    <section id="contact" className="py-5 position-relative">
+      <div className="container py-3 py-md-4">
+        <div className="row gy-4">
 
           {/* Left Form Card */}
           <div className="col-12 col-lg-5">
             <div
               className="h-100 p-4 p-md-5 rounded-4 d-flex flex-column justify-content-between"
-              style={{ backgroundColor: '#FAF7F2', border: '1px solid #F3ECE1' }}
+              style={{ backgroundColor: 'var(--contact-form-panel-bg)', border: '1px solid var(--border-color)' }}
             >
               <div>
-                <h2 className="fw-bold text-dark mb-3 fs-2" style={{ color: '#111827' }}>
+                <h2 className="fw-bold text-dark mb-3 fs-2" style={{ color: 'var(--text-main)' }}>
                   Get In Touch With Us
                 </h2>
-                <p className="text-secondary fs-6 mb-4" style={{ lineHeight: '1.6', color: '#4B5563' }}>
+                <p className="text-secondary fs-6 mb-4" style={{ lineHeight: '1.6', color: 'var(--text-muted)' }}>
                   Our team at Sky Tech is here to help! Whether you're looking for laptops, desktops, MacBooks, or servers, our experts are ready to assist you in finding the perfect tech solution.
                 </p>
 
@@ -74,7 +77,7 @@ const GetInTouchSection = () => {
                         placeholder="Your Name"
                         required
                         className="form-control rounded-3 py-2 px-3 bg-white border-1"
-                        style={{ borderColor: '#E5E7EB', fontSize: '14px' }}
+                        style={{ borderColor: 'var(--border-color)', fontSize: '14px' }}
                       />
                     </div>
 
@@ -92,7 +95,7 @@ const GetInTouchSection = () => {
                           placeholder="Phone Number"
                           required
                           className="form-control rounded-3 py-2 px-3 bg-white border-1"
-                          style={{ borderColor: '#E5E7EB', fontSize: '14px' }}
+                          style={{ borderColor: 'var(--border-color)', fontSize: '14px' }}
                         />
                       </div>
                       <div className="col-6">
@@ -107,7 +110,7 @@ const GetInTouchSection = () => {
                           placeholder="Enter Your Email Id"
                           required
                           className="form-control rounded-3 py-2 px-3 bg-white border-1"
-                          style={{ borderColor: '#E5E7EB', fontSize: '14px' }}
+                          style={{ borderColor: 'var(--border-color)', fontSize: '14px' }}
                         />
                       </div>
                     </div>
@@ -125,7 +128,7 @@ const GetInTouchSection = () => {
                         placeholder="Enter Your City"
                         required
                         className="form-control rounded-3 py-2 px-3 bg-white border-1"
-                        style={{ borderColor: '#E5E7EB', fontSize: '14px' }}
+                        style={{ borderColor: 'var(--border-color)', fontSize: '14px' }}
                       />
                     </div>
 
@@ -141,7 +144,7 @@ const GetInTouchSection = () => {
                         onChange={handleChange}
                         placeholder="Write Your Message Here"
                         className="form-control rounded-3 py-2 px-3 bg-white border-1"
-                        style={{ borderColor: '#E5E7EB', fontSize: '14px', resize: 'none' }}
+                        style={{ borderColor: 'var(--border-color)', fontSize: '14px', resize: 'none' }}
                       />
                     </div>
 
@@ -149,9 +152,10 @@ const GetInTouchSection = () => {
                     <div className="mt-2">
                       <button
                         type="submit"
-                        className="btn border-0 rounded-pill px-5 py-2 fw-bold text-white shadow-sm"
+                        className="btn border-0 rounded-pill px-5 py-2 fw-bold shadow-sm"
                         style={{
-                          background: 'linear-gradient(90deg, #FFB800 0%, #FFA500 100%)',
+                          background: 'var(--grad-primary)',
+                          color: 'var(--primary-contrast)',
                           fontSize: '14px',
                           letterSpacing: '0.5px'
                         }}
@@ -167,11 +171,11 @@ const GetInTouchSection = () => {
 
           <div className="col-12 col-lg-7 d-flex flex-column gap-4">
             {/* Find Us Here: Google Map */}
-            <div className="p-4 rounded-4" style={{ backgroundColor: '#FAF7F2', border: '1px solid #F3ECE1' }}>
+            <div className="p-4 rounded-4" style={{ backgroundColor: 'var(--contact-form-panel-bg)', border: '1px solid var(--border-color)' }}>
               <div className="d-flex align-items-center justify-content-between mb-3">
                 <h3 className="fs-2 fw-bold text-dark mb-0">Find Us Here</h3>
               </div>
-              <div className="rounded-4 overflow-hidden border bg-white shadow-sm" style={{ borderColor: '#E5E7EB' }}>
+              <div className="rounded-4 overflow-hidden border bg-white shadow-sm" style={{ borderColor: 'var(--border-color)' }}>
                 <iframe
                   title="SKY TECH IT SOLUTIONS"
                   src={mapEmbedUrl}
@@ -187,12 +191,12 @@ const GetInTouchSection = () => {
             </div>
 
             {/* Company Information */}
-            <div className="p-4 rounded-4" style={{ backgroundColor: '#FAF7F2', border: '1px solid #F3ECE1' }}>
+            <div className="p-4 rounded-4" style={{ backgroundColor: 'var(--contact-form-panel-bg)', border: '1px solid var(--border-color)' }}>
               <h3 className="fs-2 fw-bold text-dark mb-4">Company Information</h3>
               <div className="d-flex flex-column gap-3">
                 {/* Location Card */}
-                <div className="d-flex align-items-start gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: '#E5E7EB' }}>
-                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: '#FFFBEB', color: '#F59E0B' }}>
+                <div className="d-flex align-items-start gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: 'var(--border-color)' }}>
+                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--contact-method-icon-bg)', color: 'var(--accent)' }}>
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -204,8 +208,8 @@ const GetInTouchSection = () => {
                 </div>
 
                 {/* Phone Card */}
-                <div className="d-flex align-items-center gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: '#E5E7EB' }}>
-                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: '#FFFBEB', color: '#F59E0B' }}>
+                <div className="d-flex align-items-center gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: 'var(--border-color)' }}>
+                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--contact-method-icon-bg)', color: 'var(--accent)' }}>
                     <Phone size={20} />
                   </div>
                   <div>
@@ -219,8 +223,8 @@ const GetInTouchSection = () => {
                 </div>
 
                 {/* Email Card */}
-                <div className="d-flex align-items-center gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: '#E5E7EB' }}>
-                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: '#FFFBEB', color: '#F59E0B' }}>
+                <div className="d-flex align-items-center gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: 'var(--border-color)' }}>
+                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--contact-method-icon-bg)', color: 'var(--accent)' }}>
                     <Mail size={20} />
                   </div>
                   <div>

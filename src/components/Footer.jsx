@@ -12,8 +12,8 @@ import logo from '../assets/logo.png';
 
 const YellowDotIcon = () => (
   <svg width="14" height="14" viewBox="0 0 16 16" className="flex-shrink-0 me-2" style={{ verticalAlign: 'middle' }}>
-    <circle cx="8" cy="8" r="6" stroke="#fecf07" strokeWidth="2" fill="none" />
-    <circle cx="8" cy="8" r="2.2" fill="#fecf07" />
+    <circle cx="8" cy="8" r="6" stroke="var(--primary)" strokeWidth="2" fill="none" />
+    <circle cx="8" cy="8" r="2.2" fill="var(--primary)" />
   </svg>
 );
 
@@ -69,7 +69,7 @@ const Footer = () => {
               </div>
 
               {/* Description */}
-              <p className="small text-muted mb-4 px-2" style={{ lineHeight: '1.65', color: '#52453c' }}>
+              <p className="small text-muted mb-4 px-2" style={{ lineHeight: '1.65', color: 'var(--footer-link)' }}>
                 SkyTech is based out of Ahmedabad and having customer base across India, we are serving more than 1200+ Corporate and SME customers in Gujarat.
               </p>
 
