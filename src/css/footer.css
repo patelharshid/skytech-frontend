@@ -2,10 +2,10 @@
    SkyTech Footer  (colors come from --footer-* variables in :root)
    ========================================================================== */
 .skytech-footer-section {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
   font-family: var(--font-main);
-  border-top: 1px solid var(--footer-border);
+  border-top: 1px solid var(--bg-subtle-border);
 }
 
 .skytech-footer-card {
@@ -16,7 +16,7 @@
 }
 
 .skytech-logo-badge {
-  background: var(--footer-logo-bg);
+  background: var(--white);
   border-radius: 14px;
   padding: 10px 24px;
   box-shadow: var(--footer-logo-shadow);
@@ -31,7 +31,7 @@
   height: 34px;
   border-radius: 50%;
   background: var(--footer-social-bg);
-  color: var(--footer-social-color);
+  color: var(--dark);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -40,8 +40,8 @@
 }
 
 .skytech-social-btn:hover {
-  background: var(--footer-accent);
-  color: var(--footer-accent-text);
+  background: var(--primary);
+  color: var(--primary-contrast);
   transform: translateY(-2px);
 }
 
@@ -49,8 +49,8 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--footer-accent);
-  color: var(--footer-accent-text);
+  background: var(--primary);
+  color: var(--primary-contrast);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,8 +58,8 @@
 }
 
 .btn-skytech-all-products {
-  background-color: var(--footer-accent);
-  color: var(--footer-accent-text) !important;
+  background-color: var(--primary);
+  color: var(--primary-contrast) !important;
   border-radius: 50px;
   font-weight: 700;
   font-size: 0.85rem;
@@ -76,8 +76,8 @@
 }
 
 .btn-skytech-all-products:hover {
-  background-color: var(--footer-accent-hover);
-  color: var(--footer-accent-text) !important;
+  background-color: var(--primary-hover);
+  color: var(--primary-contrast) !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(var(--secondary-rgb), 0.5);
 }
@@ -85,7 +85,7 @@
 .skytech-footer-title {
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--footer-title);
+  color: var(--text-main);
   margin-bottom: 1.1rem;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .skytech-footer-link-item {
-  color: var(--footer-link);
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
@@ -109,7 +109,7 @@
 }
 
 .skytech-footer-link-item:hover {
-  color: var(--footer-link-hover);
+  color: var(--accent);
   font-weight: 700;
 }
 
@@ -120,5 +120,5 @@
   text-align: center;
   font-weight: 600;
   font-size: 0.88rem;
-  color: var(--footer-pill-text);
+  color: var(--text-main);
 }

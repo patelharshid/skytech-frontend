@@ -14,13 +14,13 @@
 
 .about-nav-active,
 .skytech-floating-nav .nav-link.about-nav-active {
-  color: var(--nav-link-active-color) !important;
-  background: var(--nav-link-active-bg) !important;
+  color: var(--accent) !important;
+  background: var(--white) !important;
   border-radius: .35rem;
 }
 
 .navbar-nav .nav-link.active.about-nav-active {
-  color: var(--nav-link-active-color) !important;
+  color: var(--accent) !important;
   background: var(--nav-link-active-bg-subtle);
   border-radius: .55rem;
 }

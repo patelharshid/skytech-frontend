@@ -46,7 +46,6 @@
   --text-light: #94a3b8;
 
   --grad-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  --grad-gold: var(--grad-primary);
   --grad-dark: linear-gradient(135deg, var(--dark) 0%, var(--slate) 100%);
   --grad-surface: linear-gradient(135deg, var(--white) 0%, var(--bg-body) 100%);
 
@@ -55,130 +54,57 @@
   --shadow-lg: 0 16px 36px rgba(var(--dark-rgb), 0.12);
 
 
-  --marquee-bg: var(--primary);
-  --marquee-color: var(--primary-contrast);
 
-  --nav-bg: var(--white);
   --nav-pill-bg: rgba(var(--primary-rgb), 0.12);
   --nav-pill-border: rgba(var(--secondary-rgb), 0.35);
   --nav-pill-shadow: 0 8px 24px rgba(var(--dark-rgb), 0.08);
-  --nav-link-color: var(--text-main);
-  --nav-link-hover: var(--accent);
-  --nav-link-active-color: var(--accent);
-  --nav-link-active-bg: var(--white);
   --nav-link-active-bg-subtle: rgba(var(--secondary-rgb), 0.12);
 
 
-  --btn-primary-bg: var(--grad-primary);
-  --btn-primary-color: var(--primary-contrast);
-  --btn-primary-hover-bg: var(--primary-hover);
   --btn-primary-shadow: rgba(var(--secondary-rgb), 0.35);
   --btn-primary-hover-shadow: rgba(var(--secondary-rgb), 0.45);
 
-  --footer-bg: var(--bg-subtle);
-  --footer-border: var(--bg-subtle-border);
-  --footer-text: var(--text-main);
-  --footer-title: var(--text-main);
   --footer-card-bg: rgba(var(--secondary-rgb), 0.08);
   --footer-card-shadow: 0 4px 14px rgba(var(--dark-rgb), 0.03);
-  --footer-logo-bg: var(--white);
   --footer-logo-border: rgba(var(--dark-rgb), 0.06);
   --footer-logo-shadow: 0 4px 14px rgba(var(--dark-rgb), 0.06);
   --footer-social-bg: rgba(var(--secondary-rgb), 0.15);
-  --footer-social-color: var(--dark);
-  --footer-link: var(--text-muted);
-  --footer-link-hover: var(--accent);
   --footer-pill-bg: rgba(var(--secondary-rgb), 0.1);
-  --footer-pill-text: var(--text-main);
-  --footer-accent: var(--primary);
-  --footer-accent-hover: var(--primary-hover);
-  --footer-accent-text: var(--primary-contrast);
 
-  --faq-bg: var(--bg-surface);
-  --faq-card-bg: var(--bg-card);
-  --faq-card-border: var(--border-color);
   --faq-card-border-hover: rgba(var(--secondary-rgb), 0.4);
-  --faq-card-border-active: var(--accent);
   --faq-card-shadow: 0 2px 8px rgba(var(--dark-rgb), 0.04);
   --faq-card-shadow-hover: 0 8px 20px rgba(var(--dark-rgb), 0.07);
   --faq-card-shadow-active: 0 10px 28px rgba(var(--secondary-rgb), 0.12);
-  --faq-toggle-bg: var(--accent);
-  --faq-toggle-color: var(--white);
-  --faq-toggle-bg-active: var(--dark);
   --faq-toggle-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.25);
   --faq-toggle-shadow-active: 0 4px 14px rgba(var(--dark-rgb), 0.3);
-  --faq-question-color: var(--text-main);
-  --faq-answer-color: var(--text-muted);
 
-  --customers-bg: var(--bg-body);
-  --customers-card-bg: var(--bg-card);
-  --customers-card-border: var(--border-color);
   --customers-card-border-hover: rgba(var(--secondary-rgb), 0.5);
   --customers-card-shadow: 0 4px 14px rgba(var(--dark-rgb), 0.06);
   --customers-card-shadow-hover: 0 14px 30px -6px rgba(var(--dark-rgb), 0.12);
   --customers-card-shadow-active: 0 6px 18px rgba(var(--secondary-rgb), 0.35);
-  --customers-title-color: var(--text-main);
-  --customers-text-color: var(--text-main);
-  --customers-date-color: var(--text-muted);
-  --customers-nav-btn-bg: var(--bg-card);
-  --customers-nav-btn-hover-bg: var(--accent);
-  --customers-nav-btn-hover-color: var(--white);
-  --customers-star-color: var(--secondary);
 
   --category-bg: #fafafa;
   --category-card-bg: #e9ded7;
   --category-card-img-bg: linear-gradient(180deg, #e8d9cf 0%, #f3f0ee 100%);
   --category-card-copy-bg: linear-gradient(180deg, #e8d9cf 0%, #f1eeec 100%);
   --category-heading-rule: linear-gradient(90deg, transparent, rgba(var(--dark-rgb), 0.4) 18%, rgba(var(--dark-rgb), 0.4) 82%, transparent);
-  --category-arrow-border: var(--secondary);
-  --category-arrow-color: var(--secondary);
-  --category-arrow-bg: var(--white);
-  --category-arrow-hover-bg: var(--secondary);
-  --category-arrow-hover-color: var(--white);
 
   --industries-bg: radial-gradient(circle at center, #1b263b 0%, #0b0f19 100%);
-  --industries-card-bg: var(--white);
   --industries-card-border: rgba(var(--white-rgb), 0.2);
-  --industries-icon-color: var(--secondary);
   --industries-glow-1: rgba(var(--accent-rgb), 0.15);
   --industries-glow-2: rgba(var(--blue-rgb), 0.15);
 
-  --snapshot-card-bg: var(--bg-subtle);
-  --snapshot-card-border: var(--bg-subtle-border);
-  --snapshot-card-dark-bg: var(--slate);
   --snapshot-card-dark-border: #334155;
 
   --page-title-banner-bg: #475569;
   --page-title-shade: linear-gradient(90deg, rgba(var(--dark-rgb), 0.68), rgba(var(--dark-rgb), 0.32));
   --contact-location-card-bg: linear-gradient(145deg, var(--bg-surface), var(--white) 72%);
   --contact-method-icon-bg: rgba(var(--primary-rgb), 0.18);
-  --contact-form-panel-bg: var(--bg-subtle);
-  --contact-form-border: var(--border-subtle);
 
-  --product-about-bg: var(--bg-surface);
-  --product-card-bg: var(--bg-card);
   --product-card-border: rgba(var(--secondary-rgb), 0.4);
-  --product-price-color: var(--blue);
 
   --modal-backdrop-bg: rgba(var(--dark-rgb), 0.75);
-  --modal-bg: var(--bg-card);
-  --modal-border: var(--border-color);
 
-  --skytech-gold: var(--primary);
-  --skytech-gold-hover: var(--primary-hover);
-  --skytech-gold-rgb: var(--primary-rgb);
-  --skytech-orange: var(--secondary);
-  --skytech-orange-rgb: var(--secondary-rgb);
-  --skytech-amber: var(--accent);
-  --skytech-amber-dark: var(--accent-dark);
-  --skytech-amber-rgb: var(--accent-rgb);
-  --skytech-dark: var(--dark);
-  --skytech-dark-rgb: var(--dark-rgb);
-  --skytech-slate: var(--slate);
-  --skytech-emerald: var(--emerald);
-  --skytech-emerald-rgb: var(--emerald-rgb);
-  --skytech-blue: var(--blue);
-  --skytech-red: var(--red);
 }
 
 body {
@@ -263,8 +189,8 @@ h6 {
 }
 
 .skytech-marquee-bar {
-  background-color: var(--marquee-bg);
-  color: var(--marquee-color);
+  background-color: var(--primary);
+  color: var(--primary-contrast);
   font-weight: 700;
   font-size: 0.82rem;
   padding: 6px 0;
@@ -288,7 +214,7 @@ h6 {
 }
 
 .sky-header {
-  background-color: var(--nav-bg);
+  background-color: var(--white);
   border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
@@ -348,7 +274,7 @@ h6 {
 }
 
 .skytech-floating-nav .nav-link {
-  color: var(--nav-link-color) !important;
+  color: var(--text-main) !important;
   font-weight: 600;
   font-size: 0.88rem;
   padding: 0.45rem 0.8rem !important;
@@ -359,38 +285,38 @@ h6 {
 
 .skytech-floating-nav .nav-link:hover,
 .navbar-nav .nav-link:hover {
-  color: var(--nav-link-hover) !important;
+  color: var(--accent) !important;
   font-weight: 700 !important;
   background-color: transparent !important;
 }
 
 .skytech-floating-nav .nav-link.active,
 .skytech-floating-nav .nav-link.about-nav-active {
-  color: var(--nav-link-active-color) !important;
-  background: var(--nav-link-active-bg) !important;
+  color: var(--accent) !important;
+  background: var(--white) !important;
   border-radius: 0.35rem;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.active.about-nav-active {
-  color: var(--nav-link-active-color) !important;
+  color: var(--accent) !important;
   background: var(--nav-link-active-bg-subtle) !important;
   border-radius: 0.55rem;
 }
 
 .skytech-floating-nav .nav-link.active:hover,
 .skytech-floating-nav .nav-link.about-nav-active:hover {
-  background: var(--nav-link-active-bg) !important;
-  color: var(--nav-link-hover) !important;
+  background: var(--white) !important;
+  color: var(--accent) !important;
 }
 
 .btn-skytech-gold,
 .btn-sky-primary,
 .btn-warning,
 .btn-primary {
-  background: var(--btn-primary-bg) !important;
+  background: var(--grad-primary) !important;
   background-color: var(--primary) !important;
-  color: var(--btn-primary-color) !important;
+  color: var(--primary-contrast) !important;
   border: 1px solid var(--primary) !important;
   font-weight: 700;
   padding: 0.55rem 1.3rem;
@@ -409,12 +335,12 @@ h6 {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: var(--btn-primary-hover-bg) !important;
-  background-color: var(--btn-primary-hover-bg) !important;
-  border-color: var(--btn-primary-hover-bg) !important;
+  background: var(--primary-hover) !important;
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px var(--btn-primary-hover-shadow);
-  color: var(--btn-primary-color) !important;
+  color: var(--primary-contrast) !important;
 }
 
 .btn-skytech-dark {
@@ -674,8 +600,8 @@ h6 {
     max-height: calc(100vh - 1rem);
     max-height: calc(100dvh - 1rem);
     padding: .75rem !important;
-    background-color: var(--modal-bg);
-    border: 1px solid var(--modal-border);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
   }
 
   .modal.fade.show.d-block .modal-body {

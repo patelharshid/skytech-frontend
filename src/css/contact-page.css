@@ -27,11 +27,11 @@
 }
 
 .contact-form-panel {
-  background: var(--contact-form-panel-bg);
+  background: var(--bg-subtle);
 }
 
 .contact-form-panel .form-control {
-  border-color: var(--contact-form-border);
+  border-color: var(--border-subtle);
   border-radius: .5rem;
 }
 
