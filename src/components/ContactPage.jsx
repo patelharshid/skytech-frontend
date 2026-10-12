@@ -100,7 +100,6 @@ function ContactPage() {
         <section className="mt-5 pt-2">
           <div className="d-flex flex-column flex-sm-row align-items-sm-end justify-content-between gap-3 mb-3">
             <div><span className="small fw-bold text-uppercase text-orange">Come find us</span><h2 className="h3 fw-bold mb-0 mt-1">Our Ahmedabad Office</h2></div>
-            <a className="btn btn-outline-warning rounded-pill d-inline-flex align-items-center gap-2 align-self-start align-self-sm-auto" href={mapUrl} target="_blank" rel="noreferrer"><Navigation size={16} />Open in Maps</a>
           </div>
           <div className="ratio ratio-21x9 rounded-4 overflow-hidden border shadow-sm">
             <iframe title="SKY TECH IT SOLUTIONS" src={mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
