@@ -173,7 +173,7 @@ const GetInTouchSection = () => {
               </div>
               <div className="rounded-4 overflow-hidden border bg-white shadow-sm" style={{ borderColor: '#E5E7EB' }}>
                 <iframe
-                  title="Sky Tech Location"
+                  title="SKY TECH IT SOLUTIONS"
                   src={mapEmbedUrl}
                   width="100%"
                   height="260"
