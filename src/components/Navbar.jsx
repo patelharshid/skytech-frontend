@@ -171,9 +171,7 @@ const Navbar = () => {
                     <a className="nav-link" href="#catalog">Accessories</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link d-inline-flex align-items-center gap-1" href="#services">
-                      Services <ChevronDown size={13} strokeWidth={2.5} />
-                    </a>
+                    <a className="nav-link" href="#services">Services</a>
                   </li>
                   <li className="nav-item">
                     <a className={`nav-link ${isAboutPage ? 'active about-nav-active' : ''}`} href="/about-us" aria-current={isAboutPage ? 'page' : undefined}>About Us</a>
