@@ -3,7 +3,7 @@ import { brandLogosData } from '../data/mockData';
 
 const BrandLogos = () => {
   return (
-    <section className="py-5 bg-white border-top border-bottom">
+    <section className="py-5 bg-white">
       <div className="container">
         {/* Title */}
         <h3 className="text-center fw-bold fs-2 mb-4 text-main">
