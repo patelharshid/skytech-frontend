@@ -32,7 +32,7 @@ const HeroBanner = ({ onOpenRentModal, onOpenQuoteModal, onExploreCatalog }) => 
 
   return (
     <section id="hero" className="position-relative py-5 overflow-hidden bg-skytech-dark text-white">
-      <div className="container position-relative z-1 py-3">
+      <div className="container position-relative z-1 hero-content-container">
         <div className="row align-items-center gy-4">
           {/* Left Text Column */}
           <div className="col-lg-7">

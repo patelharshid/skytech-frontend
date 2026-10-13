@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, Search, PhoneCall, Mail, Menu, X } from 'lucide-react';
+import { ShoppingBag, Search, PhoneCall, Mail, Menu, X, ChevronDown } from 'lucide-react';
 import TopMarqueeBar from './TopMarqueeBar';
 import { primaryNumber, primaryEmail } from '../constants/constants';
 import logo from '../assets/logo.png';
@@ -27,10 +27,10 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <header className="z-1000 position-relative bg-white">
+    <header className="z-1000 position-relative">
       <TopMarqueeBar />
 
-      <div className="sky-header py-2 py-md-3 mb-md-4">
+      <div className="sky-header py-2 py-md-3">
         <div className="container">
           <div className="row align-items-center gy-2 gy-md-3">
             <div className="col-8 col-sm-auto col-lg-3 d-flex align-items-center justify-content-between">
@@ -184,7 +184,9 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
                     <a className="nav-link" href="#catalog">Accessories</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#services">Services</a>
+                    <a className="nav-link d-inline-flex align-items-center gap-1" href="#services">
+                      Services <ChevronDown size={13} strokeWidth={2.5} />
+                    </a>
                   </li>
                   <li className="nav-item">
                     <a className={`nav-link ${isAboutPage ? 'active about-nav-active' : ''}`} href="/about-us" aria-current={isAboutPage ? 'page' : undefined}>About Us</a>
