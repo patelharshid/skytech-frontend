@@ -37,7 +37,7 @@ const GetInTouchSection = () => {
   };
 
   return (
-    <section id="contact" className="py-5 position-relative">
+    <section id="contact" className="py-5 position-relative bg-white">
       <div className="container py-3 py-md-4">
         <div className="row gy-4">
 
