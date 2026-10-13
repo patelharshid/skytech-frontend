@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="row gy-4 align-items-start">
           {/* Left Column - SkyTech Card */}
           <div className="col-lg-4">
-            <div className="skytech-footer-card text-center">
+            <div className="text-center" style={{ padding: "24px" }}>
               {/* White SkyTech Logo Badge */}
               <div className="skytech-logo-badge mb-3">
                 <img

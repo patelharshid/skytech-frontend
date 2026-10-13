@@ -12,7 +12,7 @@ const commitments = [
 function AboutPage() {
   return (
     <main className="bg-white text-dark">
-      <section className="page-title-banner about-page-banner position-relative d-flex align-items-center text-white">
+      <section className="page-title-banner position-relative d-flex align-items-center text-white" style={{ backgroundImage: "url('/src/assets/about-banner.png')" }}>
         <div className="page-title-shade position-absolute top-0 start-0 w-100 h-100" />
         <div className="container position-relative py-4">
           <h1 className="h3 fw-bold mb-2">ABOUT US</h1>
