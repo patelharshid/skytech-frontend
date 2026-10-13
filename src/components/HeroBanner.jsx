@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useHeroSlides } from '../hooks/useData';
 
-const HeroBanner = ({ onOpenRentModal, onOpenQuoteModal, onExploreCatalog }) => {
+const HeroBanner = () => {
   const { data: slides, loading } = useHeroSlides();
   const [currentSlide, setCurrentSlide] = useState(0);
 

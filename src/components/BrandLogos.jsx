@@ -1,4 +1,3 @@
-import React from 'react';
 import { brandLogosData } from '../data/mockData';
 
 const BrandLogos = () => {

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { useProducts } from '../hooks/useData';
 
@@ -8,13 +7,9 @@ const categoryLabels = {
   accessories: 'Accessories & Parts'
 };
 
-const ProductCatalog = ({ activeCategory, setActiveCategory }) => {
-  const [selectedBrand, setSelectedBrand] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+const ProductCatalog = ({ activeCategory }) => {
   const { data: filteredProducts, loading } = useProducts({
-    category: activeCategory,
-    brand: selectedBrand,
-    search: searchQuery
+    category: activeCategory
   });
 
 

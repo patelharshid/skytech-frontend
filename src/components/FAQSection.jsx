@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { useFAQData } from '../hooks/useData';
 import faqImage from '../assets/FAQ.png';
 
 const FAQSection = () => {
-  const { data: faqList, loading } = useFAQData();
+  const { data: faqList } = useFAQData();
   const [openId, setOpenId] = useState(null);
 
   const toggleFAQ = (id) => {

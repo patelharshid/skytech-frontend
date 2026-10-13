@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ArrowLeft,
   Box,
@@ -28,7 +28,7 @@ const detailIcons = {
   Connection: Cable,
 };
 
-function ProductDetailPage({ productId, onAddToCart }) {
+function ProductDetailPage({ productId }) {
   const { data: products, loading } = useProducts();
   const product = products?.find((item) => String(item.id) === String(productId));
   const galleryImages = product?.images?.length ? product.images : product?.image ? [product.image] : [];
@@ -153,12 +153,15 @@ function ProductDetailPage({ productId, onAddToCart }) {
                 {product.description && <p className="text-secondary mb-4">{product.description}</p>}
                 <h2 className="h5 fw-bold mb-3">Product details</h2>
                 <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
-                  {detailFields.map(([label, value]) => (
-                    <li key={`${product.id}-${label}`} className="d-flex align-items-center gap-3">
-                      {React.createElement(detailIcons[label] || Tag, { size: 19, className: 'flex-shrink-0 text-warning' })}
-                      <span><strong>{label}:</strong> <span className="text-secondary">{value}</span></span>
-                    </li>
-                  ))}
+                  {detailFields.map(([label, value]) => {
+                    const IconComponent = detailIcons[label] || Tag;
+                    return (
+                      <li key={`${product.id}-${label}`} className="d-flex align-items-center gap-3">
+                        <IconComponent size={19} className="flex-shrink-0 text-warning" />
+                        <span><strong>{label}:</strong> <span className="text-secondary">{value}</span></span>
+                      </li>
+                    );
+                  })}
                   {additionalSpecs.map((spec, index) => {
                     const [label, ...valueParts] = String(spec).split(':');
                     const hasLabel = valueParts.length > 0;

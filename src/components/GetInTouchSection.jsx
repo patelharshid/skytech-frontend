@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
 import { primaryNumber, primaryEmail, officeAddress, mapEmbedUrl } from '../constants/constants';
 
@@ -52,7 +52,7 @@ const GetInTouchSection = () => {
                   Get In Touch With Us
                 </h2>
                 <p className="text-secondary fs-6 mb-4" style={{ lineHeight: '1.6', color: 'var(--text-muted)' }}>
-                  Our team at Sky Tech is here to help! Whether you're looking for laptops, desktops, MacBooks, or servers, our experts are ready to assist you in finding the perfect tech solution.
+                  Our team at Sky Tech is here to help! Whether you&apos;re looking for laptops, desktops, MacBooks, or servers, our experts are ready to assist you in finding the perfect tech solution.
                 </p>
 
                 {submitted ? (

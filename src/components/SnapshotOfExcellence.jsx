@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Award, Users, Medal } from 'lucide-react';
 import { useSnapshotExcellence } from '../hooks/useData';
 

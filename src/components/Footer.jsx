@@ -1,15 +1,12 @@
-import React from 'react';
 import {
   PhoneCall,
   Mail,
   MapPin,
-  Clock,
-  MessageSquare
+  Clock
 } from 'lucide-react';
 import { primaryNumber, secondaryNumber, primaryEmail, officeAddress } from '../constants/constants';
 import logo from '../assets/logo.png';
 import footerBg from '../assets/footer.png';
-
 
 const YellowDotIcon = () => (
   <svg width="14" height="14" viewBox="0 0 16 16" className="flex-shrink-0 me-2" style={{ verticalAlign: 'middle' }}>

@@ -1,6 +1,5 @@
 import {
   siteConfigData,
-  marqueeAnnouncementsData,
   slidesData,
   productsData,
   rentalOptionsData,
