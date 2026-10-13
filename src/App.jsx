@@ -12,6 +12,7 @@ import GetInTouchSection from './components/GetInTouchSection';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
+import ServicesPage from './components/ServicesPage';
 import ProductDetailPage from './components/ProductDetailPage';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
   const isContactPage = currentPath === '/contact-us';
   const isAboutPage = currentPath === '/about-us';
+  const isServicesPage = currentPath === '/services';
   const productRoute = currentPath.match(/^\/product\/([^/]+)$/);
   const productId = productRoute ? decodeURIComponent(productRoute[1]) : null;
 
@@ -30,6 +32,8 @@ function App() {
         <ContactPage />
       ) : isAboutPage ? (
         <AboutPage />
+      ) : isServicesPage ? (
+        <ServicesPage />
       ) : productId ? (
         <ProductDetailPage productId={productId} />
       ) : (

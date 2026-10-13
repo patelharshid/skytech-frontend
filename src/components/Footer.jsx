@@ -79,6 +79,7 @@ const Footer = () => {
                 <h6 className="fw-bold text-main mb-3">Quick Links</h6>
                 <ul className="list-unstyled d-flex flex-column gap-2 mb-0">
                   <li><a href="/about-us" className="skytech-footer-link-item"><YellowDotIcon />About us</a></li>
+                  <li><a href="/services" className="skytech-footer-link-item"><YellowDotIcon />Services</a></li>
                   <li><a href="/#catalog" className="skytech-footer-link-item"><YellowDotIcon />Refurbished Systems</a></li>
                   <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Shop</a></li>
                   <li><a href="/contact-us" className="skytech-footer-link-item"><YellowDotIcon />Contact Us</a></li>
