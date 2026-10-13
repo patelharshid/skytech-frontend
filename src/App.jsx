@@ -15,7 +15,6 @@ import AboutPage from './components/AboutPage';
 import ProductDetailPage from './components/ProductDetailPage';
 
 function App() {
-  const [theme, setTheme] = useState('light');
   const [activeCategory, setActiveCategory] = useState('all');
   const [cartItems, setCartItems] = useState([
     {
@@ -23,7 +22,6 @@ function App() {
       name: 'Apple MacBook Pro 16" (M3 Max, 36GB RAM, 1TB SSD)',
       price: 3299,
       quantity: 1,
-
       image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80'
     }
   ]);
@@ -36,12 +34,6 @@ function App() {
   const isAboutPage = currentPath === '/about-us';
   const productRoute = currentPath.match(/^\/product\/([^/]+)$/);
   const productId = productRoute ? decodeURIComponent(productRoute[1]) : null;
-
-  const toggleTheme = () => {
-    const nextTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(nextTheme);
-    document.documentElement.setAttribute('data-theme', nextTheme);
-  };
 
   const handleAddToCart = (product) => {
     setCartItems(prev => {
@@ -76,8 +68,6 @@ function App() {
   return (
     <div className="sky-app-root">
       <Navbar
-        theme={theme}
-        toggleTheme={toggleTheme}
         cartCount={cartItems.reduce((acc, i) => acc + i.quantity, 0)}
         onOpenCart={() => setIsCartOpen(true)}
         onOpenQuoteModal={() => setIsQuoteModalOpen(true)}

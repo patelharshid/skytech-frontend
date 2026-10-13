@@ -66,7 +66,7 @@ const ProductCatalog = ({ activeCategory, setActiveCategory }) => {
                     </span>
                     <a
                       href={`/product/${encodeURIComponent(product.id)}`}
-                      className="btn btn-warning rounded-pill fw-bold text-dark text-nowrap px-3 py-2"
+                      className="btn btn-warning rounded-pill fw-bold text-white text-nowrap px-3 py-2"
                     >
                       View More
                     </a>

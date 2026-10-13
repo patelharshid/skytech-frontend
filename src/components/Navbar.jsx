@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, Search, Sun, Moon, PhoneCall, Mail, Menu, X } from 'lucide-react';
+import { ShoppingBag, Search, PhoneCall, Mail, Menu, X } from 'lucide-react';
 import TopMarqueeBar from './TopMarqueeBar';
 import { primaryNumber, primaryEmail } from '../constants/constants';
 import logo from '../assets/logo.png';
 
-const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) => {
+const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);

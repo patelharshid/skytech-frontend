@@ -43,16 +43,16 @@
 }
 
 .product-thumbnail.active {
-  border: 2px solid var(--secondary-color) !important;
+  border: 2px solid var(--accent-color) !important;
 }
 
 .product-condition-badge {
   padding: 0.5rem 0.85rem;
-  color: var(--accent-color);
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+  background: rgba(32, 184, 199, 0.12);
+  border: 1px solid rgba(32, 184, 199, 0.35);
   border-radius: 50rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .product-detail-about {

@@ -12,8 +12,8 @@ import logo from '../assets/logo.png';
 
 const YellowDotIcon = () => (
   <svg width="14" height="14" viewBox="0 0 16 16" className="flex-shrink-0 me-2" style={{ verticalAlign: 'middle' }}>
-    <circle cx="8" cy="8" r="6" stroke="var(--primary)" strokeWidth="2" fill="none" />
-    <circle cx="8" cy="8" r="2.2" fill="var(--primary)" />
+    <circle cx="8" cy="8" r="6" stroke="var(--accent-color)" strokeWidth="2" fill="none" />
+    <circle cx="8" cy="8" r="2.2" fill="var(--accent-color)" />
   </svg>
 );
 

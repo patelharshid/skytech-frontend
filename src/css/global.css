@@ -1,32 +1,33 @@
 :root {
-  --primary-color: #fecf07;
-  --primary-color-hover: #e5b905;
-  --primary-color-contrast: #0f172a;
+  --primary-color: #123B5D;
+  --primary-color-hover: #0c2b45;
+  --primary-color-contrast: #ffffff;
 
-  --secondary-color: #f59e0b;
-  --secondary-color-hover: #d97706;
+  --secondary-color: #20B8C7;
+  --secondary-color-hover: #1aa1ae;
   --secondary-color-contrast: #ffffff;
 
-  --accent-color: #d97706;
-  --accent-color-hover: #b45309;
-  --accent-color-dark: #b45309;
+  --accent-color: #20B8C7;
+  --accent-color-hover: #1aa1ae;
+  --accent-color-dark: #123B5D;
 
-  --bg-color: #f8fafc;
-  --text-color: #0f172a;
+  --bg-color: #F2F7FA;
+  --text-color: #123047;
   --text-color-contrast: #ffffff;
 
-  --border-color: #e2e8f0;
-  --muted-color: #64748b;
-  --muted-color-light: #94a3b8;
+  --border-color: #d2e1eb;
+  --muted-color: #557086;
+  --muted-color-light: #8fa6b8;
 
   --card-color: #ffffff;
-  --surface-color: #f1f5f9;
+  --surface-color: #e5edf4;
 
   --whatsapp: #25d366;
 
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
+
 
 body {
   font-family: var(--font-main);
@@ -60,8 +61,16 @@ h6 {
 .text-gold,
 .text-orange,
 .text-warning,
-.text-primary,
+.text-info,
 .text-skytech-gold {
+  color: var(--accent-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-teal {
   color: var(--accent-color) !important;
 }
 
@@ -77,8 +86,12 @@ h6 {
 }
 
 .bg-skytech-gold,
-.bg-primary,
 .bg-warning {
+  background-color: var(--accent-color) !important;
+  color: #ffffff !important;
+}
+
+.bg-primary {
   background-color: var(--primary-color) !important;
   color: var(--primary-color-contrast) !important;
 }
@@ -86,7 +99,8 @@ h6 {
 .bg-skytech-dark,
 .bg-navy,
 .bg-dark {
-  background-color: var(--text-color) !important;
+  background: linear-gradient(135deg, #0e273b 0%, #123B5D 60%, #0d2940 100%) !important;
+  background-color: var(--primary-color) !important;
   color: var(--text-color-contrast) !important;
 }
 
@@ -110,8 +124,9 @@ h6 {
 }
 
 .skytech-marquee-bar {
-  background-color: var(--primary-color);
-  color: var(--primary-color-contrast);
+  background: linear-gradient(90deg, #0c2b45 0%, #123B5D 50%, #0c2b45 100%);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(32, 184, 199, 0.25) !important;
   font-weight: 700;
   font-size: 0.82rem;
   padding: 6px 0;
@@ -237,12 +252,12 @@ h6 {
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
   background-color: var(--primary-color) !important;
-  color: var(--primary-color-contrast) !important;
+  color: #ffffff !important;
   border: 1px solid var(--primary-color) !important;
   font-weight: 700;
   padding: 0.55rem 1.3rem;
   border-radius: 50rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(18, 59, 93, 0.2);
   transition: all 0.25s ease;
 }
 
@@ -256,18 +271,24 @@ h6 {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: var(--primary-color-hover) !important;
+  background: linear-gradient(135deg, var(--primary-color-hover) 0%, var(--secondary-color-hover) 100%) !important;
   background-color: var(--primary-color-hover) !important;
   border-color: var(--primary-color-hover) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  color: var(--primary-color-contrast) !important;
+  box-shadow: 0 6px 20px rgba(32, 184, 199, 0.35);
+  color: #ffffff !important;
+}
+
+.btn-warning.text-dark,
+.btn-primary.text-dark,
+.btn-skytech-gold.text-dark {
+  color: #ffffff !important;
 }
 
 .btn-sky-outline {
   background: transparent;
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+  border: 1.5px solid var(--accent-color);
   font-weight: 600;
   padding: 0.55rem 1.2rem;
   border-radius: 50rem;
@@ -277,21 +298,21 @@ h6 {
 .btn-sky-outline:hover {
   background: var(--surface-color);
   border-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .sky-card {
   background: var(--card-color);
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 4px rgba(18, 59, 93, 0.04);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sky-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  border-color: var(--primary-color);
+  box-shadow: 0 8px 24px rgba(18, 59, 93, 0.1);
+  border-color: var(--accent-color);
 }
 
 .icon-box {
@@ -302,28 +323,28 @@ h6 {
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  background: var(--surface-color);
+  background: rgba(32, 184, 199, 0.1);
   color: var(--accent-color);
   margin-bottom: 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(32, 184, 199, 0.25);
   transition: all 0.3s ease;
 }
 
 .sky-card:hover .icon-box {
   background: var(--primary-color);
-  color: var(--primary-color-contrast);
+  color: #ffffff;
   border-color: var(--primary-color);
   transform: scale(1.05);
 }
 
 .badge-gold,
 .badge-sky {
-  background: var(--surface-color) !important;
-  color: var(--accent-color) !important;
-  border: 1px solid var(--border-color) !important;
+  background: rgba(32, 184, 199, 0.12) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(32, 184, 199, 0.3) !important;
   font-weight: 700;
   font-size: 0.8rem;
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 50rem;
 }
 
@@ -345,9 +366,9 @@ h6 {
 .form-control:focus,
 .form-select:focus {
   background-color: var(--card-color);
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
   color: var(--text-color);
-  box-shadow: 0 0 0 3px var(--border-color);
+  box-shadow: 0 0 0 3px rgba(32, 184, 199, 0.2);
   outline: none;
 }
 

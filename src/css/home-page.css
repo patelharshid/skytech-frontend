@@ -106,25 +106,20 @@
 }
 
 .snapshot-counter-card {
-  background-color: var(--surface-color);
+  background-color: var(--card-color);
   border: 1px solid var(--border-color);
   border-radius: 24px !important;
   padding-top: 42px !important;
   padding-bottom: 28px !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 4px var(--border-color);
+  box-shadow: 0 4px 14px rgba(18, 59, 93, 0.05);
 }
 
-[data-theme="dark"] .snapshot-counter-card {
-  background-color: var(--surface-color);
-  border-color: var(--border-color);
-  box-shadow: 0 6px 18px var(--border-color);
-}
 
 .snapshot-counter-card:hover {
   transform: translateY(-4px);
-  border-color: var(--secondary-color);
-  box-shadow: 0 6px 18px var(--border-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 24px rgba(32, 184, 199, 0.18);
 }
 
 .snapshot-icon-badge {
@@ -289,6 +284,15 @@
   background: var(--card-color);
 }
 
+.category-card-copy .text-warning {
+  color: var(--text-color) !important;
+  transition: color 0.25s ease;
+}
+
+.category-card:hover .category-card-copy .text-warning {
+  color: var(--accent-color) !important;
+}
+
 @media (max-width: 575.98px) {
   .shop-by-category {
     padding-block: 3rem !important;
@@ -323,6 +327,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .category-carousel-track,
   .category-card,
   .category-card-image,

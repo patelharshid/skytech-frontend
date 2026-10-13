@@ -36,21 +36,22 @@
 }
 
 .skytech-social-btn:hover {
-  background: var(--primary-color);
-  color: var(--primary-color-contrast);
+  background: var(--accent-color);
+  color: #ffffff;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(32, 184, 199, 0.35);
 }
 
 .skytech-footer-phone-icon {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--primary-color);
-  color: var(--primary-color-contrast);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px var(--border-color);
+  box-shadow: 0 4px 12px rgba(18, 59, 93, 0.2);
 }
 
 .skytech-footer-link-item {
