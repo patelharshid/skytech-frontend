@@ -224,22 +224,16 @@ h6 {
 }
 
 .skytech-floating-nav .nav-link.active,
-.skytech-floating-nav .nav-link.about-nav-active {
-  color: var(--accent-color) !important;
-  background: var(--card-color) !important;
-  border-radius: 0.35rem;
-}
-
+.skytech-floating-nav .nav-link.about-nav-active,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.active.about-nav-active {
   color: var(--accent-color) !important;
-  background: var(--surface-color) !important;
-  border-radius: 0.55rem;
+  background: transparent !important;
 }
 
 .skytech-floating-nav .nav-link.active:hover,
 .skytech-floating-nav .nav-link.about-nav-active:hover {
-  background: var(--card-color) !important;
+  background: transparent !important;
   color: var(--accent-color) !important;
 }
 

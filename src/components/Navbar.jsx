@@ -27,7 +27,7 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <header className="z-1000 position-relative">
+    <header className="z-1000 position-relative bg-white">
       <TopMarqueeBar />
 
       <div className="sky-header py-2 py-md-3 mb-md-4">
