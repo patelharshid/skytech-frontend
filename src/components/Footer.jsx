@@ -18,34 +18,12 @@ const YellowDotIcon = () => (
   </svg>
 );
 
-const FacebookIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-  </svg>
-);
-
 const WhatsappIcon = ({ size = 16, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
     <path d="M12 2C6.477 2 2 6.477 2 12c0 2.137.672 4.116 1.817 5.74L2.5 21.5l3.896-1.272A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.954 7.954 0 01-4.225-1.21l-.303-.18-2.316.756.77-2.257-.197-.315A7.958 7.958 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
   </svg>
 );
-
-const LinkedinIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
-
-const InstagramIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-  </svg>
-);
-
 
 const Footer = () => {
   return (
@@ -76,14 +54,6 @@ const Footer = () => {
               <p className="small text-muted mb-4 px-2" style={{ lineHeight: '1.65', color: 'var(--text-muted)' }}>
                 SkyTech is based out of Ahmedabad and having customer base across India, we are serving more than 1200+ Corporate and SME customers in Gujarat.
               </p>
-
-              {/* Social Icons Row */}
-              <div className="pt-3 border-top border-secondary border-opacity-10 d-flex justify-content-center gap-2">
-                <a href="#" className="skytech-social-btn" title="Facebook"><FacebookIcon /></a>
-                <a href={`https://wa.me/91${primaryNumber}`} target="_blank" rel="noreferrer" className="skytech-social-btn" title="WhatsApp"><WhatsappIcon /></a>
-                <a href="#" className="skytech-social-btn" title="LinkedIn"><LinkedinIcon /></a>
-                <a href="#" className="skytech-social-btn" title="Instagram"><InstagramIcon /></a>
-              </div>
             </div>
           </div>
 
