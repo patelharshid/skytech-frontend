@@ -47,11 +47,8 @@ const OurHappyCustomers = () => {
   };
 
   return (
-    <section className="py-5 border-top border-bottom position-relative overflow-hidden customers-section-wrapper">
+    <section className="py-5 position-relative overflow-hidden">
       <style>{`
-        .customers-section-wrapper {
-          background-color: var(--bg-body);
-        }
         .carousel-viewport {
           overflow: hidden;
           width: 100%;
@@ -79,7 +76,6 @@ const OurHappyCustomers = () => {
             max-width: 33.333333%;
           }
         }
-
         .review-card-pro {
           background-color: var(--card-color);
           border-radius: 20px;
@@ -208,27 +204,6 @@ const OurHappyCustomers = () => {
               >
                 <ChevronRight size={22} />
               </button>
-            )}
-
-            {/* Navigation Dots */}
-            {maxIndex > 0 && (
-              <div className="d-flex align-items-center justify-content-center gap-2 mt-4">
-                {[...Array(maxIndex + 1)].map((_, dotIdx) => (
-                  <button
-                    key={dotIdx}
-                    onClick={() => setStartIndex(dotIdx)}
-                    className="btn p-0 border-0 transition-all"
-                    style={{
-                      width: dotIdx === startIndex ? '26px' : '9px',
-                      height: '9px',
-                      borderRadius: '5px',
-                      backgroundColor: dotIdx === startIndex ? 'var(--accent-color)' : 'var(--border-color)',
-                      cursor: 'pointer'
-                    }}
-                    aria-label={`Go to slide ${dotIdx + 1}`}
-                  />
-                ))}
-              </div>
             )}
           </div>
         )}
