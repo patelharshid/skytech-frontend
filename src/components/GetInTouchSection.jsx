@@ -45,7 +45,7 @@ const GetInTouchSection = () => {
           <div className="col-12 col-lg-5">
             <div
               className="h-100 p-4 p-md-5 rounded-4 d-flex flex-column justify-content-between"
-              style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-color)' }}
+              style={{ backgroundColor: 'var(--surface-color)', border: '1px solid var(--border-color)' }}
             >
               <div>
                 <h2 className="fw-bold text-dark mb-3 fs-2" style={{ color: 'var(--text-main)' }}>
