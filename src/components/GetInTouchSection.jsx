@@ -152,13 +152,7 @@ const GetInTouchSection = () => {
                     <div className="mt-2">
                       <button
                         type="submit"
-                        className="btn border-0 rounded-pill px-5 py-2 fw-bold shadow-sm"
-                        style={{
-                          background: 'var(--grad-primary)',
-                          color: 'var(--primary-contrast)',
-                          fontSize: '14px',
-                          letterSpacing: '0.5px'
-                        }}
+                        className="btn btn-warning rounded-pill px-5 py-2 fw-bold"
                       >
                         SUBMIT
                       </button>
@@ -171,7 +165,7 @@ const GetInTouchSection = () => {
 
           <div className="col-12 col-lg-7 d-flex flex-column gap-4">
             {/* Find Us Here: Google Map */}
-            <div className="p-4 rounded-4" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-color)' }}>
+            <div className="p-4 rounded-4" style={{ backgroundColor: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
               <div className="d-flex align-items-center justify-content-between mb-3">
                 <h3 className="fs-2 fw-bold text-dark mb-0">Find Us Here</h3>
               </div>
@@ -191,12 +185,12 @@ const GetInTouchSection = () => {
             </div>
 
             {/* Company Information */}
-            <div className="p-4 rounded-4" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-color)' }}>
+            <div className="p-4 rounded-4" style={{ backgroundColor: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
               <h3 className="fs-2 fw-bold text-dark mb-4">Company Information</h3>
               <div className="d-flex flex-column gap-3">
                 {/* Location Card */}
                 <div className="d-flex align-items-start gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: 'var(--border-color)' }}>
-                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--contact-method-icon-bg)', color: 'var(--accent)' }}>
+                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--surface-color)', color: 'var(--accent-color)' }}>
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -209,7 +203,7 @@ const GetInTouchSection = () => {
 
                 {/* Phone Card */}
                 <div className="d-flex align-items-center gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: 'var(--border-color)' }}>
-                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--contact-method-icon-bg)', color: 'var(--accent)' }}>
+                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--surface-color)', color: 'var(--accent-color)' }}>
                     <Phone size={20} />
                   </div>
                   <div>
@@ -224,7 +218,7 @@ const GetInTouchSection = () => {
 
                 {/* Email Card */}
                 <div className="d-flex align-items-center gap-3 p-3 rounded-3 bg-white border" style={{ borderColor: 'var(--border-color)' }}>
-                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--contact-method-icon-bg)', color: 'var(--accent)' }}>
+                  <div className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style={{ width: '42px', height: '42px', backgroundColor: 'var(--surface-color)', color: 'var(--accent-color)' }}>
                     <Mail size={20} />
                   </div>
                   <div>

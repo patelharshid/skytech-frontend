@@ -249,7 +249,7 @@ export const happyCustomersData = {
       id: 1,
       name: "Amit Sharma",
       initial: "AS",
-      avatarBg: "#8b5cf6",
+      avatarBg: "var(--accent-color)",
       date: "8 months ago",
       rating: 5,
       comment: "This platform has made managing our school activities so much easier. The interface is clean, simple and very user-friendly. Highly recommended!"
@@ -258,7 +258,7 @@ export const happyCustomersData = {
       id: 2,
       name: "Priya Patel",
       initial: "PP",
-      avatarBg: "#8b5cf6",
+      avatarBg: "var(--accent-color)",
       date: "8 months ago",
       rating: 5,
       comment: "I love how easy it is to track my child's progress and attendance. The app is reliable, fast and provides all the information we need in one place."
@@ -267,7 +267,7 @@ export const happyCustomersData = {
       id: 3,
       name: "Rohan Kumar",
       initial: "RK",
-      avatarBg: "#8b5cf6",
+      avatarBg: "var(--accent-color)",
       date: "8 months ago",
       rating: 5,
       comment: "Excellent service and support! The team is very responsive and always ready to help. It's been a great experience using this platform."
@@ -276,7 +276,7 @@ export const happyCustomersData = {
       id: 4,
       name: "Kinjal Chaudhary",
       initial: "KC",
-      avatarBg: "#8b5cf6",
+      avatarBg: "var(--accent-color)",
       date: "6 months ago",
       rating: 5,
       comment: "Bought a refurbished Dell laptop with Intel i7 and 512GB SSD. The seller was honest, patient, and answered all my hardware questions!"
@@ -285,7 +285,7 @@ export const happyCustomersData = {
       id: 5,
       name: "Divyaradha Satani",
       initial: "DS",
-      avatarBg: "#8b5cf6",
+      avatarBg: "var(--accent-color)",
       date: "5 months ago",
       rating: 5,
       comment: "Perfect place to buy laptops and business workstations in Ahmedabad. Genuine service and prompt warranty support!!"
@@ -294,7 +294,7 @@ export const happyCustomersData = {
       id: 6,
       name: "Meniya Axar",
       initial: "MA",
-      avatarBg: "#8b5cf6",
+      avatarBg: "var(--accent-color)",
       date: "4 months ago",
       rating: 5,
       comment: "Best showroom for laptop, desktop and server products. Visited the store, very neat setup and highly professional staff."

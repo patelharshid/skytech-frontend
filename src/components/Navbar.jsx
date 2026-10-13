@@ -153,9 +153,9 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
                 <div
                   className="d-inline-flex align-items-center justify-content-center px-2 py-1 rounded-pill"
                   style={{
-                    backgroundColor: 'var(--white)',
-                    border: '1px solid var(--nav-pill-border)',
-                    boxShadow: 'var(--shadow-sm)',
+                    backgroundColor: 'var(--card-color)',
+                    border: '1px solid var(--border-color)',
+                    boxShadow: '0 2px 4px var(--border-color)',
                   }}
                 >
                   <img

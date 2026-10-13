@@ -9,9 +9,6 @@ import OurHappyCustomers from './components/OurHappyCustomers';
 import BrandLogos from './components/BrandLogos';
 import FAQSection from './components/FAQSection';
 import GetInTouchSection from './components/GetInTouchSection';
-import CartDrawer from './components/CartDrawer';
-import CheckoutModal from './components/CheckoutModal';
-import RentalEstimatorModal from './components/RentalEstimatorModal';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
@@ -114,33 +111,6 @@ function App() {
       <Footer
         onOpenRentModal={() => setIsRentModalOpen(true)}
         onOpenQuoteModal={() => setIsQuoteModalOpen(true)}
-      />
-
-      <RentalEstimatorModal
-        isOpen={isRentModalOpen}
-        onClose={() => setIsRentModalOpen(false)}
-      />
-
-      <CartDrawer
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        cartItems={cartItems}
-        onUpdateQuantity={handleUpdateQuantity}
-        onRemoveItem={handleRemoveItem}
-        onProceedToCheckout={() => {
-          setIsCartOpen(false);
-          setIsCheckoutOpen(true);
-        }}
-      />
-
-      <CheckoutModal
-        isOpen={isCheckoutOpen}
-        onClose={() => setIsCheckoutOpen(false)}
-        cartItems={cartItems}
-        onOrderComplete={() => {
-          setCartItems([]);
-          setIsCheckoutOpen(false);
-        }}
       />
     </div>
   );

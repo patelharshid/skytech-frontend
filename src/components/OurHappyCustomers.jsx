@@ -81,15 +81,15 @@ const OurHappyCustomers = () => {
         }
 
         .review-card-pro {
-          background-color: var(--bg-card);
+          background-color: var(--card-color);
           border-radius: 20px;
           border: 1px solid var(--border-color);
           transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
         }
         .review-card-pro:hover {
           transform: translateY(-8px);
-          border-color: var(--customers-card-border-hover);
-          box-shadow: var(--customers-card-shadow-hover);
+          border-color: var(--secondary-color);
+          box-shadow: 0 14px 30px -6px var(--border-color);
         }
         .avatar-pro {
           transition: transform 0.3s ease;
@@ -98,26 +98,26 @@ const OurHappyCustomers = () => {
           transform: scale(1.1);
         }
         .nav-btn-pro {
-          background-color: var(--bg-card);
-          color: var(--text-main);
+          background-color: var(--card-color);
+          color: var(--text-color);
           width: 46px;
           height: 46px;
           border: 1px solid var(--border-color);
-          box-shadow: var(--customers-card-shadow);
+          box-shadow: 0 4px 14px var(--border-color);
           transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .nav-btn-pro:hover {
-          background-color: var(--accent) !important;
-          color: var(--white) !important;
-          border-color: var(--accent) !important;
+          background-color: var(--accent-color) !important;
+          color: var(--card-color) !important;
+          border-color: var(--accent-color) !important;
           transform: translateY(-50%) scale(1.1) !important;
-          box-shadow: var(--customers-card-shadow-active) !important;
+          box-shadow: 0 6px 18px var(--border-color) !important;
         }
       `}</style>
       <div className="container py-3 py-md-4">
         {/* Main Section Header */}
         <div className="text-center mb-4 mb-md-5">
-          <h2 className="fs-2 fw-bold mb-3 tracking-tight" style={{ color: 'var(--text-main)' }}>
+          <h2 className="fs-2 fw-bold mb-3 tracking-tight" style={{ color: 'var(--text-color)' }}>
             What Our Customers Say
           </h2>
         </div>
@@ -164,7 +164,7 @@ const OurHappyCustomers = () => {
                           style={{
                             width: '44px',
                             height: '44px',
-                            backgroundColor: rev.avatarBg || '#8b5cf6',
+                            backgroundColor: rev.avatarBg || 'var(--accent-color)',
                             fontSize: '0.95rem',
                             letterSpacing: '0.5px'
                           }}
@@ -172,10 +172,10 @@ const OurHappyCustomers = () => {
                           {rev.initial}
                         </div>
                         <div className="text-start lh-sm">
-                          <div className="fw-bold fs-6 mb-1" style={{ color: 'var(--text-main)' }}>
+                          <div className="fw-bold fs-6 mb-1" style={{ color: 'var(--text-color)' }}>
                             {rev.name}
                           </div>
-                          <div className="fs-8" style={{ color: 'var(--text-muted)' }}>
+                          <div className="fs-8" style={{ color: 'var(--muted-color)' }}>
                             {rev.date}
                           </div>
                         </div>
@@ -184,12 +184,12 @@ const OurHappyCustomers = () => {
                       {/* 5 Stars */}
                       <div className="d-flex align-items-center gap-1 mb-3 text-start">
                         {[...Array(rev.rating)].map((_, i) => (
-                          <Star key={i} size={17} fill="var(--secondary)" color="var(--secondary)" />
+                          <Star key={i} size={17} fill="var(--secondary-color)" color="var(--secondary-color)" />
                         ))}
                       </div>
 
                       {/* Review Text */}
-                      <p className="small text-start mb-0" style={{ color: 'var(--text-main)', lineHeight: '1.55' }}>
+                      <p className="small text-start mb-0" style={{ color: 'var(--text-color)', lineHeight: '1.55' }}>
                         {rev.comment}
                       </p>
                     </div>
@@ -222,7 +222,7 @@ const OurHappyCustomers = () => {
                       width: dotIdx === startIndex ? '26px' : '9px',
                       height: '9px',
                       borderRadius: '5px',
-                      backgroundColor: dotIdx === startIndex ? 'var(--accent)' : 'var(--border-color)',
+                      backgroundColor: dotIdx === startIndex ? 'var(--accent-color)' : 'var(--border-color)',
                       cursor: 'pointer'
                     }}
                     aria-label={`Go to slide ${dotIdx + 1}`}
