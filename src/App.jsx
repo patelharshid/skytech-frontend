@@ -89,11 +89,11 @@ function App() {
 
         <IndustriesWeServe />
 
+        <FAQSection />
+
         <OurHappyCustomers />
 
         <BrandLogos />
-
-        <FAQSection />
 
         <GetInTouchSection />
       </main>}
