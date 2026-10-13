@@ -9,41 +9,15 @@
 }
 
 .skytech-footer-card {
-  background: var(--surface-color);
-  border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 4px 14px var(--border-color);
 }
 
 .skytech-logo-badge {
-  background: var(--card-color);
   border-radius: 14px;
   padding: 10px 24px;
-  box-shadow: 0 4px 14px var(--border-color);
-  border: 1px solid var(--border-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.skytech-social-btn {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--surface-color);
-  color: var(--text-color);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.skytech-social-btn:hover {
-  background: var(--accent-color);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(32, 184, 199, 0.35);
 }
 
 .skytech-footer-phone-icon {

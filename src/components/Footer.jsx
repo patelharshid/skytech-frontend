@@ -51,8 +51,8 @@ const Footer = () => {
               </div>
 
               {/* Description */}
-              <p className="small text-muted mb-4 px-2" style={{ lineHeight: '1.65', color: 'var(--text-muted)' }}>
-                SkyTech is based out of Ahmedabad and having customer base across India, we are serving more than 1200+ Corporate and SME customers in Gujarat.
+              <p className="small text-muted mb-4 px-2" style={{ lineHeight: '1.7', color: 'var(--text-muted)' }}>
+                Founded in 2013 and based out of Ahmedabad with a nationwide customer base, SkyTech is a trusted provider of reliable IT hardware solutions across India, we are serving more than 1200+ Corporate and SME customers in Gujarat.
               </p>
             </div>
           </div>
@@ -138,7 +138,7 @@ const Footer = () => {
 
         {/* Bottom Copyright Strip */}
         <div className="mt-4 pt-2">
-          <div className="rounded-pill text-center fw-semibold small py-3 px-4 bg-surface text-main">
+          <div className="rounded-pill text-center fw-semibold small py-2 px-3 bg-primary text-white">
             Copyright © 2026 SkyTech. All rights reserved.
           </div>
         </div>
