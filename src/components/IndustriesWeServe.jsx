@@ -12,6 +12,7 @@ import {
   Activity
 } from 'lucide-react';
 import { useIndustriesWeServe } from '../hooks/useData';
+import industryBanner from '../assets/Industry-banner.png';
 
 const iconMap = {
   GraduationCap: GraduationCap,
@@ -30,9 +31,15 @@ const IndustriesWeServe = () => {
   const { data: industries, loading } = useIndustriesWeServe();
 
   return (
-    <section className="industries-serve-section py-5 position-relative overflow-hidden">
-      {/* Background Overlay Graphics / Tech Image backdrop */}
-      <div className="industries-bg-overlay"></div>
+    <section
+      className="industries-serve-section py-3 position-relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${industryBanner})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
 
       <div className="container position-relative z-1 py-4 py-md-5">
         {/* Title */}

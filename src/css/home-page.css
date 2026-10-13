@@ -65,27 +65,13 @@
 }
 
 .industries-serve-section {
-  background: var(--text-color);
-  position: relative;
-  min-height: 400px;
-}
-
-.industries-bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:
-    radial-gradient(circle at 20% 50%, var(--accent-color) 0%, transparent 40%),
-    radial-gradient(circle at 80% 50%, var(--primary-color) 0%, transparent 40%),
-    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80');
+  background-color: var(--text-color);
+  background-image: url('../assets/Industry-banner.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.25;
-  mix-blend-mode: luminosity;
-  pointer-events: none;
+  position: relative;
+  min-height: 300px;
 }
 
 .industry-card {
