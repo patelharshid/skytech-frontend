@@ -48,17 +48,19 @@ const Navbar = ({ theme, toggleTheme, cartCount, onOpenCart, onOpenQuoteModal, o
 
             {/* Central Search Bar */}
             <div className="col-12 col-sm col-lg-4 order-3 order-sm-2 d-none d-sm-block">
-              <div className="input-group">
+              <div className="position-relative d-flex align-items-center">
+                <Search
+                  size={18}
+                  className="position-absolute start-0 ms-3 text-muted"
+                  style={{ pointerEvents: 'none' }}
+                />
                 <input
                   type="text"
-                  className="form-control sky-form-control py-2 small"
+                  className="form-control sky-form-control py-2 ps-5 pe-3 small"
                   placeholder="Search Products..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <button className="btn btn-skytech-gold px-3 d-flex align-items-center justify-content-center">
-                  <Search size={18} />
-                </button>
               </div>
             </div>
 
