@@ -22,8 +22,7 @@ const ProductCatalog = ({ activeCategory, setActiveCategory }) => {
     <section id="shop" className="py-6 position-relative">
       <div className="container">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-5">
-          <div className="badge badge-sky mb-2 px-3 py-1">Sky Tech Online Store</div>
+        <div className="text-center max-w-3xl mx-auto mb-5 mt-3 pt-3">
           <h2 className="display-6 fw-bold">Explore Certified Laptops, PCs &amp; Accessories</h2>
           <p className="text-muted lead fs-6">
             Every device undergoes a 50-point technical inspection and comes with 1-Year Warranty &amp; 30-Day Money Back Guarantee.
