@@ -28,14 +28,11 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
 
   return (
     <header className="z-1000 position-relative">
-      {/* Top Announcement Bar */}
       <TopMarqueeBar />
 
-      {/* Main Header Bar (Visible at top) */}
       <div className="sky-header py-2 py-md-3 mb-md-4">
         <div className="container">
           <div className="row align-items-center gy-2 gy-md-3">
-            {/* Brand Logo */}
             <div className="col-8 col-sm-auto col-lg-3 d-flex align-items-center justify-content-between">
               <a className="navbar-brand d-inline-flex align-items-center text-decoration-none" href="/#hero">
                 <img
@@ -46,7 +43,6 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
               </a>
             </div>
 
-            {/* Central Search Bar */}
             <div className="col-12 col-sm col-lg-4 order-3 order-sm-2 d-none d-sm-block">
               <div className="position-relative d-flex align-items-center">
                 <Search
@@ -64,10 +60,8 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
               </div>
             </div>
 
-            {/* Right Quick Actions (Phone, Email, Mobile Toggle) */}
             <div className="col-4 col-sm-auto col-lg-5 order-2 order-sm-3 d-flex align-items-center justify-content-end gap-2 gap-sm-2.5 flex-nowrap ms-auto">
-              {/* Phone Helpline */}
-              <div className="d-none d-lg-flex align-items-center gap-2 border-end pe-3 text-nowrap flex-shrink-0">
+              <div className="d-none d-lg-flex align-items-center gap-2 pe-3 text-nowrap flex-shrink-0">
                 <div className="bg-surface p-2 rounded-circle text-warning border flex-shrink-0 d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}>
                   <PhoneCall size={17} />
                 </div>
@@ -76,8 +70,7 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
                 </div>
               </div>
 
-              {/* Email Address */}
-              <div className="d-none d-xl-flex align-items-center gap-2 border-end pe-3 text-nowrap flex-shrink-0">
+              <div className="d-none d-xl-flex align-items-center gap-2 pe-3 text-nowrap flex-shrink-0">
                 <div className="bg-surface p-2 rounded-circle text-info border flex-shrink-0 d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}>
                   <Mail size={17} />
                 </div>
@@ -86,7 +79,6 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
                 </div>
               </div>
 
-              {/* Mobile Navbar Menu Toggler */}
               <button
                 className="navbar-toggler border-0 p-2 d-lg-none flex-shrink-0 text-main"
                 type="button"
@@ -98,7 +90,6 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
             </div>
           </div>
 
-          {/* Mobile Collapsible Drawer (ONLY shown on Mobile when Hamburger is tapped) */}
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse d-lg-none mt-3 border-top pt-3`} id="mobileSkyTechNav">
             <ul className="navbar-nav flex-column gap-2 font-semibold mb-3">
               <li className="nav-item">
@@ -145,12 +136,10 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
         </div>
       </div>
 
-      {/* Floating SkyTech Style Navbar Pill (ONLY displayed on Desktop `d-none d-lg-block`) */}
       <div className={`skytech-floating-nav-wrapper d-none d-lg-block ${isScrolled ? 'is-sticky' : ''}`}>
         <div className="container">
           <nav className="navbar navbar-expand-lg skytech-floating-nav py-1">
             <div className="container-fluid p-0">
-              {/* Logo inside floating navbar (visible ONLY when sticky on Desktop) */}
               <a className={`navbar-brand align-items-center text-decoration-none me-3 ${isScrolled ? 'd-inline-flex' : 'd-none'}`} href="/#hero">
                 <div
                   className="d-inline-flex align-items-center justify-content-center px-2 py-1 rounded-pill"

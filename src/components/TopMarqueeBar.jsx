@@ -16,7 +16,7 @@ const TopMarqueeBar = () => {
   }
 
   return (
-    <div className="skytech-marquee-bar border-bottom">
+    <div className="skytech-marquee-bar">
       <div className="container-fluid overflow-hidden">
         <div className="marquee-track d-flex gap-5 align-items-center">
           {announcements.map((item, index) => (

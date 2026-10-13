@@ -118,7 +118,6 @@ h6 {
 .border,
 .border-top,
 .border-bottom,
-.border-start,
 .border-end {
   border-color: var(--border-color) !important;
 }
@@ -151,7 +150,6 @@ h6 {
 
 .sky-header {
   background-color: var(--card-color);
-  border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
@@ -164,7 +162,6 @@ h6 {
 }
 
 .skytech-floating-nav {
-  background: var(--surface-color);
   border: 1px solid var(--border-color);
   border-radius: 50rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
