@@ -11,16 +11,11 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
   const isContactPage = window.location.pathname.replace(/\/$/, '') === '/contact-us';
   const isAboutPage = window.location.pathname.replace(/\/$/, '') === '/about-us';
 
-  // Handle sticky navbar on scroll (Desktop only)
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 95);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -139,24 +134,16 @@ const Navbar = ({ cartCount, onOpenCart, onOpenQuoteModal, onOpenRentModal }) =>
       <div className={`skytech-floating-nav-wrapper d-none d-lg-block ${isScrolled ? 'is-sticky' : ''}`}>
         <div className="container">
           <nav className="navbar navbar-expand-lg skytech-floating-nav py-1">
-            <div className="container-fluid p-0">
-              <a className={`navbar-brand align-items-center text-decoration-none me-3 ${isScrolled ? 'd-inline-flex' : 'd-none'}`} href="/#hero">
-                <div
-                  className="d-inline-flex align-items-center justify-content-center px-2 py-1 rounded-pill"
-                  style={{
-                    backgroundColor: 'var(--card-color)',
-                    border: '1px solid var(--border-color)',
-                    boxShadow: '0 2px 4px var(--border-color)',
-                  }}
-                >
+            <div className="container-fluid p-0 d-flex align-items-center">
+              {isScrolled && (
+                <a className="navbar-brand d-inline-flex align-items-center text-decoration-none me-3 py-0 flex-shrink-0" href="/#hero">
                   <img
                     src={logo}
                     alt="SKYTECH"
-                    style={{ height: '26px', width: 'auto', objectFit: 'contain' }}
+                    style={{ height: '24px', width: 'auto', objectFit: 'contain' }}
                   />
-                </div>
-              </a>
-
+                </a>
+              )}
               <div className="navbar-collapse justify-content-between align-items-center w-100">
                 <ul className="navbar-nav w-100 justify-content-between align-items-center font-semibold py-1">
                   <li className="nav-item">

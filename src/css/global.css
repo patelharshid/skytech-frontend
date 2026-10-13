@@ -161,7 +161,8 @@ h6 {
   right: 0;
   margin-top: -2px;
   z-index: 1030;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: none !important;
+  animation: none !important;
 }
 
 .skytech-floating-nav {
@@ -170,22 +171,27 @@ h6 {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
   padding: 6px 16px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: none !important;
+  animation: none !important;
 }
 
 .skytech-floating-nav-wrapper.is-sticky {
   position: fixed;
-  top: 12px;
+  top: 10px;
   left: 0;
   right: 0;
   margin-top: 0;
   z-index: 1050;
+  transition: none !important;
+  animation: none !important;
 }
 
 .skytech-floating-nav-wrapper.is-sticky .skytech-floating-nav {
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
-  border-color: var(--primary-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  border-color: var(--border-color);
   background: var(--bg-color);
+  transition: none !important;
+  animation: none !important;
 }
 
 .skytech-floating-nav .navbar-collapse {
