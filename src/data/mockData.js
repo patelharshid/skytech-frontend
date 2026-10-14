@@ -32,15 +32,6 @@ import serviceSoftware from '../assets/service-software.jpg';
 import serviceRecovery from '../assets/service-recovery.jpg';
 import serviceSupport from '../assets/service-support.png';
 
-export const siteConfigData = {
-  storeName: "SkyTech",
-  tagline: "Systems & Rentals",
-  phone: `+91 ${primaryNumber}`,
-  email: primaryEmail,
-  whatsappPhone: `91${primaryNumber}`,
-  address: officeAddress,
-  workingHours: "Mon - Sat: 9:30 AM - 8:00 PM"
-};
 
 export const marqueeAnnouncementsData = [
   "⚡ Special Offer: Get Free Antivirus & Carry Bag with every Refurbished Laptop Purchase!",

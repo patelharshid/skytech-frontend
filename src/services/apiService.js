@@ -1,9 +1,7 @@
 import {
-  siteConfigData,
   marqueeAnnouncementsData,
   slidesData,
   productsData,
-  rentalOptionsData,
   faqData,
   industriesWeServeData,
   snapshotExcellenceData,
@@ -40,9 +38,6 @@ async function fetchOrMock(endpoint, mockFallback, options = {}) {
 }
 
 export const apiService = {
-  getSiteConfig: async () => {
-    return fetchOrMock('/config', siteConfigData);
-  },
 
   getMarqueeAnnouncements: async () => {
     try {
@@ -81,68 +76,6 @@ export const apiService = {
   },
 
 
-  estimateTradeInValue: async ({ deviceType, brand, processor, condition, ageYears }) => {
-    if (!USE_MOCK_DATA) {
-      return fetchOrMock('/estimate-trade-in', null, {
-        method: 'POST',
-        body: JSON.stringify({ deviceType, brand, processor, condition, ageYears })
-      });
-    }
-
-    let basePrice = 25000;
-    if (deviceType === 'laptop') basePrice = 30000;
-    if (deviceType === 'macbook') basePrice = 55000;
-    if (deviceType === 'gaming_pc') basePrice = 45000;
-
-    const conditionMultiplier = {
-      like_new: 1.0,
-      good: 0.8,
-      fair: 0.6,
-      faulty: 0.35
-    }[condition] || 0.7;
-
-    const ageDeduction = Math.max(0.3, 1 - (parseInt(ageYears) || 1) * 0.12);
-    const estimatedValue = Math.round(basePrice * conditionMultiplier * ageDeduction);
-
-    return {
-      success: true,
-      estimatedValue,
-      currency: '₹',
-      guaranteeDays: 7
-    };
-  },
-
-  submitInquiry: async (inquiryData) => {
-    if (!USE_MOCK_DATA) {
-      return fetchOrMock('/inquiries', null, {
-        method: 'POST',
-        body: JSON.stringify(inquiryData)
-      });
-    }
-
-    await new Promise(resolve => setTimeout(resolve, 300));
-    return {
-      success: true,
-      message: 'Inquiry received successfully! Our representative will contact you within 2 business hours.',
-      inquiryId: `INQ-${Math.floor(100000 + Math.random() * 900000)}`
-    };
-  },
-
-  submitOrder: async (orderData) => {
-    if (!USE_MOCK_DATA) {
-      return fetchOrMock('/orders', null, {
-        method: 'POST',
-        body: JSON.stringify(orderData)
-      });
-    }
-
-    await new Promise(resolve => setTimeout(resolve, 400));
-    return {
-      success: true,
-      orderId: `ST-ORD-${Math.floor(100000 + Math.random() * 900000)}`,
-      estimatedDelivery: '2-3 Business Days'
-    };
-  },
 
   getFAQ: async () => {
     return fetchOrMock('/faq', faqData);

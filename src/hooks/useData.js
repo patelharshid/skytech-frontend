@@ -40,12 +40,6 @@ export function useProducts(filters = {}) {
   );
 }
 
-
-
-export function useSiteConfig() {
-  return useAsyncData(() => apiService.getSiteConfig());
-}
-
 export function useFAQData() {
   return useAsyncData(() => apiService.getFAQ());
 }
