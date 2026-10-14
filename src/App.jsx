@@ -48,7 +48,14 @@ function App() {
         return;
       }
 
-      // Handle section anchor on current page (e.g., #catalog, #hero)
+      // Handle Home or top navigation specifically so top marquee is never cut off
+      if (href === '/' || href === '/#hero' || href === '#hero') {
+        e.preventDefault();
+        navigateTo(href);
+        return;
+      }
+
+      // Handle section anchor on current page (e.g., #catalog, #shop)
       if (href.startsWith('#') && !href.startsWith('#/')) {
         const route = getRoute();
         if (route === '/') {

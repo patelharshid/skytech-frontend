@@ -31,7 +31,7 @@ const Navbar = ({ currentRoute }) => {
         <div className="container">
           <div className="row align-items-center gy-2 gy-md-3">
             <div className="col-8 col-sm-auto col-lg-3 d-flex align-items-center justify-content-between">
-              <a className="navbar-brand d-inline-flex align-items-center text-decoration-none" href="/#hero">
+              <a className="navbar-brand d-inline-flex align-items-center text-decoration-none" href="/">
                 <img
                   src={logo}
                   alt="SKYTECH"
@@ -90,7 +90,7 @@ const Navbar = ({ currentRoute }) => {
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse d-lg-none mt-3 border-top pt-3`} id="mobileSkyTechNav">
             <ul className="navbar-nav flex-column gap-2 font-semibold mb-3">
               <li className="nav-item">
-                <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="/#hero" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'} onClick={() => setIsNavCollapsed(true)}>Home</a>
+                <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="/" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'} onClick={() => setIsNavCollapsed(true)}>Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Laptops</a>
@@ -138,7 +138,7 @@ const Navbar = ({ currentRoute }) => {
           <nav className="navbar navbar-expand-lg skytech-floating-nav py-1">
             <div className="container-fluid p-0 d-flex align-items-center">
               {isScrolled && (
-                <a className="navbar-brand d-inline-flex align-items-center text-decoration-none me-3 py-0 flex-shrink-0" href="/#hero">
+                <a className="navbar-brand d-inline-flex align-items-center text-decoration-none me-3 py-0 flex-shrink-0" href="/">
                   <img
                     src={logo}
                     alt="SKYTECH"
@@ -149,7 +149,7 @@ const Navbar = ({ currentRoute }) => {
               <div className="navbar-collapse justify-content-between align-items-center w-100">
                 <ul className="navbar-nav w-100 justify-content-between align-items-center font-semibold py-1">
                   <li className="nav-item">
-                    <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="/#hero" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'}>Home</a>
+                    <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="/" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'}>Home</a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#catalog">Laptops</a>

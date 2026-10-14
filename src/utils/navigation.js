@@ -52,10 +52,30 @@ export function navigateTo(targetPath) {
 
   const basePath = getBasePath();
 
-  // If path is a section anchor: e.g. "/#hero", "/#catalog", "/#shop", or "#catalog"
+  // If navigating to home page: '/' or '/#hero' or '#hero', always scroll to top so top marquee is never cut
+  if (targetPath === '/' || targetPath === '/#hero' || targetPath === '#hero') {
+    const currentRoute = getRoute();
+    if (currentRoute === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.pushState(null, '', `${basePath}/`);
+      return;
+    }
+    window.history.pushState(null, '', `${basePath}/`);
+    window.dispatchEvent(new Event('app-location-change'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
+
+  // If path is a section anchor: e.g. "/#catalog", "/#shop", or "#catalog"
   if (targetPath.includes('#') && !targetPath.includes('#/')) {
     const hashId = targetPath.split('#')[1];
     const currentRoute = getRoute();
+
+    if (hashId === 'hero') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.pushState(null, '', `${basePath}/`);
+      return;
+    }
 
     // If already on home page, smoothly scroll directly
     if (currentRoute === '/') {
