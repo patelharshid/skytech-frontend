@@ -249,19 +249,23 @@
 }
 
 .category-card-image-wrap {
-  --bs-aspect-ratio: 44%;
+  --bs-aspect-ratio: 60%;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--surface-color) 0%, var(--card-color) 100%);
+  position: relative;
+  background: #f1f5f9;
 }
 
 .category-card-image {
   width: 100%;
   height: 100%;
-  transition: transform 320ms ease;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block;
+  transition: transform 380ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .category-card:hover .category-card-image {
-  transform: scale(1.045);
+  transform: scale(1.08);
 }
 
 .category-card-copy {

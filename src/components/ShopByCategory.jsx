@@ -3,15 +3,27 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { productsData } from '../data/mockData';
 
 const categoryCards = [
-  { id: 'desktops', title: 'Desktops' },
-  { id: 'laptops', title: 'Laptops' },
+  {
+    id: 'desktops',
+    title: 'Desktops',
+    image: 'https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    id: 'laptops',
+    title: 'Laptops',
+    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80'
+  },
   {
     id: 'ipads',
     title: 'iPad',
     filterCategory: 'all',
-    image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=900&q=85'
+    image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80'
   },
-  { id: 'accessories', title: 'Accessories' }
+  {
+    id: 'accessories',
+    title: 'Accessories',
+    image: 'https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80'
+  }
 ];
 
 const ShopByCategory = ({ onSelectCategory }) => {
@@ -94,7 +106,7 @@ const ShopByCategory = ({ onSelectCategory }) => {
                       aria-label={`Browse ${category.title}`}
                     >
                       <span className="category-card-image-wrap ratio">
-                        <img src={image} alt="" className="category-card-image img-fluid object-fit-contain" loading="lazy" />
+                        <img src={image} alt={category.title} className="category-card-image img-fluid object-fit-cover" loading="lazy" />
                       </span>
                       <span className="category-card-copy text-center d-flex align-items-center justify-content-center py-3 px-2">
                         <span className="text-warning fw-bold fs-5">{category.title}</span>
