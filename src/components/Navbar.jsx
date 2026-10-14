@@ -12,6 +12,8 @@ const Navbar = ({ currentRoute }) => {
   const isContactPage = activeRoute.includes('/contact-us');
   const isAboutPage = activeRoute.includes('/about-us');
   const isServicesPage = activeRoute.includes('/services');
+  const isProductPage = activeRoute.startsWith('/product');
+  const isHomePage = !isContactPage && !isAboutPage && !isServicesPage && !isProductPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,7 +92,7 @@ const Navbar = ({ currentRoute }) => {
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse d-lg-none mt-3 border-top pt-3`} id="mobileSkyTechNav">
             <ul className="navbar-nav flex-column gap-2 font-semibold mb-3">
               <li className="nav-item">
-                <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="/" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'} onClick={() => setIsNavCollapsed(true)}>Home</a>
+                <a className={`nav-link ${isHomePage ? 'active' : ''}`} href="/" aria-current={isHomePage ? 'page' : undefined} onClick={() => setIsNavCollapsed(true)}>Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Laptops</a>
@@ -149,7 +151,7 @@ const Navbar = ({ currentRoute }) => {
               <div className="navbar-collapse justify-content-between align-items-center w-100">
                 <ul className="navbar-nav w-100 justify-content-between align-items-center font-semibold py-1">
                   <li className="nav-item">
-                    <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="/" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'}>Home</a>
+                    <a className={`nav-link ${isHomePage ? 'active' : ''}`} href="/" aria-current={isHomePage ? 'page' : undefined}>Home</a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#catalog">Laptops</a>
