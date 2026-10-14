@@ -47,75 +47,16 @@ const OurHappyCustomers = () => {
   };
 
   return (
-    <section className="py-5 position-relative overflow-hidden">
-      <style>{`
-        .carousel-viewport {
-          overflow: hidden;
-          width: 100%;
-          padding: 12px 0 20px 0;
-        }
-        .carousel-track {
-          display: flex;
-          transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-          will-change: transform;
-        }
-        .carousel-item-col {
-          flex: 0 0 100%;
-          max-width: 100%;
-          padding: 0 12px;
-        }
-        @media (min-width: 768px) {
-          .carousel-item-col {
-            flex: 0 0 50%;
-            max-width: 50%;
-          }
-        }
-        @media (min-width: 992px) {
-          .carousel-item-col {
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-          }
-        }
-        .review-card-pro {
-          background-color: var(--card-color);
-          border-radius: 20px;
-          border: 1px solid var(--border-color);
-          transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-        }
-        .review-card-pro:hover {
-          transform: translateY(-8px);
-          border-color: var(--secondary-color);
-          box-shadow: 0 14px 30px -6px var(--border-color);
-        }
-        .avatar-pro {
-          transition: transform 0.3s ease;
-        }
-        .review-card-pro:hover .avatar-pro {
-          transform: scale(1.1);
-        }
-        .nav-btn-pro {
-          background-color: var(--card-color);
-          color: var(--text-color);
-          width: 46px;
-          height: 46px;
-          border: 1px solid var(--border-color);
-          box-shadow: 0 4px 14px var(--border-color);
-          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .nav-btn-pro:hover {
-          background-color: var(--accent-color) !important;
-          color: var(--card-color) !important;
-          border-color: var(--accent-color) !important;
-          transform: translateY(-50%) scale(1.1) !important;
-          box-shadow: 0 6px 18px var(--border-color) !important;
-        }
-      `}</style>
-      <div className="container py-3 py-md-4">
+    <section className="py-5 py-lg-6 position-relative overflow-hidden bg-white">
+      <div className="container py-3">
         {/* Main Section Header */}
-        <div className="text-center mb-4 mb-md-5">
-          <h2 className="fs-2 fw-bold mb-3 tracking-tight" style={{ color: 'var(--text-color)' }}>
-            What Our Customers Say
+        <div className="text-center mx-auto mb-4 mb-md-5" style={{ maxWidth: '44rem' }}>
+          <h2 className="display-6 fw-bold text-main mt-1">
+            What Our <span className="text-warning">Customers Say</span>
           </h2>
+          <p className="text-secondary lead fs-6 mb-0">
+            Real feedback from enterprise clients and retail buyers who rely on SkyTech.
+          </p>
         </div>
 
         {loading ? (
@@ -134,11 +75,11 @@ const OurHappyCustomers = () => {
             {totalReviews > itemsPerPage && (
               <button
                 onClick={handlePrev}
-                className="btn rounded-circle position-absolute top-50 start-0 translate-middle-y z-3 p-2 d-none d-md-flex align-items-center justify-content-center nav-btn-pro"
-                style={{ left: '-15px' }}
+                className="btn btn-light rounded-circle position-absolute top-50 start-0 translate-middle-y z-3 p-0 d-none d-md-flex align-items-center justify-content-center review-nav-btn shadow-sm"
+                style={{ left: '-16px' }}
                 aria-label="Previous Reviews"
               >
-                <ChevronLeft size={22} />
+                <ChevronLeft size={20} />
               </button>
             )}
 
@@ -152,26 +93,25 @@ const OurHappyCustomers = () => {
               >
                 {reviewsList.map((rev) => (
                   <div key={rev.id} className="carousel-item-col">
-                    <div className="p-4 h-100 d-flex flex-column justify-content-start review-card-pro">
+                    <div className="p-4 h-100 d-flex flex-column justify-content-start sky-card border rounded-4 bg-white">
                       {/* Header: Avatar & Name/Time Stack */}
                       <div className="d-flex align-items-center gap-3 mb-3">
                         <div
-                          className="rounded-circle text-white fw-bold d-flex align-items-center justify-content-center flex-shrink-0 avatar-pro"
+                          className="rounded-circle text-white fw-bold d-flex align-items-center justify-content-center flex-shrink-0"
                           style={{
                             width: '44px',
                             height: '44px',
                             backgroundColor: rev.avatarBg || 'var(--accent-color)',
-                            fontSize: '0.95rem',
-                            letterSpacing: '0.5px'
+                            fontSize: '0.95rem'
                           }}
                         >
                           {rev.initial}
                         </div>
                         <div className="text-start lh-sm">
-                          <div className="fw-bold fs-6 mb-1" style={{ color: 'var(--text-color)' }}>
+                          <div className="fw-bold fs-6 mb-1 text-main">
                             {rev.name}
                           </div>
-                          <div className="fs-8" style={{ color: 'var(--muted-color)' }}>
+                          <div className="small text-secondary" style={{ fontSize: '0.78rem' }}>
                             {rev.date}
                           </div>
                         </div>
@@ -180,13 +120,13 @@ const OurHappyCustomers = () => {
                       {/* 5 Stars */}
                       <div className="d-flex align-items-center gap-1 mb-3 text-start">
                         {[...Array(rev.rating)].map((_, i) => (
-                          <Star key={i} size={17} fill="var(--secondary-color)" color="var(--secondary-color)" />
+                          <Star key={i} size={16} fill="var(--secondary-color)" color="var(--secondary-color)" />
                         ))}
                       </div>
 
                       {/* Review Text */}
-                      <p className="small text-start mb-0" style={{ color: 'var(--text-color)', lineHeight: '1.55' }}>
-                        {rev.comment}
+                      <p className="small text-secondary text-start mb-0 lh-base">
+                        &ldquo;{rev.comment}&rdquo;
                       </p>
                     </div>
                   </div>
@@ -198,11 +138,11 @@ const OurHappyCustomers = () => {
             {totalReviews > itemsPerPage && (
               <button
                 onClick={handleNext}
-                className="btn rounded-circle position-absolute top-50 end-0 translate-middle-y z-3 p-2 d-none d-md-flex align-items-center justify-content-center nav-btn-pro"
-                style={{ right: '-15px' }}
+                className="btn btn-light rounded-circle position-absolute top-50 end-0 translate-middle-y z-3 p-0 d-none d-md-flex align-items-center justify-content-center review-nav-btn shadow-sm"
+                style={{ right: '-16px' }}
                 aria-label="Next Reviews"
               >
-                <ChevronRight size={22} />
+                <ChevronRight size={20} />
               </button>
             )}
           </div>

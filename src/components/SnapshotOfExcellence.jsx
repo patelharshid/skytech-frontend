@@ -64,18 +64,18 @@ const SnapshotOfExcellence = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="snapshot-section py-5 position-relative">
-      <div className="container py-3 py-md-4">
+    <section ref={sectionRef} className="py-5 py-lg-6 position-relative bg-white">
+      <div className="container py-3">
         <div className="row gy-5 align-items-center">
           {/* Left Text Column */}
-          <div className="col-lg-5">
-            <h2 className="fs-2 fw-bold text-main mb-2 tracking-tight">
-              {snapshotData?.title}
+          <div className="col-lg-5 pe-lg-4">
+            <h2 className="display-6 fw-bold text-main mt-1 mb-2">
+              A Snapshot Of <span className="text-warning">Excellence</span>
             </h2>
-            <div className="fs-5 fw-bold text-muted mb-3 d-flex align-items-center gap-2">
-              <span>{snapshotData?.subtitle}</span>
+            <div className="fs-5 fw-semibold text-primary mb-3">
+              {snapshotData?.subtitle}
             </div>
-            <p className="text-muted fs-6 leading-relaxed mb-0">
+            <p className="text-secondary small mb-0 lh-lg">
               {snapshotData?.description}
             </p>
           </div>
@@ -89,19 +89,19 @@ const SnapshotOfExcellence = () => {
                 </div>
               </div>
             ) : (
-              <div className="row g-4 justify-content-center">
+              <div className="row g-3 g-sm-4 justify-content-center">
                 {snapshotData?.counters?.map((card) => {
                   const IconComponent = iconMap[card.iconKey] || Award;
                   return (
                     <div key={card.id} className="col-12 col-sm-4">
-                      <div className="snapshot-counter-card text-center p-4 rounded-4 position-relative border shadow-xs d-flex flex-column align-items-center">
-                        {/* Floating Top Circle Badge */}
-                        <div className="snapshot-icon-badge bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center mb-3">
-                          <IconComponent size={28} strokeWidth={1.8} className="text-orange" />
+                      <div className="sky-card snapshot-card text-center p-4 py-lg-5 rounded-4 position-relative border bg-white h-100 d-flex flex-column align-items-center justify-content-center shadow-sm">
+                        {/* Icon Bubble */}
+                        <div className="snapshot-icon-bubble mb-3">
+                          <IconComponent size={28} strokeWidth={2} className="text-warning" />
                         </div>
 
                         {/* Counter Number */}
-                        <div className="display-5 fw-extrabold text-main font-mono mb-1 tracking-tight">
+                        <div className="display-5 fw-bold text-primary font-mono mb-1 tracking-tight">
                           <AnimatedCounter
                             targetNumber={card.target}
                             suffix={card.suffix}
@@ -110,7 +110,7 @@ const SnapshotOfExcellence = () => {
                         </div>
 
                         {/* Label */}
-                        <div className="fw-bold text-muted fs-6 mb-0">
+                        <div className="fw-semibold text-secondary small mb-0">
                           {card.label}
                         </div>
                       </div>

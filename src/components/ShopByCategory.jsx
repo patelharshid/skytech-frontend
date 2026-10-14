@@ -71,7 +71,6 @@ const ShopByCategory = ({ onSelectCategory }) => {
           <h2 id="shop-by-category-title" className="display-6 fw-bold mb-0">Shop By Category</h2>
           <span className="category-heading-rule" aria-hidden="true" />
         </div>
-
         <div
           className="category-carousel"
           role="region"
@@ -121,19 +120,6 @@ const ShopByCategory = ({ onSelectCategory }) => {
           <button type="button" className="btn btn-light category-carousel-arrow category-carousel-next" onClick={() => moveSlide(1)} aria-label="Next categories">
             <ArrowRight size={20} aria-hidden="true" />
           </button>
-
-          <div className="category-carousel-dots" aria-label="Choose category slide">
-            {categoryCards.map((category, index) => (
-              <button
-                key={category.id}
-                type="button"
-                className={`btn btn-sm rounded-circle p-0 category-carousel-dot ${activeSlide % categoryCards.length === index ? 'category-carousel-dot-active' : 'bg-dark'}`}
-                onClick={() => setActiveSlide(categoryCards.length + index)}
-                aria-label={`Show category slide ${index + 1}`}
-                aria-current={activeSlide % categoryCards.length === index ? 'true' : undefined}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>

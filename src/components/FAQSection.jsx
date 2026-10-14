@@ -12,15 +12,18 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="faq-section-wrapper py-5 position-relative">
-      <div className="container py-3 py-md-4">
-        <div className="row gy-4 align-items-center">
+    <section id="faq" className="py-5 py-lg-6 position-relative" style={{ backgroundColor: 'var(--surface-color)' }}>
+      <div className="container py-3">
+        <div className="row gy-5 align-items-center">
           {/* Left Column: FAQ Accordion */}
           <div className="col-lg-6">
             <div className="mb-4">
-              <h2 className="fs-2 fw-bold text-dark" style={{ color: 'var(--text-main)' }}>
-                Frequently Asked Questions
+              <h2 className="display-6 fw-bold text-main mt-1">
+                Frequently Asked <span className="text-warning">Questions</span>
               </h2>
+              <p className="text-secondary lead fs-6 mb-0">
+                Everything you need to know about SkyTech warranty, repairs, and procurement.
+              </p>
             </div>
             <div className="d-flex flex-column gap-3">
               {faqList && faqList.map((faq) => {
@@ -28,7 +31,7 @@ const FAQSection = () => {
                 return (
                   <div
                     key={faq.id}
-                    className={`faq-card-item ${isOpen ? 'is-open' : ''}`}
+                    className={`faq-card-item sky-card p-3 px-4 rounded-4 bg-white ${isOpen ? 'is-open' : ''}`}
                   >
                     <button
                       className="w-100 border-0 bg-transparent p-0 text-start d-flex justify-content-between align-items-center gap-3 cursor-pointer"
@@ -39,11 +42,11 @@ const FAQSection = () => {
                       <span className="fw-bold fs-6 pe-2 text-dark">
                         {faq.question}
                       </span>
-                      <div className="faq-toggle-icon">
+                      <div className="faq-toggle-icon flex-shrink-0">
                         {isOpen ? (
-                          <Minus size={20} strokeWidth={2.8} />
+                          <Minus size={18} strokeWidth={2.5} />
                         ) : (
-                          <Plus size={20} strokeWidth={2.8} />
+                          <Plus size={18} strokeWidth={2.5} />
                         )}
                       </div>
                     </button>
@@ -63,15 +66,13 @@ const FAQSection = () => {
 
           {/* Right Column: FAQ Image Banner */}
           <div className="col-lg-6">
-            <div className="position-relative overflow-hidden rounded-4 shadow-md" style={{ borderRadius: '24px' }}>
+            <div className="home-hero-img-wrap position-relative overflow-hidden">
               <img
                 src={faqImage}
                 alt="Frequently Asked Questions"
-                className="img-fluid w-100 d-block"
+                className="img-fluid w-100 d-block object-fit-cover"
                 style={{
-                  borderRadius: '24px',
-                  maxHeight: '560px',
-                  objectFit: 'cover'
+                  maxHeight: '520px'
                 }}
                 loading="lazy"
               />

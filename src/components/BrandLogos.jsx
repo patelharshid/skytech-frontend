@@ -2,15 +2,21 @@ import { brandLogosData } from '../data/mockData';
 
 const BrandLogos = () => {
   return (
-    <section className="py-5 bg-white">
-      <div className="container">
-        {/* Title */}
-        <h3 className="text-center fw-bold fs-2 mb-4 text-main">
-          Working Alongside Global Brands
-        </h3>
+    <section className="py-5 py-lg-6" style={{ backgroundColor: 'var(--bg-color)' }}>
+      <div className="container py-3">
+        {/* Section Header */}
+        <div className="text-center mx-auto mb-4 mb-lg-5" style={{ maxWidth: '44rem' }}>
+          <span className="badge badge-gold text-uppercase mb-2">Enterprise Partnerships</span>
+          <h2 className="display-6 fw-bold text-main mt-1">
+            Working Alongside <span className="text-warning">Global Brands</span>
+          </h2>
+          <p className="text-secondary lead fs-6 mb-0">
+            Authorized procurement and certified hardware compatibility for tier-1 IT brands.
+          </p>
+        </div>
 
         {/* Brand Grid Container */}
-        <div className="max-w-5xl mx-auto border rounded-2 overflow-hidden shadow-sm bg-white">
+        <div className="max-w-5xl mx-auto sky-card border rounded-4 overflow-hidden bg-white shadow-sm">
           <div className="row g-0">
             {brandLogosData.map((brand, idx) => (
               <div
