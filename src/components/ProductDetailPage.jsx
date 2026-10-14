@@ -74,7 +74,7 @@ function ProductDetailPage({ productId }) {
       <main className="container py-5 text-center">
         <h1 className="h3 fw-bold mb-3">Product not found</h1>
         <p className="text-muted mb-4">This product may have been removed from the catalog.</p>
-        <a href="/#shop" className="btn btn-warning rounded-pill fw-bold px-4 py-2">
+        <a href="#/shop" className="btn btn-warning rounded-pill fw-bold px-4 py-2">
           <ArrowLeft size={16} className="me-2" />Back to products
         </a>
       </main>
@@ -84,7 +84,7 @@ function ProductDetailPage({ productId }) {
   return (
     <main className="bg-white text-dark">
       <div className="container py-4 py-lg-5">
-        <a href="/#shop" className="d-inline-flex align-items-center text-decoration-none text-secondary fw-semibold mb-4">
+        <a href="#/shop" className="d-inline-flex align-items-center text-decoration-none text-secondary fw-semibold mb-4">
           <ArrowLeft size={18} className="me-2" />Back to products
         </a>
 
@@ -235,7 +235,7 @@ function ProductDetailPage({ productId }) {
                       <span className="fw-bold text-primary">₹{Number(relatedProduct.price).toLocaleString('en-IN')}</span>
                     </div>
                     <a
-                      href={`/product/${encodeURIComponent(relatedProduct.id)}`}
+                      href={`#/product/${encodeURIComponent(relatedProduct.id)}`}
                       className="btn btn-sm btn-warning rounded-pill fw-bold text-nowrap px-3 py-1"
                     >
                       View More

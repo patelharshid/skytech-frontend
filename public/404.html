@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SKYTECH</title>
+    <script>
+      // Single Page Application redirect for GitHub Pages
+      (function () {
+        var path = window.location.pathname;
+        var repoName = '/skytech-frontend';
+        
+        // Remove trailing slash if present
+        if (path.length > 1 && path.endsWith('/')) {
+          path = path.slice(0, -1);
+        }
+
+        if (path.startsWith(repoName)) {
+          var subPath = path.slice(repoName.length);
+          if (!subPath || subPath === '/') {
+            window.location.replace(repoName + '/' + window.location.search + window.location.hash);
+          } else {
+            window.location.replace(repoName + '/#' + subPath + window.location.search + window.location.hash);
+          }
+        } else {
+          window.location.replace('/#' + path + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to Skytech...</p>
+  </body>
+</html>
