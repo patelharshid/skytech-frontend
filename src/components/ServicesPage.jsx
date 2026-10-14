@@ -39,7 +39,7 @@ const ServicesPage = () => {
         <div className="container position-relative z-1">
           <div className="row align-items-center gy-5">
             {/* Left Content Column */}
-            <div className="col-lg-7">
+            <div className="col-lg-7 py-5">
               <div
                 className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3"
                 style={{
