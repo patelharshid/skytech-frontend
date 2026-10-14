@@ -4,13 +4,13 @@ import TopMarqueeBar from './TopMarqueeBar';
 import { primaryNumber, primaryEmail } from '../constants/constants';
 import logo from '../assets/logo.png';
 
-const Navbar = ({ currentRoute = '/' }) => {
+const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
-  const isContactPage = currentRoute === '/contact-us';
-  const isAboutPage = currentRoute === '/about-us';
-  const isServicesPage = currentRoute === '/services';
+  const isContactPage = window.location.pathname.replace(/\/$/, '') === '/contact-us';
+  const isAboutPage = window.location.pathname.replace(/\/$/, '') === '/about-us';
+  const isServicesPage = window.location.pathname.replace(/\/$/, '') === '/services';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +30,7 @@ const Navbar = ({ currentRoute = '/' }) => {
         <div className="container">
           <div className="row align-items-center gy-2 gy-md-3">
             <div className="col-8 col-sm-auto col-lg-3 d-flex align-items-center justify-content-between">
-              <a className="navbar-brand d-inline-flex align-items-center text-decoration-none" href="#/">
+              <a className="navbar-brand d-inline-flex align-items-center text-decoration-none" href="/#hero">
                 <img
                   src={logo}
                   alt="SKYTECH"
@@ -89,40 +89,40 @@ const Navbar = ({ currentRoute = '/' }) => {
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse d-lg-none mt-3 border-top pt-3`} id="mobileSkyTechNav">
             <ul className="navbar-nav flex-column gap-2 font-semibold mb-3">
               <li className="nav-item">
-                <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="#/" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'} onClick={() => setIsNavCollapsed(true)}>Home</a>
+                <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="/#hero" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'} onClick={() => setIsNavCollapsed(true)}>Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/shop" onClick={() => setIsNavCollapsed(true)}>Laptops</a>
+                <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Laptops</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/shop" onClick={() => setIsNavCollapsed(true)}>Desktop</a>
+                <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Desktop</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/shop" onClick={() => setIsNavCollapsed(true)}>Apple Products</a>
+                <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Apple Products</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/shop" onClick={() => setIsNavCollapsed(true)}>Monitor</a>
+                <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Monitor</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/shop" onClick={() => setIsNavCollapsed(true)}>Server</a>
+                <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Server</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/shop" onClick={() => setIsNavCollapsed(true)}>All In One</a>
+                <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>All In One</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#/shop" onClick={() => setIsNavCollapsed(true)}>Accessories</a>
+                <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Accessories</a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${isServicesPage ? 'active about-nav-active' : ''}`} href="#/services" aria-current={isServicesPage ? 'page' : undefined} onClick={() => setIsNavCollapsed(true)}>Services</a>
+                <a className={`nav-link ${isServicesPage ? 'active about-nav-active' : ''}`} href="/services" aria-current={isServicesPage ? 'page' : undefined} onClick={() => setIsNavCollapsed(true)}>Services</a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${isAboutPage ? 'active about-nav-active' : ''}`} href="#/about-us" aria-current={isAboutPage ? 'page' : undefined} onClick={() => setIsNavCollapsed(true)}>About Us</a>
+                <a className={`nav-link ${isAboutPage ? 'active about-nav-active' : ''}`} href="/about-us" aria-current={isAboutPage ? 'page' : undefined} onClick={() => setIsNavCollapsed(true)}>About Us</a>
               </li>
             </ul>
 
             <a
               className={`btn btn-skytech-gold w-100 py-2 small fw-bold ${isContactPage ? 'contact-nav-active' : ''}`}
-              href="#/contact-us"
+              href="/contact-us"
               aria-current={isContactPage ? 'page' : undefined}
               onClick={() => setIsNavCollapsed(true)}
             >
@@ -137,7 +137,7 @@ const Navbar = ({ currentRoute = '/' }) => {
           <nav className="navbar navbar-expand-lg skytech-floating-nav py-1">
             <div className="container-fluid p-0 d-flex align-items-center">
               {isScrolled && (
-                <a className="navbar-brand d-inline-flex align-items-center text-decoration-none me-3 py-0 flex-shrink-0" href="#/">
+                <a className="navbar-brand d-inline-flex align-items-center text-decoration-none me-3 py-0 flex-shrink-0" href="/#hero">
                   <img
                     src={logo}
                     alt="SKYTECH"
@@ -148,41 +148,41 @@ const Navbar = ({ currentRoute = '/' }) => {
               <div className="navbar-collapse justify-content-between align-items-center w-100">
                 <ul className="navbar-nav w-100 justify-content-between align-items-center font-semibold py-1">
                   <li className="nav-item">
-                    <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="#/" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'}>Home</a>
+                    <a className={`nav-link ${isContactPage || isAboutPage || isServicesPage ? '' : 'active'}`} href="/#hero" aria-current={isContactPage || isAboutPage || isServicesPage ? undefined : 'page'}>Home</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#/shop">Laptops</a>
+                    <a className="nav-link" href="#catalog">Laptops</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#/shop">Desktop</a>
+                    <a className="nav-link" href="#catalog">Desktop</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#/shop">Apple Products</a>
+                    <a className="nav-link" href="#catalog">Apple Products</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#/shop">Monitor</a>
+                    <a className="nav-link" href="#catalog">Monitor</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#/shop">Server</a>
+                    <a className="nav-link" href="#catalog">Server</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#/shop">All In One</a>
+                    <a className="nav-link" href="#catalog">All In One</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#/shop">Accessories</a>
+                    <a className="nav-link" href="#catalog">Accessories</a>
                   </li>
                   <li className="nav-item">
-                    <a className={`nav-link ${isServicesPage ? 'active about-nav-active' : ''}`} href="#/services" aria-current={isServicesPage ? 'page' : undefined}>Services</a>
+                    <a className={`nav-link ${isServicesPage ? 'active about-nav-active' : ''}`} href="/services" aria-current={isServicesPage ? 'page' : undefined}>Services</a>
                   </li>
                   <li className="nav-item">
-                    <a className={`nav-link ${isAboutPage ? 'active about-nav-active' : ''}`} href="#/about-us" aria-current={isAboutPage ? 'page' : undefined}>About Us</a>
+                    <a className={`nav-link ${isAboutPage ? 'active about-nav-active' : ''}`} href="/about-us" aria-current={isAboutPage ? 'page' : undefined}>About Us</a>
                   </li>
                 </ul>
 
                 {/* Right Action Button: Contact Us Golden Pill Button */}
                 <a
                   className={`btn btn-skytech-gold px-3 py-2 small fw-bold text-nowrap flex-shrink-0 ms-lg-3 ${isContactPage ? 'contact-nav-active' : ''}`}
-                  href="#/contact-us"
+                  href="/contact-us"
                   aria-current={isContactPage ? 'page' : undefined}
                 >
                   Contact Us

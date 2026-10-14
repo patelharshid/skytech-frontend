@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroBanner from './components/HeroBanner';
 import ProductCatalog from './components/ProductCatalog';
@@ -15,61 +15,18 @@ import AboutPage from './components/AboutPage';
 import ServicesPage from './components/ServicesPage';
 import ProductDetailPage from './components/ProductDetailPage';
 
-function getCleanRoute() {
-  const hash = window.location.hash || '';
-  if (hash.startsWith('#/')) {
-    const cleanHash = hash.slice(1).split('?')[0];
-    return cleanHash.replace(/\/$/, '') || '/';
-  }
-
-  const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
-  let path = window.location.pathname.replace(/\/$/, '') || '/';
-  if (base && path.startsWith(base)) {
-    path = path.slice(base.length) || '/';
-  }
-  return path.replace(/\/$/, '') || '/';
-}
-
 function App() {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [currentRoute, setCurrentRoute] = useState(getCleanRoute);
-
-  useEffect(() => {
-    const handleRouteChange = () => {
-      const nextRoute = getCleanRoute();
-      setCurrentRoute(nextRoute);
-
-      const hash = window.location.hash;
-      if (hash.includes('#shop')) {
-        setTimeout(() => {
-          document.getElementById('shop')?.scrollIntoView({ behavior: 'smooth' });
-        }, 60);
-      } else if (hash.includes('#hero')) {
-        setTimeout(() => {
-          document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
-        }, 60);
-      } else {
-        window.scrollTo(0, 0);
-      }
-    };
-
-    window.addEventListener('hashchange', handleRouteChange);
-    window.addEventListener('popstate', handleRouteChange);
-    return () => {
-      window.removeEventListener('hashchange', handleRouteChange);
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, []);
-
-  const isContactPage = currentRoute === '/contact-us';
-  const isAboutPage = currentRoute === '/about-us';
-  const isServicesPage = currentRoute === '/services';
-  const productRoute = currentRoute.match(/^\/product\/([^/]+)$/);
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+  const isContactPage = currentPath === '/contact-us';
+  const isAboutPage = currentPath === '/about-us';
+  const isServicesPage = currentPath === '/services';
+  const productRoute = currentPath.match(/^\/product\/([^/]+)$/);
   const productId = productRoute ? decodeURIComponent(productRoute[1]) : null;
 
   return (
     <div className="sky-app-root">
-      <Navbar currentRoute={currentRoute} />
+      <Navbar />
 
       {isContactPage ? (
         <ContactPage />

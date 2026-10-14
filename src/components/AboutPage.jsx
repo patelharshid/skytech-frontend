@@ -1,5 +1,4 @@
 import { FileText, MonitorCog, ShoppingBag, Target, Wrench } from 'lucide-react';
-import aboutBannerImage from '../assets/about-banner.png';
 import aboutStoryImage from '../assets/about-story.png';
 import aboutMissionImage from '../assets/about-mission.png';
 
@@ -12,11 +11,11 @@ const commitments = [
 function AboutPage() {
   return (
     <main className="bg-white text-dark">
-      <section className="page-title-banner position-relative d-flex align-items-center text-white" style={{ backgroundImage: `url(${aboutBannerImage})` }}>
+      <section className="page-title-banner position-relative d-flex align-items-center text-white" style={{ backgroundImage: "url('/src/assets/about-banner.png')" }}>
         <div className="page-title-shade position-absolute top-0 start-0 w-100 h-100" />
         <div className="container position-relative py-4">
           <h1 className="h3 fw-bold mb-2">ABOUT US</h1>
-          <p className="mb-0"><a className="text-white text-decoration-none" href="#/">Home</a> / About Us</p>
+          <p className="mb-0"><a className="text-white text-decoration-none" href="/#hero">Home</a> / About Us</p>
         </div>
       </section>
 

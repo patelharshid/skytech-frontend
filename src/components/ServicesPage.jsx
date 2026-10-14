@@ -208,7 +208,7 @@ const ServicesPage = () => {
                 </button>
 
                 <a
-                  href="#/contact-us"
+                  href="/contact-us"
                   className="btn btn-outline-light px-4 py-2.5 fw-bold rounded-pill d-inline-flex align-items-center gap-2"
                   style={{ borderWidth: '1.5px' }}
                 >
@@ -453,7 +453,7 @@ const ServicesPage = () => {
                   </a>
 
                   <a
-                    href="#/contact-us"
+                    href="/contact-us"
                     className="btn btn-outline-light btn-lg fw-bold px-4 py-3 rounded-pill d-inline-flex align-items-center justify-content-center gap-2"
                   >
                     <span>Contact Skytech</span>
