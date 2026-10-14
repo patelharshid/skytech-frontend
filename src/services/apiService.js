@@ -1,5 +1,6 @@
 import {
   siteConfigData,
+  marqueeAnnouncementsData,
   slidesData,
   productsData,
   rentalOptionsData,
@@ -46,17 +47,19 @@ export const apiService = {
   getMarqueeAnnouncements: async () => {
     try {
       const apiUrl = import.meta.env.VITE_API_URL;
-      const response = await fetch(`${apiUrl}/api/topmarquee/getTopMarquee`);
-      if (response.ok) {
-        const result = await response.json();
-        if (result && Array.isArray(result.data)) {
-          return result.data;
+      if (apiUrl) {
+        const response = await fetch(`${apiUrl}/api/topmarquee/getTopMarquee`);
+        if (response.ok) {
+          const result = await response.json();
+          if (result && Array.isArray(result.data)) {
+            return result.data;
+          }
         }
       }
     } catch (error) {
       console.warn('[apiService] Live fetch from /api/topmarquee failed:', error);
     }
-    return [];
+    return marqueeAnnouncementsData || [];
   },
 
   getHeroSlides: async () => {

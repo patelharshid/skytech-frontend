@@ -4,13 +4,14 @@ import TopMarqueeBar from './TopMarqueeBar';
 import { primaryNumber, primaryEmail } from '../constants/constants';
 import logo from '../assets/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ currentRoute }) => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
-  const isContactPage = window.location.pathname.replace(/\/$/, '') === '/contact-us';
-  const isAboutPage = window.location.pathname.replace(/\/$/, '') === '/about-us';
-  const isServicesPage = window.location.pathname.replace(/\/$/, '') === '/services';
+  const activeRoute = currentRoute || (typeof window !== 'undefined' ? window.location.pathname : '');
+  const isContactPage = activeRoute.includes('/contact-us');
+  const isAboutPage = activeRoute.includes('/about-us');
+  const isServicesPage = activeRoute.includes('/services');
 
   useEffect(() => {
     const handleScroll = () => {

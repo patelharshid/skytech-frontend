@@ -42,6 +42,14 @@ export const siteConfigData = {
   workingHours: "Mon - Sat: 9:30 AM - 8:00 PM"
 };
 
+export const marqueeAnnouncementsData = [
+  "⚡ Special Offer: Get Free Antivirus & Carry Bag with every Refurbished Laptop Purchase!",
+  "💻 Systems on Rent: High-Speed Laptops & Desktops for Corporates & Students starting @ $19/mo",
+  "🚚 Free Express Doorstep Shipping & Insured Pickup Across Nation",
+  "🛡️ 100% Tested Quality: 50-Point Hardware Inspection + 1-Year Warranty",
+  `📞 Hotline Support: +91 ${primaryNumber} | Bulk Inquiries Welcome`
+];
+
 export const slidesData = [
   {
     id: 1,
