@@ -262,17 +262,24 @@
   transform: translateY(-50%) scale(1.08) !important;
 }
 
-/* Responsive adjustments for Category Carousel */
+.home-contact-card {
+  background: linear-gradient(145deg, var(--surface-color), var(--card-color) 72%) !important;
+  border-top: 4px solid var(--accent-color) !important;
+}
+
 @media (max-width: 575.98px) {
   .category-carousel-stage {
     margin-inline: 2.5rem;
   }
+
   .category-carousel-track {
     width: 1200%;
   }
+
   .category-carousel-slide {
     padding-inline: 0.4rem;
   }
+
   .category-carousel-arrow {
     width: 36px;
     height: 36px;
@@ -283,12 +290,14 @@
   .category-carousel-track {
     width: 600%;
   }
+
   .category-carousel-slide {
     padding-inline: 0.75rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .category-carousel-track,
   .category-card,
   .category-card-image,

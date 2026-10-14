@@ -44,8 +44,7 @@ const GetInTouchSection = () => {
           {/* Left Form Card */}
           <div className="col-12 col-lg-5">
             <div
-              className="h-100 p-4 p-md-5 rounded-4 d-flex flex-column justify-content-between"
-              style={{ backgroundColor: 'var(--surface-color)', border: '1px solid var(--border-color)' }}
+              className="card h-100 p-4 p-md-5 rounded-4 border shadow-sm home-contact-card d-flex flex-column justify-content-between"
             >
               <div>
                 <h2 className="fw-bold text-dark mb-3 fs-2" style={{ color: 'var(--text-main)' }}>
@@ -165,7 +164,7 @@ const GetInTouchSection = () => {
 
           <div className="col-12 col-lg-7 d-flex flex-column gap-4">
             {/* Find Us Here: Google Map */}
-            <div className="p-4 rounded-4" style={{ backgroundColor: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
+            <div className="card p-4 rounded-4 border shadow-sm home-contact-card">
               <div className="d-flex align-items-center justify-content-between mb-3">
                 <h3 className="fs-2 fw-bold text-dark mb-0">Find Us Here</h3>
               </div>
@@ -185,7 +184,7 @@ const GetInTouchSection = () => {
             </div>
 
             {/* Company Information */}
-            <div className="p-4 rounded-4" style={{ backgroundColor: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
+            <div className="card p-4 rounded-4 border shadow-sm home-contact-card">
               <h3 className="fs-2 fw-bold text-dark mb-4">Company Information</h3>
               <div className="d-flex flex-column gap-3">
                 {/* Location Card */}

@@ -62,7 +62,7 @@ function ContactPage() {
           </div>
 
           <div className="col-12 col-lg-7">
-            <section className="h-100 rounded-4 p-4 p-xl-5 contact-form-panel">
+            <section className="card h-100 border rounded-4 shadow-sm p-4 p-xl-5 contact-form-panel">
               <h2 className="h2 fw-bold text-orange mb-4">Get In Touch With Us</h2>
               {submitted ? (
                 <div className="alert alert-success rounded-3" role="status">Thank you! Your message has been received. Our team will contact you shortly.</div>

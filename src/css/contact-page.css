@@ -6,7 +6,8 @@
   object-position: 84% center;
 }
 
-.contact-location-card {
+.contact-location-card,
+.contact-form-panel {
   background: linear-gradient(145deg, var(--surface-color), var(--card-color) 72%);
   border-top: 4px solid var(--accent-color) !important;
 }
@@ -14,10 +15,6 @@
 .contact-method-icon {
   background: var(--surface-color);
   color: var(--accent-color);
-}
-
-.contact-form-panel {
-  background: var(--surface-color);
 }
 
 .contact-nav-active {
