@@ -80,9 +80,6 @@ export const apiService = {
     });
   },
 
-  getRentalOptions: async () => {
-    return fetchOrMock('/rental-options', rentalOptionsData);
-  },
 
   estimateTradeInValue: async ({ deviceType, brand, processor, condition, ageYears }) => {
     if (!USE_MOCK_DATA) {
@@ -92,10 +89,10 @@ export const apiService = {
       });
     }
 
-    let basePrice = 400;
-    if (deviceType === 'laptop') basePrice = 500;
-    if (deviceType === 'macbook') basePrice = 850;
-    if (deviceType === 'gaming_pc') basePrice = 750;
+    let basePrice = 25000;
+    if (deviceType === 'laptop') basePrice = 30000;
+    if (deviceType === 'macbook') basePrice = 55000;
+    if (deviceType === 'gaming_pc') basePrice = 45000;
 
     const conditionMultiplier = {
       like_new: 1.0,
@@ -110,7 +107,7 @@ export const apiService = {
     return {
       success: true,
       estimatedValue,
-      currency: '$',
+      currency: '₹',
       guaranteeDays: 7
     };
   },

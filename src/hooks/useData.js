@@ -18,7 +18,7 @@ export function useAsyncData(asyncFunction, deps = []) {
     } finally {
       setLoading(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 
   useEffect(() => {
@@ -40,9 +40,7 @@ export function useProducts(filters = {}) {
   );
 }
 
-export function useRentalOptions() {
-  return useAsyncData(() => apiService.getRentalOptions());
-}
+
 
 export function useSiteConfig() {
   return useAsyncData(() => apiService.getSiteConfig());

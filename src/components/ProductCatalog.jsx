@@ -56,7 +56,7 @@ const ProductCatalog = ({ activeCategory }) => {
                   <h3 className="h6 fw-bold mb-3 text-main">{product.name}</h3>
                   <div className="d-flex align-items-center justify-content-between gap-2 border-top pt-3 mt-auto w-100">
                     <span className="fs-6 fw-bold text-primary font-mono text-nowrap">
-                      ${product.originalPrice ?? product.price}
+                      ₹{Number(product.originalPrice ?? product.price).toLocaleString('en-IN')}
                     </span>
                     <a
                       href={`/product/${encodeURIComponent(product.id)}`}

@@ -83,7 +83,7 @@ function ProductDetailPage({ productId }) {
 
   return (
     <main className="bg-white text-dark">
-      <div className="container py-4 py-lg-5">
+      <div className="container py-5 mt-5 pt-4 pt-lg-5">
         <a href="/#shop" className="d-inline-flex align-items-center text-decoration-none text-secondary fw-semibold mb-4">
           <ArrowLeft size={18} className="me-2" />Back to products
         </a>

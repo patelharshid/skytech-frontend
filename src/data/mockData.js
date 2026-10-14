@@ -44,7 +44,7 @@ export const siteConfigData = {
 
 export const marqueeAnnouncementsData = [
   "⚡ Special Offer: Get Free Antivirus & Carry Bag with every Refurbished Laptop Purchase!",
-  "💻 Systems on Rent: High-Speed Laptops & Desktops for Corporates & Students starting @ $19/mo",
+  "💻 Systems on Rent: High-Speed Laptops & Desktops for Corporates & Students starting @ ₹1,499/mo",
   "🚚 Free Express Doorstep Shipping & Insured Pickup Across Nation",
   "🛡️ 100% Tested Quality: 50-Point Hardware Inspection + 1-Year Warranty",
   `📞 Hotline Support: +91 ${primaryNumber} | Bulk Inquiries Welcome`
@@ -61,7 +61,7 @@ export const slidesData = [
   {
     id: 2,
     title: "High-Performance Systems on Rent",
-    subtitle: "Rent laptops, gaming desktops, and servers for your company, events, or education starting at just $19 / month with free maintenance.",
+    subtitle: "Rent laptops, gaming desktops, and servers for your company, events, or education starting at just ₹1,499 / month with free maintenance.",
     image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80",
     bullets: ["Short-Term & Long-Term Rentals", "Zero Maintenance Liabilities", "Instant Replacement Guarantee"]
   },
@@ -81,7 +81,7 @@ export const productsData = [
     brand: "Apple",
     series: "MacBook Pro 16\"",
     name: "Apple MacBook Pro 16\" (M3 Max, 36GB RAM, 1TB SSD)",
-    price: 3299,
+    price: 32999,
     processor: "Apple M3 Max 14-core",
     storage: "1TB NVMe SSD",
     ram: "36GB Unified Memory",
@@ -95,7 +95,7 @@ export const productsData = [
     brand: "ASUS",
     series: "ROG Zephyrus G16",
     name: "ASUS ROG Zephyrus G16 Gaming Laptop (RTX 4080)",
-    price: 2499,
+    price: 24999,
     processor: "Intel Core i9-14900HX",
     ram: "32GB DDR5 RAM",
     screen: "240Hz OLED Display",
@@ -110,7 +110,7 @@ export const productsData = [
     series: "XPS 15",
     name: "Dell XPS 15 Business Workstation (Intel i7, 16GB RAM)",
     condition: "Certified Refurbished",
-    price: 1199,
+    price: 11999,
     processor: "Intel Core i7-13700H",
     storage: "512GB NVMe SSD",
     ram: "16GB DDR5 RAM",
@@ -124,7 +124,7 @@ export const productsData = [
     brand: "Custom PC",
     series: "SkyTech Titan Pro",
     name: "SkyTech Titan Pro Gaming PC (RTX 4090, Liquid Cooled)",
-    price: 3699,
+    price: 36999,
     processor: "Intel Core i9-14900K",
     ram: "64GB DDR5 RGB RAM",
     graphic: "NVIDIA RTX 4090 24GB",
@@ -138,7 +138,7 @@ export const productsData = [
     series: "ThinkCentre M90q",
     name: "Lenovo ThinkCentre M90q Tiny Workstation",
     condition: "Certified Refurbished",
-    price: 649,
+    price: 64999,
     processor: "Intel Core i7-12700T",
     storage: "512GB SSD",
     ram: "16GB RAM",
@@ -151,7 +151,7 @@ export const productsData = [
     brand: "ASUS",
     series: "ROG Swift 34\"",
     name: "ASUS ROG Swift 34\" Curved OLED Gaming Monitor (240Hz)",
-    price: 999,
+    price: 9999,
     screen: "34\" UWQHD 3440x1440, 240Hz",
     specs: ["34\" UWQHD 3440x1440", "0.03ms Response Time", "HDR10 True Black", "USB-C Hub Hub"],
     image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=600&q=80",
@@ -162,7 +162,7 @@ export const productsData = [
     brand: "Logitech",
     series: "G PRO X",
     name: "Logitech G PRO X Wireless Mechanical Gaming Keyboard",
-    price: 149,
+    price: 14999,
     specs: ["Hot-Swappable Switches", "Lightspeed Wireless", "RGB Backlit", "Aluminum Frame"],
     image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
   },
@@ -172,19 +172,11 @@ export const productsData = [
     brand: "Samsung",
     series: "990 PRO 2TB",
     name: "Samsung 990 PRO 2TB NVMe PCIe 4.0 SSD (7450 MB/s)",
-    price: 169,
+    price: 16999,
     storage: "2TB NVMe PCIe 4.0 SSD",
     specs: ["7450 MB/s Read Speed", "Custom Heatsink", "PS5 & PC Compatible", "5-Year Warranty"],
     image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80",
   }
-];
-
-export const rentalOptionsData = [
-  { id: 'laptop-biz', name: 'Refurbished Business Laptop (Intel i5, 16GB, SSD)', baseMonthly: 25, type: 'laptop' },
-  { id: 'laptop-mac', name: 'Apple MacBook Pro M2/M3 (16GB RAM, 512GB)', baseMonthly: 45, type: 'laptop' },
-  { id: 'desktop-i7', name: 'Core i7 Workstation PC + 24" IPS Monitor', baseMonthly: 35, type: 'desktop' },
-  { id: 'gaming-pc', name: 'RTX 4070 Gaming PC + 165Hz Curved Monitor', baseMonthly: 65, type: 'desktop' },
-  { id: 'server-node', name: 'Enterprise Rackmount Server (64GB RAM, 4TB SSD)', baseMonthly: 110, type: 'server' }
 ];
 
 export const brandLogosData = [
