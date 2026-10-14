@@ -14,7 +14,7 @@ const ProductCatalog = ({ activeCategory }) => {
 
 
   return (
-    <section id="shop" className="py-5 py-lg-6 position-relative">
+    <section id="shop" className="py-5 py-lg-6 position-relative bg-white">
       <div className="container py-3">
         {/* Section Header */}
         <div className="text-center mx-auto mb-5" style={{ maxWidth: '44rem' }}>
