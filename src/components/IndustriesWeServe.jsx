@@ -51,7 +51,7 @@ const IndustriesWeServe = () => {
             }}
           >
             <Sparkles size={16} className="text-warning" />
-            <span className="small fw-bold text-uppercase tracking-wider text-light">
+            <span className="small fw-bold text-uppercase text-light">
               Nationwide Reach
             </span>
           </div>
@@ -59,7 +59,7 @@ const IndustriesWeServe = () => {
           <h2 className="display-6 fw-bold text-white mt-1">
             Industries We <span className="text-warning">Serve</span>
           </h2>
-          <p className="lead text-light opacity-90 fs-6 mb-0">
+          <p className="lead text-light fs-6 mb-0">
             Delivering robust enterprise IT infrastructure across diverse business sectors.
           </p>
         </div>

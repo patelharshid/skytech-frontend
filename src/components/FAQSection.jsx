@@ -66,7 +66,7 @@ const FAQSection = () => {
 
           {/* Right Column: FAQ Image Banner */}
           <div className="col-lg-6">
-            <div className="home-hero-img-wrap position-relative overflow-hidden">
+            <div className="faq-img-wrap position-relative overflow-hidden">
               <img
                 src={faqImage}
                 alt="Frequently Asked Questions"

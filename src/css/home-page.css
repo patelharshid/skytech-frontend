@@ -1,48 +1,21 @@
-.home-hero-glow {
-  position: absolute;
-  top: -100px;
-  right: -80px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--secondary-color) 18%, transparent) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
+/* ==========================================================================
+   Home Page Styles (SkyTech IT Solutions)
+   Minimal, Bootstrap-integrated, using :root tokens from global.css
+   ========================================================================== */
 
-.home-hero-img-wrap {
+/* FAQ Image Wrap */
+.faq-img-wrap {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease;
 }
 
-.home-hero-floating-badge {
-  background: rgba(14, 39, 59, 0.92);
-  backdrop-filter: blur(8px);
-  border: 1px solid color-mix(in srgb, var(--secondary-color) 40%, transparent);
+.faq-img-wrap:hover {
+  transform: translateY(-4px);
 }
 
-.hero-dot-indicator {
-  height: 8px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.hero-dot-active {
-  width: 28px;
-  background-color: var(--secondary-color) !important;
-  box-shadow: 0 0 10px rgba(32, 184, 199, 0.6);
-}
-
-.hero-dot-inactive {
-  width: 10px;
-  background-color: rgba(255, 255, 255, 0.35) !important;
-}
-
-.hero-dot-inactive:hover {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-}
-
+/* Home Icon Bubbles (Used in Industries and Contact sections) */
 .home-icon-bubble {
   background: linear-gradient(135deg, color-mix(in srgb, var(--primary-color) 10%, transparent) 0%, color-mix(in srgb, var(--secondary-color) 18%, transparent) 100%);
   transition: all 0.3s ease;
@@ -59,7 +32,7 @@
   color: #ffffff !important;
 }
 
-/* Snapshot Counter Cards & Unique Icon Bubble */
+/* Snapshot Counter Cards & Circular Icon Bubble */
 .snapshot-card {
   border-top: 3.5px solid var(--secondary-color) !important;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -93,6 +66,7 @@
   stroke: #ffffff !important;
 }
 
+/* FAQ Accordion Item & Toggle Icon */
 .faq-card-item {
   cursor: pointer;
 }
@@ -135,6 +109,7 @@
   min-height: 0;
 }
 
+/* Shop By Category Carousel */
 .category-carousel {
   position: relative;
 }
@@ -292,15 +267,12 @@
   .category-carousel-stage {
     margin-inline: 2.5rem;
   }
-
   .category-carousel-track {
     width: 1200%;
   }
-
   .category-carousel-slide {
     padding-inline: 0.4rem;
   }
-
   .category-carousel-arrow {
     width: 36px;
     height: 36px;
@@ -311,14 +283,12 @@
   .category-carousel-track {
     width: 600%;
   }
-
   .category-carousel-slide {
     padding-inline: 0.75rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   .category-carousel-track,
   .category-card,
   .category-card-image,

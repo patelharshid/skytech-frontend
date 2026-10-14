@@ -403,14 +403,4 @@ h6 {
   .display-4 {
     font-size: 1.75rem !important;
   }
-
-  .product-card {
-    padding: .65rem !important;
-    border-radius: 12px;
-  }
-
-  .product-card .badge.position-absolute {
-    margin: .35rem !important;
-    font-size: .62rem;
-  }
 }

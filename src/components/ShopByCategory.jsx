@@ -69,7 +69,6 @@ const ShopByCategory = ({ onSelectCategory }) => {
       <div className="container">
         <div className="text-center mb-4 mb-lg-5">
           <h2 id="shop-by-category-title" className="display-6 fw-bold mb-0">Shop By Category</h2>
-          <span className="category-heading-rule" aria-hidden="true" />
         </div>
         <div
           className="category-carousel"

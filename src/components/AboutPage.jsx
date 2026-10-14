@@ -47,16 +47,16 @@ function AboutPage() {
                 }}
               >
                 <Sparkles size={16} className="text-warning" />
-                <span className="small fw-bold text-uppercase tracking-wider text-light">
+                <span className="small fw-bold text-uppercase text-light">
                   {aboutHeroData.badge}
                 </span>
               </div>
 
-              <h1 className="display-4 fw-bold mb-3 text-white tracking-tight lh-sm">
+              <h1 className="display-4 fw-bold mb-3 text-white lh-sm">
                 Empowering Your <span className="text-warning">Digital World</span>
               </h1>
 
-              <p className="lead text-light opacity-90 mb-4 pe-lg-4 fs-5 lh-base">
+              <p className="lead text-light mb-4 pe-lg-4 fs-5 lh-base">
                 {aboutHeroData.description}
               </p>
 
@@ -352,7 +352,7 @@ function AboutPage() {
                 <h2 className="display-6 fw-bold text-white mb-3">
                   Let&apos;s Build Something Better Together
                 </h2>
-                <p className="lead text-light opacity-90 fs-6 mb-0" style={{ maxWidth: '42rem' }}>
+                <p className="lead text-light fs-6 mb-0" style={{ maxWidth: '42rem' }}>
                   Have a question or need the right technology solution? Our team is ready to help with certified advice, transparent pricing, and dependable support.
                 </p>
               </div>

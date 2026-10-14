@@ -26,7 +26,7 @@ const Navbar = ({ currentRoute }) => {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <header className="z-1000 position-relative">
+    <header className="position-relative" style={{ zIndex: 1020 }}>
       <TopMarqueeBar />
 
       <div className="sky-header py-2 py-md-3">
@@ -59,7 +59,7 @@ const Navbar = ({ currentRoute }) => {
               </div>
             </div>
 
-            <div className="col-4 col-sm-auto col-lg-5 order-2 order-sm-3 d-flex align-items-center justify-content-end gap-2 gap-sm-2.5 flex-nowrap ms-auto">
+            <div className="col-4 col-sm-auto col-lg-5 order-2 order-sm-3 d-flex align-items-center justify-content-end gap-2 gap-sm-3 flex-nowrap ms-auto">
               <div className="d-none d-lg-flex align-items-center gap-2 pe-3 text-nowrap flex-shrink-0">
                 <div className="bg-surface p-2 rounded-circle text-warning border flex-shrink-0 d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}>
                   <PhoneCall size={17} />
@@ -90,7 +90,7 @@ const Navbar = ({ currentRoute }) => {
           </div>
 
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse d-lg-none mt-3 border-top pt-3`} id="mobileSkyTechNav">
-            <ul className="navbar-nav flex-column gap-2 font-semibold mb-3">
+            <ul className="navbar-nav flex-column gap-2 fw-semibold mb-3">
               <li className="nav-item">
                 <a className={`nav-link ${isHomePage ? 'active' : ''}`} href="/" aria-current={isHomePage ? 'page' : undefined} onClick={() => setIsNavCollapsed(true)}>Home</a>
               </li>
@@ -149,7 +149,7 @@ const Navbar = ({ currentRoute }) => {
                 </a>
               )}
               <div className="navbar-collapse justify-content-between align-items-center w-100">
-                <ul className="navbar-nav w-100 justify-content-between align-items-center font-semibold py-1">
+                <ul className="navbar-nav w-100 justify-content-between align-items-center fw-semibold py-1">
                   <li className="nav-item">
                     <a className={`nav-link ${isHomePage ? 'active' : ''}`} href="/" aria-current={isHomePage ? 'page' : undefined}>Home</a>
                   </li>

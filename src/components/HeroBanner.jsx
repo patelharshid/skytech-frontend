@@ -36,7 +36,7 @@ const HeroBanner = () => {
         <div className="row align-items-center gy-4">
           {/* Left Text Column */}
           <div className="col-lg-7">
-            <h1 className="display-4 fw-extrabold mb-3 text-white tracking-tight">
+            <h1 className="display-4 fw-bold mb-3 text-white">
               {slide.title}
             </h1>
 
@@ -56,7 +56,7 @@ const HeroBanner = () => {
 
           {/* Right Image Visual Banner */}
           <div className="col-lg-5">
-            <div className="sky-card p-3 bg-slate border-secondary shadow-lg position-relative overflow-hidden">
+            <div className="sky-card p-3 border-secondary shadow-lg position-relative overflow-hidden">
               <img
                 src={slide.image}
                 alt={slide.title}

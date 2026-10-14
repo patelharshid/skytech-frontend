@@ -16,13 +16,13 @@ const BrandLogos = () => {
         </div>
 
         {/* Brand Grid Container */}
-        <div className="max-w-5xl mx-auto sky-card border rounded-4 overflow-hidden bg-white shadow-sm">
+        <div className="mx-auto sky-card border rounded-4 overflow-hidden bg-white shadow-sm" style={{ maxWidth: '960px' }}>
           <div className="row g-0">
             {brandLogosData.map((brand, idx) => (
               <div
                 key={idx}
-                className="col-6 col-md-3 p-3.5 d-flex align-items-center justify-content-center border-end border-bottom"
-                style={{ height: '95px', backgroundColor: 'var(--bg-card)' }}
+                className="col-6 col-md-3 p-3 d-flex align-items-center justify-content-center border-end border-bottom"
+                style={{ height: '95px', backgroundColor: 'var(--card-color)' }}
               >
                 {brand.isAppleCombo ? (
                   <div className="d-flex align-items-center gap-2">

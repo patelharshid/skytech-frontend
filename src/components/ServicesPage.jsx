@@ -44,14 +44,14 @@ const ServicesPage = () => {
                 }}
               >
                 <Sparkles size={16} className="text-warning" />
-                <span className="small fw-bold text-uppercase tracking-wider text-light">Professional Laptop Care &amp; IT Services</span>
+                <span className="small fw-bold text-uppercase text-light">Professional Laptop Care &amp; IT Services</span>
               </div>
 
-              <h1 className="display-4 fw-bold mb-3 text-white tracking-tight lh-sm">
+              <h1 className="display-4 fw-bold mb-3 text-white lh-sm">
                 Complete Laptop Solutions <span className="text-warning">Under One Roof</span>
               </h1>
 
-              <p className="lead text-light opacity-90 mb-4 pe-lg-4 fs-5 lh-base">
+              <p className="lead text-light mb-4 pe-lg-4 fs-5 lh-base">
                 Laptop sales, repairs, upgrades, and professional IT support.
                 Fast turnaround, genuine parts, and certified technician expertise you can trust.
               </p>
@@ -152,7 +152,7 @@ const ServicesPage = () => {
                     </p>
 
                     <div className="mt-auto mb-3 p-3 bg-surface rounded-3 border">
-                      <div className="fw-bold small text-main mb-2 text-uppercase tracking-wider" style={{ fontSize: '0.74rem' }}>
+                      <div className="fw-bold small text-main mb-2 text-uppercase" style={{ fontSize: '0.74rem' }}>
                         Included Services:
                       </div>
                       <ul className="list-unstyled d-flex flex-column gap-2 mb-0">
@@ -286,7 +286,7 @@ const ServicesPage = () => {
                 <h2 className="display-6 fw-bold text-white mb-3">
                   Need Help With Your Laptop?
                 </h2>
-                <p className="lead text-light opacity-90 fs-6 mb-0" style={{ maxWidth: '42rem' }}>
+                <p className="lead text-light fs-6 mb-0" style={{ maxWidth: '42rem' }}>
                   Speak directly to our senior hardware specialists or schedule your device diagnostics today.
                   We provide doorstep pick-and-drop assistance across Ahmedabad and walk-in express repairs.
                 </p>

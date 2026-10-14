@@ -101,7 +101,7 @@ const SnapshotOfExcellence = () => {
                         </div>
 
                         {/* Counter Number */}
-                        <div className="display-5 fw-bold text-primary font-mono mb-1 tracking-tight">
+                        <div className="display-5 fw-bold text-primary font-mono mb-1">
                           <AnimatedCounter
                             targetNumber={card.target}
                             suffix={card.suffix}

@@ -1,4 +1,3 @@
-import { Loader2 } from 'lucide-react';
 import { useProducts } from '../hooks/useData';
 
 const categoryLabels = {
@@ -29,7 +28,9 @@ const ProductCatalog = ({ activeCategory }) => {
         {/* Products Grid */}
         {loading ? (
           <div className="text-center py-5">
-            <Loader2 className="animate-spin text-primary mx-auto mb-3" size={32} />
+            <div className="spinner-border text-primary mx-auto mb-3" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
             <p className="text-muted small">Loading catalog data from service...</p>
           </div>
         ) : !filteredProducts || filteredProducts.length === 0 ? (
