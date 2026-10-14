@@ -15,7 +15,15 @@ import {
   FileCheck,
   Laptop,
   Mail,
-  MapPin
+  MapPin,
+  Target,
+  Eye,
+  Users,
+  Lightbulb,
+  ShieldCheck,
+  Wrench,
+  Cpu,
+  Server
 } from 'lucide-react';
 import serviceHero from '../assets/service-hero.png';
 import serviceRepair from '../assets/service-repair.jpg';
@@ -492,3 +500,121 @@ export const servicesContactDetailsData = [
     mapUrl: mapUrl
   }
 ];
+
+// =============================================================================
+// ABOUT US PAGE MOCK DATA
+// =============================================================================
+
+export const aboutHeroData = {
+  badge: "Who We Are",
+  headline: "Empowering Your Digital World",
+  description: "Discover technology solutions designed to help individuals and businesses work smarter with speed, security, and dependability.",
+  storyButtonText: "Explore Our Story",
+  contactButtonText: "Contact Us",
+  floatingBadge: {
+    title: "10+ Years of Excellence",
+    subtitle: "1,200+ Corporate Clients Nationwide"
+  }
+};
+
+export const aboutStoryData = {
+  badge: "Technology With a Purpose",
+  title: "Building Lasting Value Through Reliable Technology",
+  lead: "Founded in 2013, SkyTech started with a clear purpose: to bridge the gap between expensive enterprise technology and growing organizations by delivering high-grade laptops, desktops, and IT solutions at honest prices.",
+  paragraphs: [
+    "Headquartered in Ahmedabad, Gujarat, we have grown to serve more than 1,200+ Corporate, SME, and institutional clients across India. Whether deploying bulk office workstations, providing certified refurbished MacBooks, or performing complex chip-level hardware diagnostics, our focus has always been on speed, precision, and lasting dependability.",
+    "We do not just supply hardware — we build dependable partnerships. Every system we deliver is 50-point quality checked, backed by warranty, and supported by certified engineers who genuinely care about your uptime."
+  ],
+  stats: [
+    { value: "10+", label: "Years in Business" },
+    { value: "1,200+", label: "Corporate Clients" },
+    { value: "10,000+", label: "Devices Serviced" },
+    { value: "100%", label: "Tested & Certified" }
+  ]
+};
+
+export const aboutMissionVisionData = [
+  {
+    id: "mission",
+    title: "Our Mission",
+    icon: Target,
+    tag: "Purpose & Execution",
+    description: "Deliver reliable, accessible technology solutions that meet customer needs with uncompromising quality, upfront transparency, and integrity.",
+    points: [
+      "OEM-grade genuine parts and certified diagnostics",
+      "Cost-effective refurbished & brand-new hardware",
+      "Honest upfront estimates with zero hidden costs"
+    ]
+  },
+  {
+    id: "vision",
+    title: "Our Vision",
+    icon: Eye,
+    tag: "Future & Growth",
+    description: "Build lasting relationships through innovation, service, and trust — setting the gold standard in tech retail, hardware repair, and IT infrastructure.",
+    points: [
+      "Sustainable IT lifecycle extension for businesses",
+      "Nationwide reach with express doorstep support",
+      "Accessible high-performance technology for everyone"
+    ]
+  }
+];
+
+export const aboutWhyChooseData = [
+  {
+    icon: Users,
+    title: "Customer-Focused Approach",
+    description: "We listen to your specific needs first. Receive honest, transparent guidance without pushy sales tactics or unnecessary upsells."
+  },
+  {
+    icon: Lightbulb,
+    title: "Practical Technology Solutions",
+    description: "Smart hardware upgrades, enterprise workstations, and tailored configurations engineered for real-world productivity and high ROI."
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality and Reliability",
+    description: "Rigid 50-point multi-level diagnostic inspections, OEM-grade components, and warranty protection on every machine we deliver."
+  },
+  {
+    icon: Headphones,
+    title: "Dedicated Support",
+    description: "Friendly communication, fast turnaround time, certified chip-level technicians, and responsive after-sales service you can count on."
+  }
+];
+
+export const aboutExpertiseData = [
+  {
+    id: "sales",
+    title: "Laptop Sales & Accessories",
+    icon: Laptop,
+    badge: "Enterprise & Refurbished",
+    description: "Certified premium refurbished corporate laptops, workstations, and 100% original computer accessories at unbeatable prices.",
+    bullets: ["Tested Grade-A corporate laptops", "Original chargers, batteries & adaptors", "Keyboards, monitors & docking stations"]
+  },
+  {
+    id: "repair",
+    title: "Laptop Repair & Maintenance",
+    icon: Wrench,
+    badge: "Hardware & Chip-Level",
+    description: "Expert diagnostics and chip-level motherboard repairing for Dell, HP, Lenovo, Asus, Acer, and Apple MacBooks.",
+    bullets: ["Motherboard chip-level circuit repair", "Broken display & hinge replacements", "Liquid damage & thermal cleaning"]
+  },
+  {
+    id: "upgrades",
+    title: "Hardware Upgrades",
+    icon: Cpu,
+    badge: "Speed & Performance",
+    description: "Supercharge slow machines. Instant speed boost with ultra-fast NVMe PCIe SSDs and DDR4/DDR5 RAM expansions.",
+    bullets: ["High-speed NVMe PCIe SSD installation", "RAM expansion up to 32GB / 64GB", "OS cloning with zero data loss"]
+  },
+  {
+    id: "support",
+    title: "IT Solutions & Support",
+    icon: Server,
+    badge: "Corporate & AMC",
+    description: "Comprehensive IT infrastructure management, Annual Maintenance Contracts (AMC), and responsive technical support.",
+    bullets: ["Annual Maintenance Contracts (AMC)", "Bulk office workstation deployment", "Dedicated remote & onsite tech support"]
+  }
+];
+
