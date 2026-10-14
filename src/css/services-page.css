@@ -1,16 +1,11 @@
-.services-hero-section {
-  background: linear-gradient(135deg, #0e273b 0%, #123047 60%, #0d2940 100%);
-  position: relative;
-  overflow: hidden;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
+/* ==========================================================================
+   SERVICES PAGE STYLES (SkyTech)
+   Streamlined with Bootstrap 5 utilities and global.css :root variables
+   ========================================================================== */
 
-@media (min-width: 992px) {
-  .services-hero-section {
-    padding-top: 6.5rem;
-    padding-bottom: 6.5rem;
-  }
+/* Hero Section */
+.services-hero-section {
+  background: linear-gradient(135deg, #0e273b 0%, var(--primary-color) 60%, #0d2940 100%);
 }
 
 .services-hero-glow {
@@ -19,15 +14,13 @@
   right: -80px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(32, 184, 199, 0.18) 0%, rgba(18, 48, 71, 0) 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--secondary-color) 18%, transparent) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
 
 .service-hero-img-wrap {
-  position: relative;
   border-radius: 20px;
-  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
   transition: transform 0.4s ease;
@@ -38,239 +31,53 @@
 }
 
 .service-hero-img {
-  width: 100%;
   height: 380px;
-  object-fit: cover;
-  display: block;
 }
 
 .service-hero-floating-badge {
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
   background: rgba(14, 39, 59, 0.92);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(32, 184, 199, 0.4);
-  padding: 10px 18px;
-  border-radius: 12px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 40%, transparent);
 }
 
-/* Service Cards */
-.service-card-item {
-  background: var(--card-color);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 22px;
-  height: 100%;
-  width: 100%;
-  display: flex !important;
-  flex-direction: column !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(18, 59, 93, 0.05);
-  position: relative;
-  overflow: hidden;
-  min-width: 0;
-}
-
-.service-card-item:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent-color);
-  box-shadow: 0 16px 36px rgba(18, 59, 93, 0.12);
-}
-
+/* Service Cards Image & Hover */
 .service-card-img-wrap {
-  border-radius: 14px;
-  overflow: hidden;
   height: 205px;
-  margin-bottom: 20px;
-  background: var(--surface-color);
-  position: relative;
-  flex-shrink: 0;
 }
 
 .service-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   transition: transform 0.45s ease;
 }
 
-.service-card-item:hover .service-card-img {
+.sky-card:hover .service-card-img {
   transform: scale(1.05);
 }
 
-
-.service-card-content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.service-features-list {
-  margin-top: auto;
-  margin-bottom: 20px;
-  padding: 14px 16px;
-  background: var(--surface-color);
-  border-radius: 14px;
-  border: 1px solid var(--border-color);
-}
-
-.service-card-btn {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  background-color: var(--primary-color);
-  color: #ffffff !important;
-  font-weight: 700;
-  border: none;
-  border-radius: 50rem;
-  padding: 0.65rem 1.2rem;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(18, 59, 93, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-decoration: none;
-  font-size: 0.88rem;
-}
-
-.service-card-btn:hover {
-  background: linear-gradient(135deg, var(--primary-color-hover) 0%, var(--secondary-color-hover) 100%);
-  background-color: var(--primary-color-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(32, 184, 199, 0.35);
-  color: #ffffff !important;
-}
-
-/* Why Choose Us Cards */
-.why-trust-card {
-  background: var(--card-color);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 28px 24px;
-  height: 100%;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(18, 59, 93, 0.04);
-}
-
+/* Why Choose Us Icon Badge */
 .why-icon-wrap {
   width: 60px;
   height: 60px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(18, 59, 93, 0.08) 0%, rgba(32, 184, 199, 0.15) 100%);
-  color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary-color) 10%, transparent) 0%, color-mix(in srgb, var(--secondary-color) 18%, transparent) 100%);
   transition: all 0.3s ease;
 }
 
-/* Service Process Timeline */
+/* Service Process Step Cards */
 .process-step-card {
-  background: var(--card-color);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 28px 22px;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  display: flex !important;
-  flex-direction: column !important;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(18, 59, 93, 0.05);
-  border-top: 4px solid var(--secondary-color);
-  overflow: hidden;
-}
-
-.process-step-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 2;
+  border-top: 4px solid var(--secondary-color) !important;
 }
 
 .process-step-icon-bubble {
   width: 54px;
   height: 54px;
-  border-radius: 16px;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 18px rgba(32, 184, 199, 0.25);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--secondary-color) 25%, transparent);
   transition: all 0.3s ease;
-  flex-shrink: 0;
 }
 
 .process-step-watermark {
-  position: absolute;
-  top: 10px;
-  right: 18px;
-  font-family: var(--font-mono);
-  font-size: 3.6rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  color: rgba(18, 59, 93, 0.05);
+  color: color-mix(in srgb, var(--primary-color) 6%, transparent);
   line-height: 1;
-  pointer-events: none;
   transition: all 0.3s ease;
-  user-select: none;
-}
-
-.process-step-tag {
-  font-size: 0.76rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 4px 10px;
-  background: rgba(32, 184, 199, 0.1);
-  color: var(--primary-color);
-  border-radius: 50rem;
-  border: 1px solid rgba(32, 184, 199, 0.25);
-  display: inline-block;
-}
-
-.process-step-highlight-pill {
-  margin-top: auto;
-  padding: 8px 12px;
-  background: var(--surface-color);
-  border-radius: 10px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  border: 1px solid var(--border-color);
-}
-
-.process-banner-strip {
-  background: var(--card-color);
-  border: 1px solid var(--border-color);
-  border-radius: 18px;
-  padding: 20px 28px;
-  box-shadow: 0 4px 14px rgba(18, 59, 93, 0.04);
-}
-
-/* CTA & Contact Details Strip */
-.services-cta-banner {
-  background: linear-gradient(135deg, #0e273b 0%, #123047 65%, #091f2f 100%);
-  border-radius: 24px;
-  padding: 44px 32px;
-  color: #ffffff;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 16px 40px rgba(14, 39, 59, 0.25);
-}
-
-.services-info-box {
-  background: var(--card-color);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 24px;
-  height: 100%;
-  transition: all 0.25s ease;
 }

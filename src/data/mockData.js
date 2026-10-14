@@ -1,4 +1,28 @@
-import { primaryNumber, primaryEmail, officeAddress } from '../constants/constants';
+import {
+  primaryNumber,
+  secondaryNumber,
+  primaryEmail,
+  officeAddress,
+  mapUrl
+} from '../constants/constants';
+import {
+  Award,
+  CheckCircle2,
+  FileText,
+  Headphones,
+  PhoneCall,
+  Search,
+  FileCheck,
+  Laptop,
+  Mail,
+  MapPin
+} from 'lucide-react';
+import serviceHero from '../assets/service-hero.png';
+import serviceRepair from '../assets/service-repair.jpg';
+import serviceUpgrade from '../assets/service-upgrade.png';
+import serviceSoftware from '../assets/service-software.jpg';
+import serviceRecovery from '../assets/service-recovery.jpg';
+import serviceSupport from '../assets/service-support.png';
 
 export const siteConfigData = {
   storeName: "SkyTech",
@@ -9,14 +33,6 @@ export const siteConfigData = {
   address: officeAddress,
   workingHours: "Mon - Sat: 9:30 AM - 8:00 PM"
 };
-
-export const marqueeAnnouncementsData = [
-  "⚡ Special Offer: Get Free Antivirus & Carry Bag with every Refurbished Laptop Purchase!",
-  "💻 Systems on Rent: High-Speed Laptops & Desktops for Corporates & Students starting @ $19/mo",
-  "🚚 Free Express Doorstep Shipping & Insured Pickup Across Nation",
-  "🛡️ 100% Tested Quality: 50-Point Hardware Inspection + 1-Year Warranty",
-  `📞 Hotline Support: +91 ${primaryNumber} | Bulk Inquiries Welcome`
-];
 
 export const slidesData = [
   {
@@ -301,3 +317,178 @@ export const happyCustomersData = {
     }
   ]
 };
+
+// =============================================================================
+// SERVICES PAGE MOCK DATA
+// =============================================================================
+
+export const servicesTrustHighlightsData = [
+  'Chip-Level Diagnostics',
+  '100% Genuine Parts',
+  'Upfront Pricing'
+];
+
+export const servicesListData = [
+  {
+    id: 'repair',
+    title: 'Laptop Repair & Maintenance',
+    image: serviceRepair,
+    badge: 'Hardware & Chip-Level',
+    description: 'Expert diagnostics and chip-level motherboard repairing for Dell, HP, Lenovo, Asus, Acer, and Apple MacBooks.',
+    features: [
+      'Motherboard chip-level circuit repair',
+      'Broken screen & hinge replacement',
+      'Liquid damage & thermal fan cleaning'
+    ],
+    inquiryMsg: 'Hello Skytech, I need Laptop Repair & Maintenance service.'
+  },
+  {
+    id: 'sales',
+    title: 'Laptop Sales & Accessories',
+    image: serviceHero,
+    badge: 'Enterprise & Refurbished',
+    description: 'Certified premium refurbished business laptops, workstations, and 100% original computer accessories at unbeatable prices.',
+    features: [
+      'Grade-A tested corporate laptops',
+      'Original chargers, batteries & adaptors',
+      'Docking stations, monitors & keyboards'
+    ],
+    inquiryMsg: 'Hello Skytech, I am inquiring about Laptop Sales and Accessories.'
+  },
+  {
+    id: 'upgrades',
+    title: 'Hardware Upgrades (RAM & SSD)',
+    image: serviceUpgrade,
+    badge: 'Speed & Performance',
+    description: 'Supercharge your slow laptop. Instant speed boost with high-speed NVMe PCIe SSDs and high-capacity DDR4/DDR5 RAM upgrades.',
+    features: [
+      'Ultra-fast M.2 NVMe SSD installations',
+      'RAM expansion up to 32GB / 64GB',
+      'OS cloning with zero data loss'
+    ],
+    inquiryMsg: 'Hello Skytech, I want to upgrade my laptop RAM and SSD.'
+  },
+  {
+    id: 'software',
+    title: 'Software Installation & Troubleshooting',
+    image: serviceSoftware,
+    badge: 'OS & Licensing',
+    description: 'Clean operating system setups, licensing, driver optimization, software troubleshooting, and deep virus/malware removal.',
+    features: [
+      'Genuine Windows & macOS installations',
+      'Driver conflict resolution & BIOS updates',
+      'Virus, spyware & malware cleanup'
+    ],
+    inquiryMsg: 'Hello Skytech, I need Software Installation & Troubleshooting support.'
+  },
+  {
+    id: 'recovery',
+    title: 'Data Recovery & Backup',
+    image: serviceRecovery,
+    badge: 'Secure & Confidential',
+    description: 'Safe extraction of critical photos, files, and database records from dead drives, accidental format, or corrupted partitions.',
+    features: [
+      'Corrupted SSD & dead HDD recovery',
+      'Accidentally deleted partition restore',
+      'Automated local & cloud backup setups'
+    ],
+    inquiryMsg: 'Hello Skytech, I need emergency Data Recovery support.'
+  },
+  {
+    id: 'business',
+    title: 'Business IT Support',
+    image: serviceSupport,
+    badge: 'Corporate & AMC',
+    description: 'Comprehensive IT infrastructure management, Annual Maintenance Contracts (AMC), and responsive on-demand technical support.',
+    features: [
+      'Annual Maintenance Contracts (AMC)',
+      'Bulk office workstation deployments',
+      'Dedicated remote & onsite tech support'
+    ],
+    inquiryMsg: 'Hello Skytech, I am looking for Business IT Support / AMC services.'
+  }
+];
+
+export const whyChooseListData = [
+  {
+    icon: Award,
+    title: 'Experienced Technical Team',
+    text: 'Over 10+ years of dedicated chip-level hardware repair experience. Our certified engineers solve complex board faults others turn away.'
+  },
+  {
+    icon: CheckCircle2,
+    title: 'Quality Parts & Reliable Solutions',
+    text: 'We strictly source OEM-grade and genuine parts with manufacturer warranties to ensure lasting, dependable laptop performance.'
+  },
+  {
+    icon: FileText,
+    title: 'Transparent Service Estimates',
+    text: 'No unexpected bills or hidden charges. You receive a clear, honest diagnostic evaluation and estimate before any work starts.'
+  },
+  {
+    icon: Headphones,
+    title: 'Customer-Focused Support',
+    text: 'Friendly communication, fast turnaround time, warranty on repaired components, and helpful post-service support.'
+  }
+];
+
+export const processStepsData = [
+  {
+    number: '01',
+    icon: PhoneCall,
+    title: 'Submit your service request',
+    description: 'Call, WhatsApp, or bring your device directly to our service center in Ahmedabad.',
+    highlight: 'Instant Response'
+  },
+  {
+    number: '02',
+    icon: Search,
+    title: 'Get an initial assessment',
+    description: 'Our certified engineers conduct diagnostics to pinpoint the precise fault and required parts.',
+    highlight: 'Comprehensive Diagnostics'
+  },
+  {
+    number: '03',
+    icon: FileCheck,
+    title: 'Approve the estimated cost',
+    description: 'We provide an upfront quote and turnaround estimate. Repair begins only upon your approval.',
+    highlight: 'Zero Hidden Costs'
+  },
+  {
+    number: '04',
+    icon: Laptop,
+    title: 'Receive your repaired laptop',
+    description: 'Your machine undergoes multi-level stress testing and is safely handed back with warranty.',
+    highlight: 'Tested with Warranty'
+  }
+];
+
+export const servicesContactDetailsData = [
+  {
+    id: 'phone',
+    icon: PhoneCall,
+    title: 'Direct Call & WhatsApp',
+    subtitle: 'Mon - Sat: 11:00 AM – 7:00 PM',
+    type: 'phone',
+    phones: [
+      { label: `+91 ${primaryNumber}`, tel: `+91${primaryNumber}`, isPrimary: true },
+      { label: `+91 ${secondaryNumber}`, tel: `+91${secondaryNumber}`, isPrimary: false }
+    ]
+  },
+  {
+    id: 'email',
+    icon: Mail,
+    title: 'Official Email',
+    subtitle: 'For inquiries & corporate quotes',
+    type: 'email',
+    email: primaryEmail
+  },
+  {
+    id: 'location',
+    icon: MapPin,
+    title: 'Service Center Location',
+    type: 'location',
+    address: officeAddress,
+    mapUrl: mapUrl
+  }
+];
