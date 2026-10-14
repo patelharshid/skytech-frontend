@@ -31,14 +31,10 @@ const ServicesPage = () => {
 
   return (
     <main className="bg-white text-dark">
-      {/* =================================================================
-          01. HERO BANNER
-          ================================================================= */}
       <section className="services-hero-section text-white position-relative overflow-hidden py-5 py-lg-6">
         <div className="services-hero-glow" aria-hidden="true" />
         <div className="container position-relative z-1">
           <div className="row align-items-center gy-5">
-            {/* Left Content Column */}
             <div className="col-lg-7 py-5">
               <div
                 className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3"
@@ -95,7 +91,8 @@ const ServicesPage = () => {
                 <img
                   src={serviceHero}
                   alt="SkyTech Professional Laptop Solutions"
-                  className="service-hero-img w-100 object-fit-cover d-block"
+                  className="w-100 object-fit-cover d-block"
+                  style={{ height: '380px' }}
                 />
                 <div className="service-hero-floating-badge position-absolute bottom-0 start-0 m-3 p-2 px-3 rounded-3 shadow d-flex align-items-center gap-3">
                   <div className="bg-primary text-white p-2 rounded-circle d-flex align-items-center justify-content-center" style={{ width: '42px', height: '42px' }}>
@@ -131,11 +128,11 @@ const ServicesPage = () => {
             {servicesListData.map((service) => (
               <div key={service.id} className="col-12 col-md-6 col-lg-4 d-flex">
                 <div className="sky-card p-4 h-100 w-100 d-flex flex-column position-relative overflow-hidden">
-                  <div className="service-card-img-wrap rounded-3 overflow-hidden mb-3 bg-surface position-relative flex-shrink-0">
+                  <div className="rounded-3 overflow-hidden mb-3 bg-surface position-relative flex-shrink-0" style={{ height: '205px' }}>
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="service-card-img w-100 h-100 object-fit-cover"
+                      className="w-100 h-100 object-fit-cover"
                     />
                   </div>
 
