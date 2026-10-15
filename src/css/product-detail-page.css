@@ -152,7 +152,6 @@
   line-height: 1.5;
   text-align: left;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
 @media (max-width: 991.98px) {
