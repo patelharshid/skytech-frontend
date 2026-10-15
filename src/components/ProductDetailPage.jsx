@@ -11,10 +11,22 @@ import {
   Laptop,
   MemoryStick,
   Monitor,
+  PhoneCall,
+  ShieldCheck,
+  Sparkles,
   Tag,
+  Truck,
 } from 'lucide-react';
 import { useProducts } from '../hooks/useData';
+import { primaryNumber } from '../constants/constants';
 import '../css/product-detail-page.css';
+
+const WhatsappIcon = ({ size = 20, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 2.137.672 4.116 1.817 5.74L2.5 21.5l3.896-1.272A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.954 7.954 0 01-4.225-1.21l-.303-.18-2.316.756.77-2.257-.197-.315A7.958 7.958 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
+  </svg>
+);
 
 const detailIcons = {
   Brand: Tag,
@@ -54,6 +66,21 @@ function ProductDetailPage({ productId }) {
     String(item.id) !== String(productId) && item.category !== product?.category
   ));
   const relatedProducts = [...sameCategoryProducts, ...otherCategoryProducts].slice(0, 4);
+
+  const formattedPrice = product?.price != null
+    ? `₹${product.price}`
+    : 'Price on Request';
+
+  const whatsappMessage = product
+    ? `Hello SkyTech, I would like to inquire about this product:
+• Product: ${product.name}
+• Price: ${formattedPrice}
+• Brand: ${product.brand || 'SkyTech'}
+${product.condition ? `• Condition: ${product.condition}\n` : ''}
+Could you please share availability, warranty details, and best offer?`
+    : '';
+
+  const whatsappUrl = `https://wa.me/91${primaryNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   useEffect(() => {
     setActiveImageIndex(0);
@@ -142,41 +169,62 @@ function ProductDetailPage({ productId }) {
           </div>
 
           <div className="col-12 col-lg-6">
-            {(detailFields.length > 0 || additionalSpecs.length > 0) && (
-              <section className="product-detail-summary">
+            <section className="product-detail-summary">
+              {product.brand && (
                 <div className="text-uppercase fw-bold text-warning small mb-2">{product.brand}</div>
-                <h1 className="h2 fw-bold text-dark mb-3">{product.name}</h1>
-                {product.price != null && (
-                  <div className="h3 fw-bold text-dark mb-4">₹{Number(product.price).toLocaleString('en-IN')}</div>
-                )}
-                {product.condition && <div className="mb-4"><span className="badge rounded-pill product-condition-badge">{product.condition}</span></div>}
-                {product.description && <p className="text-secondary mb-4">{product.description}</p>}
-                <h2 className="h5 fw-bold mb-3">Product details</h2>
-                <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
-                  {detailFields.map(([label, value]) => {
-                    const IconComponent = detailIcons[label] || Tag;
-                    return (
-                      <li key={`${product.id}-${label}`} className="d-flex align-items-center gap-3">
-                        <IconComponent size={19} className="flex-shrink-0 text-warning" />
-                        <span><strong>{label}:</strong> <span className="text-secondary">{value}</span></span>
-                      </li>
-                    );
-                  })}
-                  {additionalSpecs.map((spec, index) => {
-                    const [label, ...valueParts] = String(spec).split(':');
-                    const hasLabel = valueParts.length > 0;
+              )}
+              <h1 className="h2 fw-bold text-dark mb-3">{product.name}</h1>
+              {product.price != null && (
+                <div className="h3 fw-bold text-dark mb-3">₹{Number(product.price).toLocaleString('en-IN')}</div>
+              )}
+              {product.condition && (
+                <div className="mb-3">
+                  <span className="badge rounded-pill product-condition-badge">{product.condition}</span>
+                </div>
+              )}
+              {product.description && <p className="text-secondary mb-4">{product.description}</p>}
 
-                    return (
-                      <li key={`${product.id}-spec-${index}`} className="d-flex align-items-center gap-3">
-                        <CircuitBoard size={19} className="flex-shrink-0 text-warning" />
-                        <span><strong>{hasLabel ? `${label.trim()}:` : 'Specification:'}</strong>{' '}
-                          <span className="text-secondary">{hasLabel ? valueParts.join(':').trim() : spec}</span></span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            )}
+              {/* Inquiry Action Buttons */}
+              <div className="product-detail-actions d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-3 mb-4">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp-inquiry d-inline-flex align-items-center justify-content-center gap-2"
+                >
+                  <WhatsappIcon size={22} />
+                  <span>Inquire on WhatsApp</span>
+                </a>
+              </div>
+              {(detailFields.length > 0 || additionalSpecs.length > 0) && (
+                <>
+                  <h2 className="h5 fw-bold mb-3 border-top pt-4">Product details</h2>
+                  <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
+                    {detailFields.map(([label, value]) => {
+                      const IconComponent = detailIcons[label] || Tag;
+                      return (
+                        <li key={`${product.id}-${label}`} className="d-flex align-items-center gap-3">
+                          <IconComponent size={19} className="flex-shrink-0 text-warning" />
+                          <span><strong>{label}:</strong> <span className="text-secondary">{value}</span></span>
+                        </li>
+                      );
+                    })}
+                    {additionalSpecs.map((spec, index) => {
+                      const [label, ...valueParts] = String(spec).split(':');
+                      const hasLabel = valueParts.length > 0;
+
+                      return (
+                        <li key={`${product.id}-spec-${index}`} className="d-flex align-items-center gap-3">
+                          <CircuitBoard size={19} className="flex-shrink-0 text-warning" />
+                          <span><strong>{hasLabel ? `${label.trim()}:` : 'Specification:'}</strong>{' '}
+                            <span className="text-secondary">{hasLabel ? valueParts.join(':').trim() : spec}</span></span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </>
+              )}
+            </section>
           </div>
         </div>
 

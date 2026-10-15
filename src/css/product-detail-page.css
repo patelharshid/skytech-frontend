@@ -55,6 +55,27 @@
   font-weight: 700;
 }
 
+.btn-whatsapp-inquiry {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid #25D366 !important;
+  border-radius: 50rem !important;
+  padding: 0.75rem 1.75rem !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-decoration: none !important;
+}
+
+.btn-whatsapp-inquiry:hover,
+.btn-whatsapp-inquiry:focus {
+  background: linear-gradient(135deg, #20ba5a 0%, #0e7266 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.42) !important;
+}
+
 .product-detail-about {
   position: relative;
   isolation: isolate;
