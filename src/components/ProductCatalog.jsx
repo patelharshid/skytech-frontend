@@ -41,13 +41,13 @@ const ProductCatalog = ({ activeCategory }) => {
           <div className="row g-3 g-md-4">
             {filteredProducts.map(product => (
               <div key={product.id} className="col-6 col-md-4 col-lg-3">
-                <div className="sky-card h-100 p-3 d-flex flex-column align-items-start">
+                <div className="sky-card product-catalog-card h-100 d-flex flex-column align-items-start">
                   <div className="w-100 position-relative overflow-hidden rounded-3 mb-2 bg-surface">
                     <img
                       src={product.image}
                       alt={product.name}
                       className="w-100 object-fit-cover d-block"
-                      style={{ height: '180px' }}
+                      style={{ height: '170px' }}
                     />
                   </div>
                   {product.category && (
@@ -58,17 +58,19 @@ const ProductCatalog = ({ activeCategory }) => {
                       {categoryLabels[product.category] || product.category}
                     </span>
                   )}
-                  <h3 className="h6 fw-bold mb-3 text-main">{product.name}</h3>
-                  <div className="d-flex align-items-center justify-content-between gap-2 border-top pt-3 mt-auto w-100">
-                    <span className="fs-6 fw-bold text-primary font-mono text-nowrap">
-                      ₹{Number(product.originalPrice ?? product.price).toLocaleString('en-IN')}
-                    </span>
-                    <a
-                      href={`/product/${encodeURIComponent(product.id)}`}
-                      className="btn btn-warning rounded-pill fw-bold text-white text-nowrap px-3 py-2"
-                    >
-                      View More
-                    </a>
+                  <h3 className="product-card-title mb-2 text-main w-100">{product.name}</h3>
+                  <div className="border-top pt-2 pt-sm-3 mt-auto w-100">
+                    <div className="product-card-footer">
+                      <span className="product-card-price">
+                        ₹{Number(product.originalPrice ?? product.price).toLocaleString('en-IN')}
+                      </span>
+                      <a
+                        href={`/product/${encodeURIComponent(product.id)}`}
+                        className="btn btn-warning product-card-btn text-white"
+                      >
+                        View More
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

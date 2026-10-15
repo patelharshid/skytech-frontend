@@ -267,6 +267,82 @@
   border-top: 4px solid var(--accent-color) !important;
 }
 
+/* Product Catalog Cards Responsive Layout */
+.product-catalog-card {
+  padding: 0.75rem !important;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .product-catalog-card {
+    padding: 1rem !important;
+  }
+}
+
+.product-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.product-card-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--font-mono, monospace);
+  white-space: nowrap;
+}
+
+.product-card-btn {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  border-radius: 50rem !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 575.98px) {
+  .product-card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+    width: 100%;
+  }
+
+  .product-card-btn {
+    width: 100% !important;
+    padding: 0.45rem 0.6rem !important;
+  }
+
+  .product-card-price {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .product-card-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .product-card-btn {
+    padding: 0.42rem 1.1rem !important;
+  }
+}
+
 @media (max-width: 575.98px) {
   .category-carousel-stage {
     margin-inline: 2.5rem;
