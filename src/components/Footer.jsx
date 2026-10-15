@@ -43,7 +43,7 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt="SKYTECH"
-                  style={{ width: '180px', height: 'auto', objectFit: 'contain' }}
+                  style={{ width: '200px', height: 'auto', objectFit: 'contain' }}
                 />
               </div>
 
