@@ -17,7 +17,8 @@ const Navbar = ({ currentRoute }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 95);
+      const threshold = window.innerWidth >= 992 ? 95 : 30;
+      setIsScrolled(window.scrollY > threshold);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -26,10 +27,11 @@ const Navbar = ({ currentRoute }) => {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <header className="position-relative" style={{ zIndex: 1020 }}>
+    <>
       <TopMarqueeBar />
 
-      <div className="sky-header py-2 py-md-3">
+      <header className={`sky-header-root ${isScrolled ? 'header-scrolled' : ''}`} style={{ zIndex: 1020 }}>
+        <div className="sky-header py-2 py-md-3">
         <div className="container">
           <div className="row align-items-center gy-2 gy-md-3">
             <div className="col-8 col-sm-auto col-lg-3 d-flex align-items-center justify-content-between">
@@ -92,7 +94,7 @@ const Navbar = ({ currentRoute }) => {
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse d-lg-none mt-3 border-top pt-3`} id="mobileSkyTechNav">
             <ul className="navbar-nav flex-column gap-2 fw-semibold mb-3">
               <li className="nav-item">
-                <a className={`nav-link ${isHomePage ? 'active' : ''}`} href="/" aria-current={isHomePage ? 'page' : undefined} onClick={() => setIsNavCollapsed(true)}>Home</a>
+                <a className={`nav-link ${isHomePage ? 'active home-nav-active' : ''}`} href="/" aria-current={isHomePage ? 'page' : undefined} onClick={() => setIsNavCollapsed(true)}>Home</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#catalog" onClick={() => setIsNavCollapsed(true)}>Laptops</a>
@@ -151,7 +153,7 @@ const Navbar = ({ currentRoute }) => {
               <div className="navbar-collapse justify-content-between align-items-center w-100">
                 <ul className="navbar-nav w-100 justify-content-between align-items-center fw-semibold py-1">
                   <li className="nav-item">
-                    <a className={`nav-link ${isHomePage ? 'active' : ''}`} href="/" aria-current={isHomePage ? 'page' : undefined}>Home</a>
+                    <a className={`nav-link ${isHomePage ? 'active home-nav-active' : ''}`} href="/" aria-current={isHomePage ? 'page' : undefined}>Home</a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#catalog">Laptops</a>
@@ -196,6 +198,8 @@ const Navbar = ({ currentRoute }) => {
         </div>
       </div>
     </header>
+    {isScrolled && <div className="d-lg-none sky-header-mobile-placeholder" aria-hidden="true" />}
+    </>
   );
 };
 

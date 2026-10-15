@@ -34,13 +34,14 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.5;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
+  overflow-x: clip;
 }
 
 h1,
@@ -221,18 +222,26 @@ h6 {
 }
 
 .skytech-floating-nav .nav-link.active,
-.skytech-floating-nav .nav-link.about-nav-active {
+.skytech-floating-nav .nav-link.home-nav-active,
+.skytech-floating-nav .nav-link.about-nav-active,
+#mobileSkyTechNav .nav-link.active,
+#mobileSkyTechNav .nav-link.home-nav-active,
+#mobileSkyTechNav .nav-link.about-nav-active {
   color: var(--accent-color) !important;
-  background: rgba(32, 184, 199, 0.06) !important;
-  border: 1.5px solid var(--accent-color);
+  background: rgba(32, 184, 199, 0.08) !important;
+  border: 1.5px solid var(--accent-color) !important;
   border-radius: 8px;
   padding: 0.35rem 0.85rem !important;
   font-weight: 700 !important;
 }
 
 .skytech-floating-nav .nav-link.active:hover,
-.skytech-floating-nav .nav-link.about-nav-active:hover {
-  background: rgba(32, 184, 199, 0.1) !important;
+.skytech-floating-nav .nav-link.home-nav-active:hover,
+.skytech-floating-nav .nav-link.about-nav-active:hover,
+#mobileSkyTechNav .nav-link.active:hover,
+#mobileSkyTechNav .nav-link.home-nav-active:hover,
+#mobileSkyTechNav .nav-link.about-nav-active:hover {
+  background: rgba(32, 184, 199, 0.12) !important;
   color: var(--accent-color) !important;
 }
 
@@ -359,24 +368,61 @@ h6 {
   }
 }
 
+.sky-header-root {
+  position: relative;
+  z-index: 1020;
+}
+
 @media (max-width: 991.98px) {
-  .skytech-floating-nav-wrapper {
-    margin-top: 0;
+  .sky-header-root.header-scrolled .sky-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1040;
+    box-shadow: 0 4px 18px rgba(18, 59, 93, 0.12);
   }
 
-  .skytech-floating-nav {
-    border-radius: 16px;
-    padding: 10px 14px;
+  .sky-header-mobile-placeholder {
+    height: 76px;
   }
 
-  .skytech-floating-nav .navbar-nav {
-    padding: 0.5rem 0;
-    gap: 4px;
+  #mobileSkyTechNav {
+    max-height: calc(100vh - 85px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 0.75rem;
   }
 
-  .skytech-floating-nav .nav-link {
-    padding: 0.6rem 1rem !important;
+  #mobileSkyTechNav .navbar-nav {
+    padding: 0.25rem 0;
+    gap: 6px;
+  }
+
+  #mobileSkyTechNav .nav-link {
+    color: var(--text-color) !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.65rem 1rem !important;
     border-radius: 10px;
+    border: 1.5px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  #mobileSkyTechNav .nav-link:hover {
+    color: var(--accent-color) !important;
+    background-color: rgba(32, 184, 199, 0.06) !important;
+  }
+
+  #mobileSkyTechNav .nav-link.active,
+  #mobileSkyTechNav .nav-link.home-nav-active,
+  #mobileSkyTechNav .nav-link.about-nav-active {
+    color: var(--accent-color) !important;
+    background: rgba(32, 184, 199, 0.08) !important;
+    border: 1.5px solid var(--accent-color) !important;
+    font-weight: 700 !important;
   }
 
   .display-4 {
@@ -403,4 +449,4 @@ h6 {
   .display-4 {
     font-size: 1.75rem !important;
   }
-}
+}
