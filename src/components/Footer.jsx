@@ -80,7 +80,7 @@ const Footer = () => {
               </div>
 
               <a
-                href="/#shop"
+                href="/products"
                 className="btn btn-warning rounded-pill fw-bold text-uppercase text-nowrap px-3 px-sm-4 py-1 py-sm-2 flex-shrink-0 skytech-all-products-btn"
               >
                 ALL PRODUCTS
@@ -96,7 +96,7 @@ const Footer = () => {
                   <li><a href="/about-us" className="skytech-footer-link-item"><YellowDotIcon />About us</a></li>
                   <li><a href="/services" className="skytech-footer-link-item"><YellowDotIcon />Services</a></li>
                   <li><a href="/#catalog" className="skytech-footer-link-item"><YellowDotIcon />Refurbished Systems</a></li>
-                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Shop</a></li>
+                  <li><a href="/products" className="skytech-footer-link-item"><YellowDotIcon />Shop</a></li>
                   <li><a href="/contact-us" className="skytech-footer-link-item"><YellowDotIcon />Contact Us</a></li>
                 </ul>
               </div>
@@ -105,12 +105,12 @@ const Footer = () => {
               <div className="col-6 col-md-3">
                 <h6 className="fw-bold text-main mb-3">Find It Fast</h6>
                 <ul className="list-unstyled d-flex flex-column gap-2 mb-0">
-                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Laptops</a></li>
-                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Server</a></li>
-                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Desktop System</a></li>
-                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />All In One</a></li>
-                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Apple MacBook</a></li>
-                  <li><a href="/#shop" className="skytech-footer-link-item"><YellowDotIcon />Accessories</a></li>
+                  <li><a href="/products?category=laptops" className="skytech-footer-link-item"><YellowDotIcon />Laptops</a></li>
+                  <li><a href="/products?category=desktops" className="skytech-footer-link-item"><YellowDotIcon />Server</a></li>
+                  <li><a href="/products?category=desktops" className="skytech-footer-link-item"><YellowDotIcon />Desktop System</a></li>
+                  <li><a href="/products?category=desktops" className="skytech-footer-link-item"><YellowDotIcon />All In One</a></li>
+                  <li><a href="/products?search=Apple" className="skytech-footer-link-item"><YellowDotIcon />Apple MacBook</a></li>
+                  <li><a href="/products?category=accessories" className="skytech-footer-link-item"><YellowDotIcon />Accessories</a></li>
                 </ul>
               </div>
 

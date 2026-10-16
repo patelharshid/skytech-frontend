@@ -1,0 +1,84 @@
+/* All Products Page - Minimal Custom Styling adhering to SkyTech Theme */
+
+.all-products-hero {
+  background: linear-gradient(135deg, #0e273b 0%, var(--primary-color) 60%, #0d2940 100%);
+}
+
+.all-products-hero-glow {
+  position: absolute;
+  top: -90px;
+  right: -60px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--secondary-color) 20%, transparent) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.all-products-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+}
+
+.all-products-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(18, 59, 93, 0.12);
+  border-color: color-mix(in srgb, var(--secondary-color) 60%, transparent);
+}
+
+.all-products-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-color: var(--surface-color);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.all-products-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.all-products-card:hover .all-products-img-wrap img {
+  transform: scale(1.05);
+}
+
+.all-products-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.6rem;
+  line-height: 1.35;
+}
+
+.all-products-filter-chip {
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.all-products-filter-chip.active {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--secondary-color) 35%, transparent);
+}
+
+@media (max-width: 575.98px) {
+  .all-products-img-wrap {
+    height: 135px;
+  }
+  .all-products-title {
+    font-size: 0.82rem;
+    min-height: 2.3rem;
+  }
+}

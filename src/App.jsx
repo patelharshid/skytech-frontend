@@ -14,6 +14,7 @@ import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
 import ServicesPage from './components/ServicesPage';
 import ProductDetailPage from './components/ProductDetailPage';
+import AllProductsPage from './components/AllProductsPage';
 import { getRoute, navigateTo } from './utils/navigation';
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
   const isContactPage = currentRoute === '/contact-us';
   const isAboutPage = currentRoute === '/about-us';
   const isServicesPage = currentRoute === '/services';
+  const isAllProductsPage = currentRoute === '/products' || currentRoute === '/all-products';
   const productRoute = currentRoute.match(/^\/product\/([^/]+)$/);
   const productId = productRoute ? decodeURIComponent(productRoute[1]) : null;
 
@@ -99,6 +101,8 @@ function App() {
         <AboutPage />
       ) : isServicesPage ? (
         <ServicesPage />
+      ) : isAllProductsPage ? (
+        <AllProductsPage />
       ) : productId ? (
         <ProductDetailPage productId={productId} />
       ) : (

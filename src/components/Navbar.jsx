@@ -12,8 +12,9 @@ const Navbar = ({ currentRoute }) => {
   const isContactPage = activeRoute.includes('/contact-us');
   const isAboutPage = activeRoute.includes('/about-us');
   const isServicesPage = activeRoute.includes('/services');
-  const isProductPage = activeRoute.startsWith('/product');
-  const isHomePage = !isContactPage && !isAboutPage && !isServicesPage && !isProductPage;
+  const isAllProductsPage = activeRoute.includes('/products') || activeRoute.includes('/all-products');
+  const isProductDetailPage = activeRoute.startsWith('/product') && !isAllProductsPage;
+  const isHomePage = !isContactPage && !isAboutPage && !isServicesPage && !isProductDetailPage && !isAllProductsPage;
 
   useEffect(() => {
     const handleScroll = () => {

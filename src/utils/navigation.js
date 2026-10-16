@@ -40,6 +40,7 @@ export function getRoute() {
   if (path.includes('/contact-us')) return '/contact-us';
   if (path.includes('/about-us')) return '/about-us';
   if (path.includes('/services')) return '/services';
+  if (path.includes('/products') || path.includes('/all-products')) return '/products';
 
   const prodMatch = path.match(/\/product\/([^/]+)/);
   if (prodMatch) return `/product/${decodeURIComponent(prodMatch[1])}`;
