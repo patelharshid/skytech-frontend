@@ -25,7 +25,7 @@ const WhatsappIcon = ({ size = 16, className = "" }) => (
 const Footer = () => {
   return (
     <footer
-      className="skytech-footer-section py-5 position-relative"
+      className="skytech-footer-section pt-3 pt-md-5 pb-5 position-relative"
       style={{
         backgroundImage: `url(${footerBg})`,
         backgroundSize: 'cover',
@@ -37,9 +37,9 @@ const Footer = () => {
         <div className="row gy-4 align-items-start">
           {/* Left Column - SkyTech Card */}
           <div className="col-lg-4">
-            <div className="text-center" style={{ padding: "24px" }}>
+            <div className="text-center pt-0 pt-md-3 px-3 pb-3">
               {/* White SkyTech Logo Badge */}
-              <div className="skytech-logo-badge mb-3">
+              <div className="skytech-logo-badge mb-2 mb-md-3">
                 <img
                   src={logo}
                   alt="SKYTECH"

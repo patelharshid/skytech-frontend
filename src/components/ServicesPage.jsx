@@ -31,11 +31,11 @@ const ServicesPage = () => {
 
   return (
     <main className="bg-white text-dark">
-      <section className="services-hero-section text-white position-relative overflow-hidden py-5 py-lg-6">
+      <section className="services-hero-section text-white position-relative overflow-hidden pt-3 pb-5 pt-sm-4 pb-sm-5 py-lg-6">
         <div className="services-hero-glow" aria-hidden="true" />
         <div className="container position-relative z-1">
-          <div className="row align-items-center gy-5">
-            <div className="col-lg-7 py-5">
+          <div className="row align-items-center gy-4 gy-lg-5">
+            <div className="col-lg-7 pt-1 pb-3 py-lg-5">
               <div
                 className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3"
                 style={{
