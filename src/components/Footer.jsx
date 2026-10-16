@@ -57,17 +57,32 @@ const Footer = () => {
           {/* Right Section (Phone Bar + 4 Columns) */}
           <div className="col-lg-8">
             {/* Top Phone Header Bar & ALL PRODUCTS Button */}
-            <div className="d-flex flex-wrap align-items-center justify-content-between pb-3 mb-4 border-bottom border-secondary border-opacity-10 gap-3">
+            <div className="d-flex align-items-center justify-content-between pb-3 mb-4 border-bottom border-secondary border-opacity-10 gap-3">
               <div className="d-flex align-items-center gap-3">
-                <div className="skytech-footer-phone-icon">
+                <div className="skytech-footer-phone-icon flex-shrink-0">
                   <PhoneCall size={20} />
                 </div>
-                <div className="fw-bold fs-5 text-main font-mono">
-                  +91-{primaryNumber} | +91-{secondaryNumber}
+                <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-0 gap-lg-2 fw-bold fs-5 text-main font-mono">
+                  <a
+                    href={`tel:+91${primaryNumber}`}
+                    className="text-decoration-none text-main text-nowrap"
+                  >
+                    +91-{primaryNumber}
+                  </a>
+                  <span className="d-none d-lg-inline opacity-50 user-select-none">|</span>
+                  <a
+                    href={`tel:+91${secondaryNumber}`}
+                    className="text-decoration-none text-main text-nowrap"
+                  >
+                    +91-{secondaryNumber}
+                  </a>
                 </div>
               </div>
 
-              <a href="/#shop" className="btn btn-warning rounded-pill fw-bold text-uppercase px-4 py-2">
+              <a
+                href="/#shop"
+                className="btn btn-warning rounded-pill fw-bold text-uppercase text-nowrap px-4 py-2"
+              >
                 ALL PRODUCTS
               </a>
             </div>
