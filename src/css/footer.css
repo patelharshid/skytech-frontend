@@ -37,18 +37,18 @@
 
 @media (max-width: 575.98px) {
   .skytech-footer-phone-icon {
-    width: 36px;
-    height: 36px;
+    width: 39px;
+    height: 39px;
   }
 
   .skytech-phone-text {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     line-height: 1.25;
   }
 
   .skytech-all-products-btn {
-    font-size: 0.72rem !important;
-    padding: 0.38rem 0.75rem !important;
+    font-size: 0.88rem !important;
+    padding: 0.38rem 0.8rem !important;
   }
 }
 
