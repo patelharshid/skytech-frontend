@@ -82,8 +82,13 @@ const ShopByCategory = ({ onSelectCategory }) => {
             if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
           }}
         >
-          <button type="button" className="btn btn-light category-carousel-arrow category-carousel-previous" onClick={() => moveSlide(-1)} aria-label="Previous categories">
-            <ArrowLeft size={20} aria-hidden="true" />
+          <button
+            type="button"
+            className="btn btn-light category-carousel-arrow category-carousel-previous d-flex align-items-center justify-content-center p-0"
+            onClick={() => moveSlide(-1)}
+            aria-label="Previous categories"
+          >
+            <ArrowLeft className="category-carousel-arrow-icon" size={20} aria-hidden="true" />
           </button>
 
           <div className="category-carousel-stage">
@@ -116,8 +121,13 @@ const ShopByCategory = ({ onSelectCategory }) => {
             </div>
           </div>
 
-          <button type="button" className="btn btn-light category-carousel-arrow category-carousel-next" onClick={() => moveSlide(1)} aria-label="Next categories">
-            <ArrowRight size={20} aria-hidden="true" />
+          <button
+            type="button"
+            className="btn btn-light category-carousel-arrow category-carousel-next d-flex align-items-center justify-content-center p-0"
+            onClick={() => moveSlide(1)}
+            aria-label="Next categories"
+          >
+            <ArrowRight className="category-carousel-arrow-icon" size={20} aria-hidden="true" />
           </button>
         </div>
       </div>

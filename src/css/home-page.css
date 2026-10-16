@@ -138,21 +138,41 @@
 
 .category-carousel-arrow {
   position: absolute;
-  z-index: 2;
-  top: 43%;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 50%;
+  border: 1.5px solid var(--secondary-color);
+  border-radius: 50% !important;
   background: var(--card-color);
   color: var(--secondary-color);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .category-carousel-arrow:hover {
-  transform: scale(1.06);
+  transform: translateY(-50%) scale(1.08);
   background: var(--secondary-color);
   color: #ffffff;
+  box-shadow: 0 6px 16px rgba(32, 184, 199, 0.35);
+}
+
+.category-carousel-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.category-carousel-arrow-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .category-carousel-previous {
@@ -359,6 +379,21 @@
   .category-carousel-arrow {
     width: 36px;
     height: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .category-carousel-previous {
+    left: 2px;
+  }
+
+  .category-carousel-next {
+    right: 2px;
+  }
+
+  .category-carousel-arrow-icon {
+    width: 18px;
+    height: 18px;
   }
 }
 
