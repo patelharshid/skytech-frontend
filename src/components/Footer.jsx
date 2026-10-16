@@ -62,7 +62,7 @@ const Footer = () => {
                 <div className="skytech-footer-phone-icon flex-shrink-0">
                   <PhoneCall size={18} />
                 </div>
-                <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-0 gap-lg-2 fw-bold fs-6 fs-sm-5 text-main font-mono">
+                <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-0 gap-lg-2 fw-bold text-main font-mono skytech-phone-text">
                   <a
                     href={`tel:+91${primaryNumber}`}
                     className="text-decoration-none text-main text-nowrap"
@@ -81,7 +81,7 @@ const Footer = () => {
 
               <a
                 href="/#shop"
-                className="btn btn-warning rounded-pill fw-bold text-uppercase text-nowrap px-3 px-sm-4 py-2 flex-shrink-0"
+                className="btn btn-warning rounded-pill fw-bold text-uppercase text-nowrap px-3 px-sm-4 py-1 py-sm-2 flex-shrink-0 skytech-all-products-btn"
               >
                 ALL PRODUCTS
               </a>
