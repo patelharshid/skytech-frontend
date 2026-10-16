@@ -27,6 +27,13 @@
   box-shadow: 0 4px 12px rgba(18, 59, 93, 0.2);
 }
 
+@media (max-width: 575.98px) {
+  .skytech-footer-phone-icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+
 .skytech-footer-link-item {
   color: var(--muted-color);
   text-decoration: none;

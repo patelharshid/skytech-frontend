@@ -57,12 +57,12 @@ const Footer = () => {
           {/* Right Section (Phone Bar + 4 Columns) */}
           <div className="col-lg-8">
             {/* Top Phone Header Bar & ALL PRODUCTS Button */}
-            <div className="d-flex align-items-center justify-content-between pb-3 mb-4 border-bottom border-secondary border-opacity-10 gap-3">
-              <div className="d-flex align-items-center gap-3">
+            <div className="d-flex align-items-center justify-content-between pb-3 mb-4 border-bottom border-secondary border-opacity-10 gap-2 gap-sm-3">
+              <div className="d-flex align-items-center gap-2 gap-sm-3">
                 <div className="skytech-footer-phone-icon flex-shrink-0">
-                  <PhoneCall size={20} />
+                  <PhoneCall size={18} />
                 </div>
-                <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-0 gap-lg-2 fw-bold fs-5 text-main font-mono">
+                <div className="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-0 gap-lg-2 fw-bold fs-6 fs-sm-5 text-main font-mono">
                   <a
                     href={`tel:+91${primaryNumber}`}
                     className="text-decoration-none text-main text-nowrap"
@@ -81,7 +81,7 @@ const Footer = () => {
 
               <a
                 href="/#shop"
-                className="btn btn-warning rounded-pill fw-bold text-uppercase text-nowrap px-4 py-2"
+                className="btn btn-warning rounded-pill fw-bold text-uppercase text-nowrap px-3 px-sm-4 py-2 flex-shrink-0"
               >
                 ALL PRODUCTS
               </a>
